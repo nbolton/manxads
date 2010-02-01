@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpFile xmlns="http://schemas.manxads.com/HelpFile">
+  <Title>Searching</Title>
+  <Description>
+    Learn how the ManxAds search works, how to find what you're looking
+    for and get tips on creating listings which appear higher in the search results.
+  </Description>
+  <Body>
+    <Section Title="How It Works">
+      <Paragraph>
+        The ManxAds Search Engine works much like Google, all the listings on
+        the site are 'indexed' every so often, this is why they take a short
+        while to appear after posting.
+      </Paragraph>
+    </Section>
+    <Section Title="Advanced Searching">
+      <Paragraph>
+        You may want to filter your search so that it only shows listings between
+        certain dates and prices, from certain categories, and even your local town or village.
+      </Paragraph>
+      <Paragraph>
+        This can be done on the advanced search page (use the 'Search' link at the top of the screen).
+        On this page, you can switch between advanced search, and simple search.
+      </Paragraph>
+    </Section>
+    <Section Title="Result Ranking">
+      <Paragraph>
+        The ManxAds Search Engine uses a complex ranking algorithm to determine 
+        how relevant a listing is in relation to the keywords you specify.
+      </Paragraph>
+      <Paragraph>
+        When creating your listings, you should put the most relevant keywords
+        in your title, as they carry a greater weight than those in the details.
+        However, be careful you don't use a keyword too many times, or the
+        search engine will see them as less unique, and so less relevant.
+        Hint: Adding pictures can also improve your item's search rank.
+      </Paragraph>
+      <Paragraph>
+        The more listings you have, the more credible your listings will be.
+        When adding the listing to categories, you should try add it to as few
+        as possible, your listing could loose points for being in too many.
+      </Paragraph>
+    </Section>
+    <Section Title="Quality of Service">
+      <Paragraph>
+        After reading this page, if you think your listing should appear
+        higher in the search results, please do contact us and tell us why
+        so that we can improve the search engine.
+      </Paragraph>
+    </Section>
+  </Body>
+</HelpFile>

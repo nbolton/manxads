@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpFile xmlns="http://schemas.manxads.com/HelpFile">
+  <Title>Traders &amp; Charities</Title>
+  <Description>
+    We fully support Manx organisations... And, it's absolutely free to have your charity or company (corporate trader) on ManxAds with your logo, so why not do it today?
+  </Description>
+  <Body>
+    <Section Title="Registration">
+      <Paragraph>
+        First, we'd like you to register as a normal seller on ManxAds so we have all your details. Use the 'Register' link at the top of the page to get started.
+      </Paragraph>
+    </Section>
+    <Section Title="Request Upgrade">
+      <Paragraph>
+        Once you've registered, simply go to your 'My ManxAds' page (your account home). Then, click either 'Upgrade to Trader' or 'Upgrade to Charity' at the bottom, and we'll do the rest!
+      </Paragraph>
+      <Paragraph>
+        Please note that as per our Terms and Conditions, charities and corporate traders must be registered on the Isle of Man, and we will ask for proof of registration.
+      </Paragraph>
+      <Paragraph>
+        Thank you for your interest in our Trader &amp; Charity programme!
+      </Paragraph>
+    </Section>
+  </Body>
+</HelpFile>

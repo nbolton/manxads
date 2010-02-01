@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="ManxAds.Listing">
+    <Position X="4.5" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Listing.cs</FileName>
+      <HashCode>AAAIIAAAQAAAAAAAAQEBBIABAQKAEVBAQAAAAEAACAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Seller" />
+      <Property Name="PriceType" />
+    </ShowAsAssociation>
+    <AssociationLine Name="Seller" Type="ManxAds.Seller" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="1.735" />
+        <Point X="8.5" Y="1.735" />
+      </Path>
+    </AssociationLine>
+  </Class>
+  <Class Name="ManxAds.Seller">
+    <Position X="8.5" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Seller.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManxAds.User">
+    <Position X="12.75" Y="1.5" Width="3" />
+    <TypeIdentifier>
+      <FileName>User.cs</FileName>
+      <HashCode>AADAIAEEgQABAYEAAIMFBQACBQEACEACQIgBgkAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SocialTitleType" />
+      <Property Name="UserType" />
+      <Property Name="RegisterType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ManxAds.Password">
+    <Position X="14" Y="10" Width="3" />
+    <TypeIdentifier>
+      <FileName>Password.cs</FileName>
+      <HashCode>AAAAAAAgAAAAIgAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManxAds.Advert">
+    <Position X="4.5" Y="6" Width="3.25" />
+    <TypeIdentifier>
+      <FileName>Advert.cs</FileName>
+      <HashCode>AAAAIEAAQAJAAEAAABEABAAQAACCAEAAQAAAAkAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Advertiser" />
+      <Property Name="SizeType" />
+      <Property Name="FormatType" />
+      <Property Name="PositionType" />
+    </ShowAsAssociation>
+    <AssociationLine Name="FormatType" Type="ManxAds.AdvertFormatType" FixedFromPoint="true">
+      <Path>
+        <Point X="6.375" Y="9.553" />
+        <Point X="6.375" Y="11.551" />
+        <Point X="8.25" Y="11.551" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PositionType" Type="ManxAds.AdvertPositionType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.125" Y="9.553" />
+        <Point X="7.125" Y="10.633" />
+        <Point X="11" Y="10.633" />
+      </Path>
+    </AssociationLine>
+  </Class>
+  <Class Name="ManxAds.Advertiser">
+    <Position X="8.75" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Advertiser.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAACAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Seller" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ManxAds.Category">
+    <Position X="0.75" Y="5.25" Width="3.25" />
+    <TypeIdentifier>
+      <FileName>Category.cs</FileName>
+      <HashCode>AAAAYEAAQAQgAEAEIAEABEAAgAACBMABQAAAgEIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManxAds.Administrator">
+    <Position X="9.5" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Administrator.cs</FileName>
+      <HashCode>AAAAAAAAAABAAAAAAAEAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Advertiser" />
+      <Property Name="Seller" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ManxAds.Security">
+    <Position X="16.25" Y="7.5" Width="4.25" />
+    <TypeIdentifier>
+      <FileName>Security.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManxAds.ListingImage">
+    <Position X="1" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>ListingImage.cs</FileName>
+      <HashCode>AAAAQAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ManxAds.PriceType">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PriceType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAI=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ManxAds.SocialTitleType">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SocialTitleType.cs</FileName>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAABBAIAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ManxAds.UserType">
+    <Position X="17.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>UserType.cs</FileName>
+      <HashCode>AAAAAAAAAABAAAAAAAAAIBAAAAEEAABAAAAAAAAASAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ManxAds.RegisterType">
+    <Position X="17.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>RegisterType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ManxAds.AdvertSizeType">
+    <Position X="4.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdvertSizeType.cs</FileName>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAACAAAAAAAiAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ManxAds.AdvertFormatType">
+    <Position X="8.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdvertFormatType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAIAAAAAAAAIAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ManxAds.AdvertPositionType">
+    <Position X="11" Y="10" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>AdvertPositionType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAACACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

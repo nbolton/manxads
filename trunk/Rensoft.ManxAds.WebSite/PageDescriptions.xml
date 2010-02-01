@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pageDescriptions>
+  <default>
+    Visit ManxAds for the Isle of Man and post your classified adverts for free!
+    New and used cars, motorbikes, electricals, computers, clothes and much more!
+  </default>
+  <descriptionList>
+    <description page="Categories.aspx">
+      Browse the ManxAds categories to find the classified you're looking for.
+    </description>
+    <description page="Listings.aspx">
+      ManxAds listings in order of when they were last boosted by users (see help for more info).
+    </description>
+    <description page="Advertise.aspx">
+      Give your business the edge by advertising your animated (flash) or still banners on ManxAds!
+    </description>
+  </descriptionList>
+</pageDescriptions>

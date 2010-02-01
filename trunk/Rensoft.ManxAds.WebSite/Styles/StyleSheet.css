@@ -1,0 +1,1061 @@
+﻿body 
+{
+	font-size: 76%;
+	color: #4B4B4B;
+}
+
+body,
+.GenericFormTextBox 
+{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3
+{
+	padding-top: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+h1, h2, h3,
+h1 a, h2 a, h3 a
+{
+	color: #2166B1;
+	text-decoration: none;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover 
+{
+	text-decoration: underline;
+}
+
+h1 
+{
+	font-size: 2em;
+}
+
+h2 
+{
+	font-size: 1.5em;
+	margin-top: 5px;
+	padding-top: 5px;
+}
+
+h3 
+{
+	font-size: 1.4em;
+	margin-top: 5px;
+	padding-top: 5px;
+}
+
+p
+{
+	margin-top: 3px;
+	padding-top: 3px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+ul 
+{
+	margin-top: 10px;
+	margin-left: 25px;
+}
+
+#LayoutContainer 
+{
+	text-align: center;
+	margin: 0 auto;
+	width: 728px;
+}
+
+#LayoutHeader
+{
+	text-align: left;
+	height: 50px;
+}
+
+#LayoutHeaderLogo
+{
+	float: left;
+}
+
+#LayoutHeaderSearch
+{
+	float: right;
+}
+
+#LayoutHeaderSearch
+{
+	font-weight: bold;
+}
+
+#LayoutSubHeader 
+{
+	float: left;
+	clear: both;
+	text-align: left;
+	margin-bottom: 7px;
+}
+
+#LayoutSubHeaderButtons 
+{
+	float: left;
+	width: 190px;
+}
+
+#LayoutSubHeaderButtons img
+{
+	margin-right: 1px;
+}
+
+#LayoutSubHeaderMenu 
+{
+	float: left;
+	width: 538px;
+}
+
+#LayoutSubHeaderMenuLinks 
+{
+	float: left;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#LayoutSubHeaderMenuNavigation 
+{
+	float: left;
+}
+
+#LayoutSubHeaderMenuSecurity 
+{
+	float: right;
+	margin-left: 10px;
+}
+
+#LayoutSubHeaderMenuBar 
+{
+	float: left;
+	clear: both;
+	margin-top: 2px;
+	background-color: #2166B2;
+	height: 3px;
+	font-size: 0px;
+	width: 100%;
+}
+
+#LayoutMiddle 
+{
+	text-align: left;
+	margin-top: 20px;
+}
+
+#LayoutLeftAdvert 
+{
+	margin-right: 20px;
+	float: left;
+	width: 125px;
+}
+
+#LayoutMiddle 
+{
+	float: left;
+	margin-bottom: 20px;
+}
+
+.LayoutLeftAdvertLayer 
+{
+	margin-bottom: 20px;
+	height: 125px;
+}
+
+#LayoutContent 
+{
+	float: left;
+	width: 443px;
+}
+
+#LayoutRightAdvert 
+{
+	margin-left: 20px;
+	float: right;
+}
+
+#LayoutBottomAdvert 
+{
+	clear: both;
+}
+
+#LayoutFooter 
+{
+	margin-top: 20px;
+}
+
+#LayoutHeaderSearchControls
+{
+	margin-top: 3px;
+}
+
+#LayoutHeaderSearchTitle,
+#LayoutHeaderSearchControls 
+{
+	text-align: right;
+}
+
+#LogonOptions 
+{
+	padding-bottom: 10px;
+	float: left;
+}
+
+#LogonExistingUsers,
+#LogonNewUsers 
+{
+	float: left;
+	margin-right: 20px;
+}
+
+#LogonExistingUsersTitle,
+#LogonExistingUsersControls,
+#LogonNewUsersTitle,
+#LogonNewUsersControls
+{
+	width: 165px;
+	padding: 10px;
+}
+
+.TextBox
+{
+	border: solid 1px #2166B1;
+	background-color: #EFEFEF;
+	height: 19px;
+	margin-bottom: 4px;
+	margin-right: 4px;
+}
+
+#LogonNewUsersControls h1,
+#LogonExistingUsersControls h1 
+{
+	font-size: 1em;
+	color: #676767;
+	padding-bottom: 2px;
+}
+
+#LogonExistingUsersTitle 
+{
+	border: solid 1px #1DC82A;
+	background-color: #D4FFD0;
+}
+
+#LogonExistingUsersControls,
+#LogonNewUsersControls
+{
+	border: solid 1px #C5C5C5;
+	border-top: solid 0px #000;
+	background-color: #FAFAFA;
+}
+
+#LogonNewUsersTitleSmall,
+#LogonExistingUsersTitleSmall 
+{
+	font-size: 1.1em;
+}
+
+#LogonNewUsersTitleLarge,
+#LogonExistingUsersTitleLarge
+{
+	font-size: 2.2em;
+	font-weight: bold;
+	color: #62BE59;
+}
+
+#LogonExistingUsersTitleLarge
+{
+	color: #62BE59;
+}
+
+#LogonNewUsersTitleLarge
+{
+	color: #6285D1;
+}
+
+#LogonNewUsersTitle 
+{
+	border: solid 1px #2166B1;
+	background-color: #D0DEFD;
+}
+
+.LogonControlsButtonContainer
+{
+	text-align: right;
+	margin-top: 10px;
+}
+
+.LogonControlsTextBoxesContainer 
+{
+	height: 115px;
+}
+
+#LogonHelp 
+{
+	clear: both;
+}
+
+.ErrorPanel 
+{
+	margin-bottom: 20px;
+}
+
+.ErrorLabel 
+{
+	color: Red;
+}
+
+.BrowserHeaderNoThumbnail,
+.GenericFormHeader,
+.BrowserMiniHeader,
+.BrowserHeader 
+{
+	border: solid 1px #2166B1;
+}
+
+.BrowserThumbnail 
+{
+	vertical-align: top;
+}
+
+.BrowserThumbnailImage 
+{
+	border: solid 1px #2266AF;
+}
+
+.GenericFormBody,
+.BrowserNano,
+.BrowserNanoRow,
+.BrowserRow,
+.BrowserRowAlternating
+{
+	border: solid 1px #C5C5C5;
+	border-top: 0px;
+}
+
+.GenericFormBody,
+.BrowserNanoRow,
+.BrowserRow,
+.BrowserRowAlternating
+{
+	padding: 9px;
+}
+
+.BrowserRowAlternating 
+{
+	background-color: #EDEDED;
+}
+
+.BrowserHeaderNoThumbnail,
+.BrowserMiniHeader,
+.BrowserHeader,
+.BrowserDetailsSummary 
+{
+	font-size: 1.2em;
+	color: #2166B1;
+}
+
+.BrowserDetailsDescription p
+{
+	margin: 0px;
+	padding: 0px;
+	margin-top: 4px;
+}
+
+.BrowserHeaderNoThumbnail,
+.BrowserMiniHeader,
+.BrowserHeader 
+{
+	height: 19px;
+	background-image: url('../Images/Static/Layout/BrowserHeaderBackground.gif');
+}
+
+.BrowserHeader,
+.BrowserHeaderNoThumbnail
+{
+	padding-right: 9px;
+}
+
+.BrowserHeaderNoThumbnail
+{
+	padding-left: 9px;
+}
+
+.BrowserHeader
+{
+	padding-left: 70px;
+}
+
+.BrowserMiniHeader 
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.BrowserDetails 
+{
+	padding-left: 9px;
+	width: 100%;
+	vertical-align: top;
+}
+
+.BrowserDetailsSeparator 
+{
+	height: 4px;
+}
+
+.CategoryHeaderTitle,
+.CategoryRowTitle 
+{
+	width: 50%;
+}
+
+.CategoryHeaderListingCount,
+.CategoryRowListingCount 
+{
+	width: 25%;
+}
+
+.CategoryHeaderLatestListing,
+.CategoryRowLatestListing 
+{
+	width: 25%;
+}
+
+#WelcomeColumnLeft
+{
+	width: 66%;
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+#WelcomeColumnRight
+{
+	width: 33%;
+	padding-left: 10px;
+	vertical-align: top;
+}
+
+#WelcomeTips 
+{
+	clear: both;
+	margin-top: 10px;
+}
+
+.ListingsMiniRowTitle 
+{
+	font-size: 1em;
+	white-space: nowrap;
+}
+
+.ListingsMiniRowPrice 
+{
+	font-size: 1em;
+	text-align: right;
+}
+
+.ListingsMiniRowDetails 
+{
+	font-size: 0.9em;
+	text-align: justify;
+	width: 100%;
+}
+
+.ColouredPriceFixed 
+{
+	color: #167DED;
+}
+
+.ColouredPriceVariable 
+{
+	color: #00B51E;
+}
+
+.ColouredPriceFree 
+{
+	color: #D82121;
+}
+
+.CategoryNanoRowTitle 
+{
+	font-size: 0.9em;
+}
+
+.CategoryRowTitle a,
+.CategoryNanoRowTitle a,
+.ListingsMiniRowTitle a
+{
+	color: #2166B1;
+	text-decoration: none;
+}
+
+.CategoryRowTitle a:hover,
+.CategoryNanoRowTitle a:hover,
+.ListingsMiniRowTitle a:hover
+{
+	text-decoration: underline;
+}
+
+.CategoryNanoRowListingCountWithZeros 
+{
+	color: #4B4B4B;
+	text-align: right;
+	font-size: 0.7em;
+}
+
+.BrowserNano 
+{
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+
+.BrowserNanoRow 
+{
+	padding: 7px;
+	border-bottom-width: 0px;
+}
+
+.BrowserContinuedLink
+{
+	margin-top: 7px;
+	font-size: 1em;
+}
+
+.GenericFormHeader,
+.GenericFormBody 
+{
+	padding: 5px;
+	padding-left: 7px;
+}
+
+.GenericFormHeader 
+{
+	background-image: url('../Images/Static/Layout/GenericFormBackground.gif');
+	font-size: 1.2em;
+	color: #2166B1;
+}
+
+.GenericFormBody 
+{
+	background-color: #FAFAFA;
+}
+
+.GenericFormBody ul
+{
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 18px;
+}
+
+.GenericFormBody h3 
+{
+	margin-top: 4px;
+	padding-top: 0px;
+}
+
+.GenericFormSeparator 
+{
+	height: 20px;
+	font-size: 15px;
+}
+
+.ListingHeaderTitle,
+.ListingRowTitle
+{
+	width: 50%;
+}
+
+.ListingHeaderPrice,
+.ListingRowPrice
+{
+	width: 15%;
+	text-align: right;
+}
+
+.ListingHeaderDate,
+.ListingRowDate
+{
+	width: 22%;
+	text-align: right;
+}
+
+.ListingHeaderId,
+.ListingRowId
+{
+	width: 13%;
+	text-align: right;
+}
+
+.ListingRowId 
+{
+	color: #676767;
+	font-size: 0.9em;
+}
+
+.GenericFormSegment
+{
+	padding-top: 6px;
+	padding-bottom: 5px;
+	padding-left: 2px;
+}
+
+.GenericFormSegment h1 
+{
+	font-size: 1em;
+	color: #676767;
+	padding-bottom: 2px;
+}
+
+.GenericFormSegment p 
+{
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 2px;
+}
+
+.GenericFormTextBox
+{
+	border: solid 1px #4E75CA;
+	background-color: #EFEFEF;
+	padding: 1px;
+}
+
+.UploadedImage,
+.ListingCategoryItem
+{
+	padding-top: 10px;
+	text-align: center;
+}
+
+.UploadedImage p,
+.ListingCategoryItem p
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.ListingDetailsImage
+{
+	margin-right: 10px;
+	float: left;
+	clear: both;
+}
+
+.ListingDetailsImageThumbnails 
+{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+.ListingDetailsEnlargeThumbnail 
+{
+	padding: 0px;
+}
+
+.ListingImageProgress
+{
+	margin: 5px;
+	padding: 7px;
+	border: solid 1px #2166B1;
+	background-color: #F1F6FF;
+	clear: both;
+	float: left;
+	position: absolute;
+}
+
+#ListingDetailsExtraInfo
+{
+	clear: both;
+	margin-top: 10px;
+}
+
+#ListingDetailsContact 
+{
+	clear: both;
+	margin-top: 20px;
+}
+
+#ListingDetailsInfo p
+{
+	font-size: 1.1em;
+}
+
+#ListingDetailsInfo h2 
+{
+	font-size: 1.5em;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 2px;
+}
+
+.ListingDetailsPriceType 
+{
+	font-size: .7em;
+}
+
+.ListingDetailsExtraInfoSegment h2,
+.ListingDetailsExtraInfoSegment h3
+{
+	font-size: 1.1em;
+	margin: 0px;
+	padding: 0px;
+	color: #7A7A7A;
+}
+
+.ListingDetailsExtraInfoSegment h3
+{
+	font-size: 1.2em;
+	margin-top: 1px;
+	margin-bottom: 7px;
+}
+
+#ListingDetailsSellerInfo h2 
+{
+	padding: 0px;
+	margin: 0px;
+	margin-top: 10px;
+	margin-bottom: 4px;
+}
+
+#ListingDetailsSellerInfo h3 
+{
+	color: #00B51E;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 4px;
+}
+
+#ListingDetailsSellerInfo th, 
+#ListingDetailsSellerInfo td 
+{
+	font-size: 1em;
+	padding-top: 1px;
+	padding-right: 6px;
+}
+
+#ListingDetailsSellerInfo th 
+{
+	text-align: left;
+}
+
+#ListingDetailsSellerInfo td
+{
+	color: #2166B1;
+}
+
+.UserHeaderName,
+.UserRowFullName
+{
+	width: 30%;
+}
+
+.UserHeaderEmail,
+.UserRowEmailAddress
+{
+	width: 50%;
+}
+
+.UserHeaderLastActive,
+.UserRowLastActive
+{
+	width: 20%;
+	text-align: right;
+}
+
+.AdvertDefaultState
+{
+	visibility: hidden;
+	position: absolute;
+    background: white;
+}
+
+.AdvertDebug 
+{
+	float: left;
+	position: absolute;
+	z-index: 200;
+	background-color: white;
+	padding: 3px;
+	border: solid 1px grey;
+	visibility: hidden;
+}
+
+#LayoutTopAdvert 
+{
+	width: 728px;
+	height: 90px;
+	text-align: left;
+	clear: both;
+}
+
+#LayoutBottomAdvert 
+{
+	width: 728px;
+	height: 90px;
+	text-align: left;
+}
+
+#LayoutRightAdvert 
+{
+	width: 120px;
+	height: 600px;
+}
+
+.WarningText 
+{
+	color: Red;
+}
+
+.ImageUploadReminder,
+.UpgradeRequestPanel,
+.UserVerifyPanel,
+.UserVerifyResentPanel 
+{
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.ImageUploadReminder,
+.UserVerifyPanel 
+{
+	border: solid 1px #FF5F5F;
+	background-color: #FFEFEF;
+}
+
+.UpgradeRequestPanel,
+.UserVerifyResentPanel 
+{
+	border: solid 1px #34C900;
+	background-color: #F2FFEF;
+}
+
+.ImageUploadReminder h3,
+.UserVerifyPanel h3 
+{
+	color: #FB2B2B;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.ImageUploadReminder p,
+.UpgradeRequestPanel p,
+.UserVerifyPanel p,
+.UserVerifyResentPanel p
+{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.UpgradeRequestPanel p,
+.UserVerifyResentPanel p 
+{
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.SiteMapPath 
+{
+	margin-bottom: 10px;
+}
+
+.TraderLayer 
+{
+	float: left;
+	margin-right: 5px;
+	text-align: center;
+}
+
+.ListingTraderTag 
+{
+	float: left;
+	position: absolute;
+	margin-left: -9px;
+	margin-top: -9px;
+}
+
+.SearchCategoryDropDown 
+{
+	margin-right: 3px;
+	margin-bottom: 4px;
+}
+
+.SearchDialog 
+{
+	margin-bottom: 5px;
+}
+
+.SearchDialog th
+{
+	padding-right: 10px;
+	padding-left: 0px;
+}
+
+.HelpMenu li
+{
+	color: Gray;
+	margin-bottom: 10px;
+}
+
+.AdminStatisticsTable td 
+{
+	text-align: center;
+}
+
+.ListingDetailsTraderInfo p
+{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.ListingDetailsTraderInfo img,
+.TraderListRow img 
+{
+	padding-top: 3px;
+	padding-right: 7px;
+}
+
+.ListingDetailsTraderInfo h3
+{
+	margin-bottom: 3px;
+}
+
+#ListingSummary
+{
+	padding: 7px;
+	border: solid 1px #2166B1;
+	background-color: #F1F6FF;
+	clear: both;
+}
+
+#ListingSummary td,
+#ListingSummary th
+{
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 3px;
+	vertical-align: top;
+}
+
+#ListingSummary th 
+{
+	padding-right: 9px;
+	white-space: nowrap;
+}
+
+#ListingSummary td
+{
+	padding-right: 18px;
+}
+
+.NoTextWrap 
+{
+	white-space: nowrap;
+}
+
+.ListingDetailsThumbnail 
+{
+	border: solid 1px #2166B1;
+	padding: 0px;
+	margin-right: 8px;
+}
+
+.ListingDetailsOptions 
+{
+	margin-top: 8px;
+	margin-bottom: 4px;
+}
+
+.UploadButton 
+{
+	height: 22px;
+}
+
+.TraderGridViewName
+{
+	font-weight: bold;
+	color: #2166B1;
+}
+
+.HelpControl img
+{
+	border: solid 1px #7DABDD;
+}
+
+.ListingHitCounter 
+{
+	clear: both;
+	color: #2166B1;
+	margin-top: 15px;
+	border: solid 1px #2166B1;
+	background-color: #F1F6FF;
+	padding: 5px;
+	font-size: 1.2em;
+	font-weight: bold;
+	float: left;
+}
+
+.HomeGenericNotice,
+.PayPalDonationHome,
+.PayPalDonationListingBrowser,
+.PayPalDonationListingModify
+{
+	text-align: center;
+}
+
+.HomeGenericNotice,
+.PayPalDonationHome,
+.PayPalDonationListingBrowser
+{
+	padding: 3px 7px 3px 7px;
+	border: solid 1px #2166B1;
+	background-color: #F1F6FF;
+	clear: both;
+}
+
+.HomeGenericNotice,
+.PayPalDonationHome
+{
+	margin: 3px 3px 15px 3px;
+}
+
+.PayPalDonationListingBrowser
+{
+    margin-bottom: 11px;
+}
+
+.HomeGenericNotice p,
+.PayPalDonationHome p,
+.PayPalDonationListingBrowser p,
+.PayPalDonationListingModify p
+{
+    margin: 0px;
+    padding: 4px 0px 4px 0px;
+	color: #2166B1;
+}
+
+.ReportAbuse
+{
+    margin-top: 10px;
+	padding: 3px 7px 3px 7px;
+	border: solid 1px #2166B1;
+	background-color: #F1F6FF;
+	color: #2166B1;
+	clear: both;
+	float: left;
+	width: 427px;
+}
+
+.ReportAbuse p
+{
+    margin: 0px;
+    padding: 4px 0px 4px 0px;
+}
