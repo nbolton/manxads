@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Rensoft.ManxAds.Test.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=.\sqlexpress2008;Initial Catalog=ManxAdsWebsite;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="WebsiteBasePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\Nick\Documents\Projects (Rensoft)\VS2008\Rensoft.ManxAds\Rensoft.ManxAds.WebSite</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

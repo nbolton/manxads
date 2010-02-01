@@ -1,0 +1,732 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46996987-84D2-493A-A1D7-6910C56169BE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rensoft.ManxAds.WebSite</RootNamespace>
+    <AssemblyName>Rensoft.ManxAds.WebSite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorOptions.ascx.cs">
+      <DependentUpon>AdministratorOptions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministratorOptions.ascx.designer.cs">
+      <DependentUpon>AdministratorOptions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvertBrowser.aspx.cs">
+      <DependentUpon>AdvertBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvertBrowser.aspx.designer.cs">
+      <DependentUpon>AdvertBrowser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Advertise.aspx.cs">
+      <DependentUpon>Advertise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Advertise.aspx.designer.cs">
+      <DependentUpon>Advertise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvertiserOptions.ascx.cs">
+      <DependentUpon>AdvertiserOptions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvertiserOptions.ascx.designer.cs">
+      <DependentUpon>AdvertiserOptions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvertModify.aspx.cs">
+      <DependentUpon>AdvertModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvertModify.aspx.designer.cs">
+      <DependentUpon>AdvertModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvertRedirect.aspx.cs">
+      <DependentUpon>AdvertRedirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvertRedirect.aspx.designer.cs">
+      <DependentUpon>AdvertRedirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvertRotator.ascx.cs">
+      <DependentUpon>AdvertRotator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvertRotator.ascx.designer.cs">
+      <DependentUpon>AdvertRotator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BreadcrumbTrail.ascx.designer.cs">
+      <DependentUpon>BreadcrumbTrail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryModify.aspx.designer.cs">
+      <DependentUpon>CategoryModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryNanoRow.ascx.designer.cs">
+      <DependentUpon>CategoryNanoRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryRow.ascx.designer.cs">
+      <DependentUpon>CategoryRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CharityList.aspx.designer.cs">
+      <DependentUpon>CharityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactForm.ascx.designer.cs">
+      <DependentUpon>ContactForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactFormInline.aspx.designer.cs">
+      <DependentUpon>ContactFormInline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactFormPopup.aspx.designer.cs">
+      <DependentUpon>ContactFormPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonateControl.ascx.cs">
+      <DependentUpon>DonateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonateControl.ascx.designer.cs">
+      <DependentUpon>DonateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorReporting.cs" />
+    <Compile Include="FileNotFound.aspx.designer.cs">
+      <DependentUpon>FileNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlashAdvert.aspx.designer.cs">
+      <DependentUpon>FlashAdvert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlashAdvertInline.ascx.designer.cs">
+      <DependentUpon>FlashAdvertInline.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GenericError.aspx.designer.cs">
+      <DependentUpon>GenericError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Listings.ascx.designer.cs">
+      <DependentUpon>Listings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Search.ascx.designer.cs">
+      <DependentUpon>Search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="InvalidRequest.aspx.designer.cs">
+      <DependentUpon>InvalidRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListingBrowser.ascx.designer.cs">
+      <DependentUpon>ListingBrowser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ListingBrowser.aspx.designer.cs">
+      <DependentUpon>ListingBrowser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListingDetails.ascx.designer.cs">
+      <DependentUpon>ListingDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ListingDetailsInline.aspx.designer.cs">
+      <DependentUpon>ListingDetailsInline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListingDetailsPopup.aspx.designer.cs">
+      <DependentUpon>ListingDetailsPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListingMiniRow.ascx.designer.cs">
+      <DependentUpon>ListingMiniRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ListingModify.aspx.designer.cs">
+      <DependentUpon>ListingModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListingModifySteps.ascx.designer.cs">
+      <DependentUpon>ListingModifySteps.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ListingRow.ascx.designer.cs">
+      <DependentUpon>ListingRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Listings.aspx.designer.cs">
+      <DependentUpon>Listings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logon.aspx.designer.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master.master.designer.cs">
+      <DependentUpon>Master.master</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication.cs" />
+    <Compile Include="BreadcrumbNode.cs" />
+    <Compile Include="BrowserRow.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPageProperties.cs" />
+    <Compile Include="DefaultButton.cs" />
+    <Compile Include="HelpFileInfo.cs" />
+    <Compile Include="IPagingManager.cs" />
+    <Compile Include="PageMode.cs" />
+    <Compile Include="PagingAssistantBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagingManager.cs" />
+    <Compile Include="QueryAccessors.cs" />
+    <Compile Include="RandomNotice.ascx.cs">
+      <DependentUpon>RandomNotice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RandomNotice.ascx.designer.cs">
+      <DependentUpon>RandomNotice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="RobotFlag.cs" />
+    <Compile Include="StandardControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardMaster.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BreadcrumbTrail.ascx.cs">
+      <DependentUpon>BreadcrumbTrail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryModify.aspx.cs">
+      <DependentUpon>CategoryModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryNanoRow.ascx.cs">
+      <DependentUpon>CategoryNanoRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryRow.ascx.cs">
+      <DependentUpon>CategoryRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CharityList.aspx.cs">
+      <DependentUpon>CharityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactForm.ascx.cs">
+      <DependentUpon>ContactForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactFormInline.aspx.cs">
+      <DependentUpon>ContactFormInline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactFormPopup.aspx.cs">
+      <DependentUpon>ContactFormPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileNotFound.aspx.cs">
+      <DependentUpon>FileNotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlashAdvert.aspx.cs">
+      <DependentUpon>FlashAdvert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlashAdvertInline.ascx.cs">
+      <DependentUpon>FlashAdvertInline.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenericError.aspx.cs">
+      <DependentUpon>GenericError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\Listings.ascx.cs">
+      <DependentUpon>Listings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\Search.ascx.cs">
+      <DependentUpon>Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvalidRequest.aspx.cs">
+      <DependentUpon>InvalidRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingBrowser.ascx.cs">
+      <DependentUpon>ListingBrowser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingBrowser.aspx.cs">
+      <DependentUpon>ListingBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingDetails.ascx.cs">
+      <DependentUpon>ListingDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingDetailsInline.aspx.cs">
+      <DependentUpon>ListingDetailsInline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingDetailsPopup.aspx.cs">
+      <DependentUpon>ListingDetailsPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingMiniRow.ascx.cs">
+      <DependentUpon>ListingMiniRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingModify.aspx.cs">
+      <DependentUpon>ListingModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingModifySteps.ascx.cs">
+      <DependentUpon>ListingModifySteps.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingRow.ascx.cs">
+      <DependentUpon>ListingRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listings.aspx.cs">
+      <DependentUpon>Listings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logon.aspx.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.master.cs">
+      <DependentUpon>Master.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagingAssistant.ascx.cs">
+      <DependentUpon>PagingAssistant.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagingAssistant.ascx.designer.cs">
+      <DependentUpon>PagingAssistant.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PriceColoursTip.ascx.cs">
+      <DependentUpon>PriceColoursTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PriceColoursTip.ascx.designer.cs">
+      <DependentUpon>PriceColoursTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Privacy.aspx.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Privacy.aspx.designer.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileEditor.aspx.cs">
+      <DependentUpon>ProfileEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileEditor.aspx.designer.cs">
+      <DependentUpon>ProfileEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PromoEmails.aspx.cs">
+      <DependentUpon>PromoEmails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PromoEmails.aspx.designer.cs">
+      <DependentUpon>PromoEmails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecoverPassword.aspx.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecoverPassword.aspx.designer.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchDialog.ascx.cs">
+      <DependentUpon>SearchDialog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchDialog.ascx.designer.cs">
+      <DependentUpon>SearchDialog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchInline.ascx.cs">
+      <DependentUpon>SearchInline.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchInline.ascx.designer.cs">
+      <DependentUpon>SearchInline.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SellerOptions.ascx.cs">
+      <DependentUpon>SellerOptions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellerOptions.ascx.designer.cs">
+      <DependentUpon>SellerOptions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsEditor.aspx.cs">
+      <DependentUpon>SettingsEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SettingsEditor.aspx.designer.cs">
+      <DependentUpon>SettingsEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubHeader.ascx.cs">
+      <DependentUpon>SubHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubHeader.ascx.designer.cs">
+      <DependentUpon>SubHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessDialog.ascx.cs">
+      <DependentUpon>SuccessDialog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuccessDialog.ascx.designer.cs">
+      <DependentUpon>SuccessDialog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Terms.aspx.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terms.aspx.designer.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraderList.aspx.cs">
+      <DependentUpon>TraderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraderList.aspx.designer.cs">
+      <DependentUpon>TraderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraderListingsTip.ascx.cs">
+      <DependentUpon>TraderListingsTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraderListingsTip.ascx.designer.cs">
+      <DependentUpon>TraderListingsTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TraderOptions.ascx.cs">
+      <DependentUpon>TraderOptions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraderOptions.ascx.designer.cs">
+      <DependentUpon>TraderOptions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserBrowser.aspx.cs">
+      <DependentUpon>UserBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserBrowser.aspx.designer.cs">
+      <DependentUpon>UserBrowser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModify.aspx.cs">
+      <DependentUpon>UserModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModify.aspx.designer.cs">
+      <DependentUpon>UserModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUpgrade.aspx.cs">
+      <DependentUpon>UserUpgrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUpgrade.aspx.designer.cs">
+      <DependentUpon>UserUpgrade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserVerify.aspx.cs">
+      <DependentUpon>UserVerify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserVerify.aspx.designer.cs">
+      <DependentUpon>UserVerify.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Help\HelpFile.xsd" />
+    <None Include="Help\HelpFile.xsx">
+      <DependentUpon>HelpFile.xsd</DependentUpon>
+    </None>
+    <Content Include="Master.master" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Live.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="AdministratorOptions.ascx" />
+    <Content Include="AdvertBrowser.aspx" />
+    <Content Include="Advertise.aspx" />
+    <Content Include="AdvertiserOptions.ascx" />
+    <Content Include="AdvertModify.aspx" />
+    <Content Include="AdvertRedirect.aspx" />
+    <Content Include="AdvertRotator.ascx" />
+    <Content Include="BreadcrumbTrail.ascx" />
+    <Content Include="Categories.aspx" />
+    <Content Include="CategoryModify.aspx" />
+    <Content Include="CategoryNanoRow.ascx" />
+    <Content Include="CategoryRow.ascx" />
+    <Content Include="CharityList.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="ContactForm.ascx" />
+    <Content Include="ContactFormInline.aspx" />
+    <Content Include="ContactFormPopup.aspx" />
+    <Content Include="google-alt-skyscraper.html" />
+    <Content Include="google-alt-leaderboard.html" />
+    <Content Include="Default.aspx" />
+    <Content Include="DonateControl.ascx" />
+    <Content Include="Email\BuyButton.gif" />
+    <Content Include="Email\BuySellTextA.gif" />
+    <Content Include="Email\BuySellTextB.gif" />
+    <Content Include="Email\ChristmasLogo.gif" />
+    <Content Include="Email\ContactTemplate.html" />
+    <Content Include="Email\ItemA.gif" />
+    <Content Include="Email\ItemB.gif" />
+    <Content Include="Email\ItemC.gif" />
+    <Content Include="Email\ItemD.gif" />
+    <Content Include="Email\Logo.gif" />
+    <Content Include="Email\ManxAds-December-2006.htm" />
+    <Content Include="Email\SellButton.gif" />
+    <Content Include="favicon.ico" />
+    <Content Include="FileNotFound.aspx" />
+    <Content Include="FlashAdvert.aspx" />
+    <Content Include="FlashAdvertInline.ascx" />
+    <Content Include="GenericError.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="google-alt.html" />
+    <Content Include="Help.aspx" />
+    <Content Include="Help\ListingPolicy.xml" />
+    <Content Include="Help\Listings.ascx" />
+    <Content Include="Help\Listings.xml" />
+    <Content Include="Help\Search.ascx" />
+    <Content Include="Help\Search.xml" />
+    <Content Include="Help\Searching.xml" />
+    <Content Include="Help\Trader.xml" />
+    <Content Include="Images\Dynamic\Listing\Full-1615-2186.jpg" />
+    <Content Include="Images\Dynamic\Listing\Full-1615-2187.jpg" />
+    <Content Include="Images\Dynamic\Listing\Full-1615-2188.jpg" />
+    <Content Include="Images\Dynamic\Listing\Full-1615-2189.jpg" />
+    <Content Include="Images\Dynamic\Listing\Full-1615-2190.jpg" />
+    <Content Include="Images\Dynamic\Listing\Small-1615-2186.jpg" />
+    <Content Include="Images\Dynamic\Listing\Small-1615-2187.jpg" />
+    <Content Include="Images\Dynamic\Listing\Small-1615-2188.jpg" />
+    <Content Include="Images\Dynamic\Listing\Small-1615-2189.jpg" />
+    <Content Include="Images\Dynamic\Listing\Small-1615-2190.jpg" />
+    <Content Include="Images\Dynamic\Listing\Thumb-1615-2186.gif" />
+    <Content Include="Images\Dynamic\Listing\Thumb-1615-2187.gif" />
+    <Content Include="Images\Dynamic\Listing\Thumb-1615-2188.gif" />
+    <Content Include="Images\Dynamic\Listing\Thumb-1615-2189.gif" />
+    <Content Include="Images\Dynamic\Listing\Thumb-1615-2190.gif" />
+    <Content Include="Images\Static\Help\Listing-Boosting.png" />
+    <Content Include="Images\Static\Help\Listing-Categories-A.png" />
+    <Content Include="Images\Static\Help\Listing-Categories-B.png" />
+    <Content Include="Images\Static\Help\Listing-Details.png" />
+    <Content Include="Images\Static\Help\Listing-Images-A.png" />
+    <Content Include="Images\Static\Help\Listing-Images-B.png" />
+    <Content Include="Images\Static\Help\Listing-Images-C.png" />
+    <Content Include="Images\Static\Help\Listing-Images-D.png" />
+    <Content Include="Images\Static\Help\Listing-Price-A.png" />
+    <Content Include="Images\Static\Help\Listing-Price-B.png" />
+    <Content Include="Images\Static\Layout\BrowserHeaderBackground.gif" />
+    <Content Include="Images\Static\Layout\BuyButton.gif" />
+    <Content Include="Images\Static\Layout\CancelButton.gif" />
+    <Content Include="Images\Static\Layout\CharityTraderTag.gif" />
+    <Content Include="Images\Static\Layout\ChristmasHolly.gif" />
+    <Content Include="Images\Static\Layout\ChristmasLogo.gif" />
+    <Content Include="Images\Static\Layout\ContinueButton.gif" />
+    <Content Include="Images\Static\Layout\CorporateTraderTag.gif" />
+    <Content Include="Images\Static\Layout\DeleteButton.gif" />
+    <Content Include="Images\Static\Layout\ErrorIcon.gif" />
+    <Content Include="Images\Static\Layout\FinishButton.gif" />
+    <Content Include="Images\Static\Layout\GenericFormBackground.gif" />
+    <Content Include="Images\Static\Layout\Loading.gif" />
+    <Content Include="Images\Static\Layout\Logo.gif" />
+    <Content Include="Images\Static\Layout\LogOnButton.gif" />
+    <Content Include="Images\Static\Layout\MyManxAdsButton.gif" />
+    <Content Include="Images\Static\Layout\NextButton.gif" />
+    <Content Include="Images\Static\Layout\PlaceholderLeaderboard.gif" />
+    <Content Include="Images\Static\Layout\PlaceholderSkyscraper.gif" />
+    <Content Include="Images\Static\Layout\PlaceholderSquareButton.gif" />
+    <Content Include="Images\Static\Layout\PlaceholderThumbnail.gif" />
+    <Content Include="Images\Static\Layout\PlaceholderThumbnailBlank.gif" />
+    <Content Include="Images\Static\Layout\PreviousButton.gif" />
+    <Content Include="Images\Static\Layout\RegisterButton.gif" />
+    <Content Include="Images\Static\Layout\SearchButton.gif" />
+    <Content Include="Images\Static\Layout\SellButton.gif" />
+    <Content Include="Images\Static\Layout\TraderLogoPlaceholder.png" />
+    <Content Include="InvalidRequest.aspx" />
+    <Content Include="ListingBrowser.ascx" />
+    <Content Include="ListingBrowser.aspx" />
+    <Content Include="ListingDetails.ascx" />
+    <Content Include="ListingDetailsInline.aspx" />
+    <Content Include="ListingDetailsPopup.aspx" />
+    <Content Include="ListingMiniRow.ascx" />
+    <Content Include="ListingModify.aspx" />
+    <Content Include="ListingModifySteps.ascx" />
+    <Content Include="ListingRow.ascx" />
+    <Content Include="Listings.aspx" />
+    <Content Include="Logon.aspx" />
+    <Content Include="PageDescriptions.xml" />
+    <Content Include="PagingAssistant.ascx" />
+    <Content Include="PriceColoursTip.ascx" />
+    <Content Include="Privacy.aspx" />
+    <Content Include="ProfileEditor.aspx" />
+    <Content Include="PromoEmails.aspx" />
+    <Content Include="RandomNotice.ascx" />
+    <Content Include="RecoverPassword.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="Scripts\AdvertRotator.js" />
+    <Content Include="Scripts\DefaultButton.js" />
+    <Content Include="Scripts\OpenWindow.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="SearchDialog.ascx" />
+    <Content Include="SearchInline.ascx" />
+    <Content Include="SellerOptions.ascx" />
+    <Content Include="SettingsEditor.aspx" />
+    <Content Include="Sitemap.xml" />
+    <Content Include="Styles\StyleSheet.css" />
+    <Content Include="SubHeader.ascx" />
+    <Content Include="SuccessDialog.ascx" />
+    <Content Include="Terms.aspx" />
+    <Content Include="TraderList.aspx" />
+    <Content Include="TraderListingsTip.ascx" />
+    <Content Include="TraderOptions.ascx" />
+    <Content Include="UserBrowser.aspx" />
+    <Content Include="UserHome.aspx" />
+    <Content Include="UserModify.aspx" />
+    <Content Include="UserUpgrade.aspx" />
+    <Content Include="UserVerify.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Rensoft.ErrorReporting\Rensoft.ErrorReporting\Rensoft.ErrorReporting.csproj">
+      <Project>{4DC206E8-BDF6-4CF6-B626-36DDE18A9303}</Project>
+      <Name>Rensoft.ErrorReporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManxAds\ManxAds.csproj">
+      <Project>{8CFCBAF1-FAD8-478B-82FB-CD7715D96B4B}</Project>
+      <Name>ManxAds</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rensoft.ManxAds\Rensoft.ManxAds.csproj">
+      <Project>{5A71E842-D3BB-4FF4-B5AF-D9E24EFCE882}</Project>
+      <Name>Rensoft.ManxAds</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Dynamic\Advert\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6774</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

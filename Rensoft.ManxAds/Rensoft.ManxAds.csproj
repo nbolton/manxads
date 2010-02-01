@@ -1,0 +1,116 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A71E842-D3BB-4FF4-B5AF-D9E24EFCE882}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rensoft.ManxAds</RootNamespace>
+    <AssemblyName>Rensoft.ManxAds</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\ListingAbuseReportGroup.cs" />
+    <Compile Include="IScheduledTask.cs" />
+    <Compile Include="Data\ListingAbuseReport.cs" />
+    <Compile Include="ListingAbuseReportUtility.cs" />
+    <Compile Include="ListingAbuseReportNotifier.cs" />
+    <Compile Include="ListingAutoDeleteTask.cs" />
+    <Compile Include="ListingChecker.cs" />
+    <Compile Include="ListingDeleteNotify.cs" />
+    <Compile Include="ListingExpiryNotify.cs" />
+    <Compile Include="ListingNotifiy.cs" />
+    <Compile Include="DebugEventArgs.cs" />
+    <Compile Include="ListingNotifySet.cs" />
+    <Compile Include="MaEventLogHelper.cs" />
+    <Compile Include="NotifierTask.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduledPayload.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Rensoft.ErrorReporting\Rensoft.ErrorReporting\Rensoft.ErrorReporting.csproj">
+      <Project>{4DC206E8-BDF6-4CF6-B626-36DDE18A9303}</Project>
+      <Name>Rensoft.ErrorReporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManxAds\ManxAds.csproj">
+      <Project>{8CFCBAF1-FAD8-478B-82FB-CD7715D96B4B}</Project>
+      <Name>ManxAds</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListingExpiryTemplate.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListingDeleteTemplate.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ListingAbuseForReporter.htm" />
+    <Content Include="Resources\ListingAbuseForSeller.htm" />
+    <Content Include="Resources\ListingAbuseReportEmail.htm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HelpFile xmlns="http://schemas.manxads.com/HelpFile">
+  <Title>Listing Policy</Title>
+  <Description>
+    Help keep ManxAds tidy, find out what violates our listing policy.
+  </Description>
+  <Body>
+    <Section Title="About our Policy">
+      <Paragraph>
+        ManxAds expressly prohibits users that violate the usability of the site. These include,
+        but are not limited to: Category Spamming, and Scamers. Any user caught abusing ManxAds
+        will be immediately banned from using the website. Each page has a link so that other 
+        users can report abuse directly to ManxAds.
+      </Paragraph>
+    </Section>
+    <Section Title="Category Spamming">
+      <Paragraph>
+        What is Category Spamming? Simply, when a user adds a listing to a category that is not
+        relevant, this is generally considered category spamming. Usually category spammers will
+        add their listing to several categories in order to recieve maximum exposure, but this comes
+        at the cost to other uses, since it's reduces the quality of categories on ManxAds.
+      </Paragraph>
+    </Section>
+    <Section Title="Scammers">
+      <Paragraph>
+        What are Scammers? A scammer is a person who posts a listing with the intent to recieve money
+        off a user, with no intention to provide goods or services in return (and vice versa). This 
+        behaviour is highly illegal, and any scams will always be immediately reported to the Isle 
+        of Man Police Department by ManxAds, with no exceptions!
+      </Paragraph>
+    </Section>
+  </Body>
+</HelpFile>
