@@ -65,8 +65,25 @@ public partial class Master : StandardMaster
         return randomList;
     }
 
+    protected bool OfflineForMaintenance
+    {
+        get
+        {
+            return (Request.QueryString["DisableOfflineForMaintenance"] == null)
+                && Convert.ToBoolean(ConfigurationManager.AppSettings["OfflineForMaintenance"]);
+        }
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        // if offline, hide the "whole page" div and don't do any more load stuff
+        if (OfflineForMaintenance)
+        {
+            MaintenanceView.Visible = true;
+            LayoutWholePage.Visible = false;
+            return;
+        }
+
         // seasonal control changes
         if (DateTime.Now.Month == 12) {
             LayoutHeaderLogoImage.ImageUrl = "~/Images/Static/Layout/ChristmasLogo.gif";

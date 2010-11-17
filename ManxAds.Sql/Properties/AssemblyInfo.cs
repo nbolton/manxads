@@ -6,11 +6,11 @@ using System.Data.Sql;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ManxAdsPimpmaster")]
+[assembly: AssemblyTitle("ManxAds SQL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Rensoft")]
-[assembly: AssemblyProduct("ManxAdsPimpmaster")]
+[assembly: AssemblyProduct("ManxAds SQL")]
 [assembly: AssemblyCopyright("Copyright © Rensoft 2006")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

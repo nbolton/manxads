@@ -20,74 +20,82 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <input id="AdvertDebug" runat="Server" type="hidden" />
-        <div id="LayoutContainer">
-        
-            <div id="LayoutHeader">
-                <div id="LayoutHeaderLogo">
-                    <asp:HyperLink ID="LayoutHeaderLogoHyperLink" runat="server" NavigateUrl="~/">
-                        <asp:Image ID="LayoutHeaderLogoImage" runat="server" ImageUrl="~/Images/Static/Layout/Logo.gif" AlternateText="ManxAds" />
-                    </asp:HyperLink>
-                </div>
-                <div id="LayoutHeaderSearch">
-                    <uc3:SearchInline ID="SearchInline1" runat="server" />
-                </div>
-            </div>
+        <div id="MaintenanceView" runat="Server" Visible="False">
+            <h1><span style="color: #2166B2">Manx</span><span style="color: #333333">Ads</span></h1>
+            <p>We've just taken the site offline while we do some maintenance.</p>
+            <p>Sorry for any inconvenience! ManxAds should be back online soon.</p>
+            <p>Thanks,<br />The ManxAds team</p>
+        </div>
+        <div id="LayoutWholePage" runat="Server">
+            <input id="AdvertDebug" runat="Server" type="hidden" />
+            <div id="LayoutContainer">
             
-            <div id="LayoutSubHeader">
-                <uc1:SubHeader ID="SubHeader" runat="server" />
-            </div>
-            
-            <div id="LayoutTopAdvert">
-                <uc2:AdvertRotator ID="TopAdvertRotator" runat="server" />
-            </div>
-			
-            <asp:Panel ID="temppanel3" runat="server" Visible="True">
-				<div style="margin-top: 5px">
-				<script type="text/javascript"><!--
-				google_ad_client = "pub-3305986762497110";
-				/* ManxAds link block */
-				google_ad_slot = "1539753621";
-				google_ad_width = 728;
-				google_ad_height = 15;
-				//-->
-				</script>
-				<script type="text/javascript"
-				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-				</script>
-				</div>
-			</asp:Panel>
-            
-            <div id="LayoutMiddle">
-                
-                <div id="LayoutLeftAdvert">
-					<div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator1" runat="server" /></div>
-                    <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator2" runat="server" /></div>
-                    <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator3" runat="server" /></div>
-                    <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator4" runat="server" /></div>
-                    <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator5" runat="server" /></div>
-                    <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator6" runat="server" /></div>
+                <div id="LayoutHeader">
+                    <div id="LayoutHeaderLogo">
+                        <asp:HyperLink ID="LayoutHeaderLogoHyperLink" runat="server" NavigateUrl="~/">
+                            <asp:Image ID="LayoutHeaderLogoImage" runat="server" ImageUrl="~/Images/Static/Layout/Logo.gif" AlternateText="ManxAds" />
+                        </asp:HyperLink>
+                    </div>
+                    <div id="LayoutHeaderSearch">
+                        <uc3:SearchInline ID="SearchInline1" runat="server" />
+                    </div>
                 </div>
                 
-                <div id="LayoutContent">
-                    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />
+                <div id="LayoutSubHeader">
+                    <uc1:SubHeader ID="SubHeader" runat="server" />
                 </div>
                 
-                <div id="LayoutRightAdvert">
-                    <uc2:AdvertRotator ID="RightAdvertRotator" runat="server" />
+                <div id="LayoutTopAdvert">
+                    <uc2:AdvertRotator ID="TopAdvertRotator" runat="server" />
+                </div>
+    			
+                <asp:Panel ID="temppanel3" runat="server" Visible="True">
+				    <div style="margin-top: 5px">
+				    <script type="text/javascript"><!--
+				    google_ad_client = "pub-3305986762497110";
+				    /* ManxAds link block */
+				    google_ad_slot = "1539753621";
+				    google_ad_width = 728;
+				    google_ad_height = 15;
+				    //-->
+				    </script>
+				    <script type="text/javascript"
+				    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				    </script>
+				    </div>
+			    </asp:Panel>
+                
+                <div id="LayoutMiddle">
+                    
+                    <div id="LayoutLeftAdvert">
+					    <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator1" runat="server" /></div>
+                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator2" runat="server" /></div>
+                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator3" runat="server" /></div>
+                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator4" runat="server" /></div>
+                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator5" runat="server" /></div>
+                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator6" runat="server" /></div>
+                    </div>
+                    
+                    <div id="LayoutContent">
+                        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />
+                    </div>
+                    
+                    <div id="LayoutRightAdvert">
+                        <uc2:AdvertRotator ID="RightAdvertRotator" runat="server" />
+                    </div>
+                    
+                </div>
+                
+                <div id="LayoutBottomAdvert">
+                    <uc2:AdvertRotator ID="BottomAdvertRotator" runat="server" />
+                </div>
+                
+                <div id="LayoutFooter">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Terms.aspx" Target="_blank">Terms &amp; Conditions</asp:HyperLink> | <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Privacy.aspx" target="_blank">Privacy Policy</asp:HyperLink> | <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Contact.aspx" Target="_blank">Contact ManxAds</asp:HyperLink><br />
+                    Copyright &copy; 2006-2007 ManxAds. All rights reserved.
                 </div>
                 
             </div>
-            
-            <div id="LayoutBottomAdvert">
-                <uc2:AdvertRotator ID="BottomAdvertRotator" runat="server" />
-            </div>
-            
-            <div id="LayoutFooter">
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Terms.aspx" Target="_blank">Terms &amp; Conditions</asp:HyperLink> | <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Privacy.aspx" target="_blank">Privacy Policy</asp:HyperLink> | <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Contact.aspx" Target="_blank">Contact ManxAds</asp:HyperLink><br />
-                Copyright &copy; 2006-2007 ManxAds. All rights reserved.
-            </div>
-            
         </div>
     </form>
     <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">

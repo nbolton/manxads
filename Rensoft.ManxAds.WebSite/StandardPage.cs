@@ -122,7 +122,8 @@ public class StandardPage : System.Web.UI.Page
     void StandardPage_Error(object sender, EventArgs e)
     {
 #if !DEBUG
-        ErrorReporting.Record(ex, Page, Auth);
+        // wtf?!
+        //ErrorReporting.Record(ex, Page, Auth);
 #endif
     }
 

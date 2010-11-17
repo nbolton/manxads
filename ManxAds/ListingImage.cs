@@ -98,7 +98,7 @@ namespace ManxAds
             {
                 sp.AddParam("@ListingId", this.listingId);
                 sp.AddParam("@Master", this.isMaster);
-                sp.AddParam("@InsertId", SqlDbType.Int);
+                sp.AddOutParam("@InsertId", SqlDbType.Int);
 
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();

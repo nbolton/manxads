@@ -23,8 +23,7 @@ public partial class StoredProcedures
         int locationId,
         int sellerId,
         int resultsLimit,
-        int startIndex,
-        out SqlXml listingsXml)
+        int startIndex)
     {
         XmlDocument xmlListingsDocument = new XmlDocument();
         XmlElement root = xmlListingsDocument.CreateElement("ListingSearch");
@@ -149,9 +148,15 @@ public partial class StoredProcedures
             connection.Close();
         }
 
-        // Read output from XML document into SQL XML structure.
-        StringReader stringReader = new StringReader(xmlListingsDocument.InnerXml);
-        listingsXml = new SqlXml(new XmlTextReader(stringReader));
+        // previously this was sent back as an out param. probably better to return results!
+        SqlMetaData column = new SqlMetaData("ListingSearch", SqlDbType.NText);
+        SqlDataRecord record = new SqlDataRecord(column);
+        record.SetString(0, xmlListingsDocument.InnerXml);
+
+        // sql's whacky way of extracting column meta data (pass record into two methods).
+        SqlContext.Pipe.SendResultsStart(record);
+        SqlContext.Pipe.SendResultsRow(record);
+        SqlContext.Pipe.SendResultsEnd();
     }
 
     public static void AssignListingsXml(

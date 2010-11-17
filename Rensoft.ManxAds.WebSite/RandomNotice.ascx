@@ -6,7 +6,7 @@
     <asp:MultiView ID="NoticeMultiView" runat="server">
         <asp:View ID="NoticeScamView" runat="server">
             <p><b>Please be aware of scams!</b></p>
-            <p>Read about <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Help.aspx?Topic=ListingPolicy">scam listings</asp:HyperLink> so you know how to keep safe on ManxAds. Use the links at the bottom of a listing page to report it as a scam.</p>
+            <p>Read about <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Help.aspx?Topic=ListingPolicy">scam listings</asp:HyperLink> so you know how to keep safe on ManxAds. Use the link at the bottom of a listing detail page to report scams.</p>
         </asp:View>
         <asp:View ID="NoticeDonationView" runat="server">
             <uc4:DonateControl ID="DonateControl1" runat="server" DonateID="7154453" />
@@ -17,8 +17,8 @@
             <p>Grab a last minute <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Listings.aspx?Search=christmas">Christmas bargain</asp:HyperLink> on ManxAds!</p>
         </asp:View>
         <asp:View ID="BugsFixedView" runat="server">
-            <p><b>We've fixed a bug!</b></p>
-            <p>The listing report feature is working again, sorry about the hiccup!</p>
+            <p><b>Search engine fixed</b></p>
+            <p>The search engine bug was resolved on 17/11/2010, and should now be more reliable. Thanks for letting us know!</p>
         </asp:View>
     </asp:MultiView>
 </div>

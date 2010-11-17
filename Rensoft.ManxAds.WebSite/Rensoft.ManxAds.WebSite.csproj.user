@@ -9,7 +9,7 @@
           <NativeDebugging>False</NativeDebugging>
           <SQLDebugging>False</SQLDebugging>
           <PublishCopyOption>RunFiles</PublishCopyOption>
-          <PublishTargetLocation>C:\Projects\Rensoft\VS2008\Rensoft.ManxAds\Rensoft.ManxAds.WebSite-Published\</PublishTargetLocation>
+          <PublishTargetLocation>C:\Projects\Rensoft\vs2008\Rensoft.ManxAds\Rensoft.ManxAds.WebSite-Published\</PublishTargetLocation>
           <PublishDeleteAllFiles>True</PublishDeleteAllFiles>
           <PublishCopyAppData>False</PublishCopyAppData>
           <ExternalProgram>
