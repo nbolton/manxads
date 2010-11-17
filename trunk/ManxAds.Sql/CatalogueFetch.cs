@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Xml;
 using System.IO;
 
-namespace ManxAds.Pimpmaster
+namespace ManxAds.Sql
 {
     public partial class StoredProcedures
     {

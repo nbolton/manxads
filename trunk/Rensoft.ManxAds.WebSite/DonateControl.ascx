@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DonateControl.ascx.cs" Inherits="Rensoft.ManxAds.WebSite.DonateControl" %>
-<p><b>ManxAds is free for everyone!</b></p>
-<p>Your donations help to keep ManxAds free for everyone to use.</p>
+<p><b>Donate to ManxAds</b></p>
+<p>Your donations help us improve ManxAds. Thank you!</p>
 <p>
     <input type="hidden" name="cmd" value="_s-xclick" />
     <input type="hidden" name="hosted_button_id" value="<%=DonateID%>" />

@@ -756,8 +756,8 @@ namespace ManxAds
                 sp.AddParam("@TradingWebsite", tradingWebsite);
                 sp.AddParam("@TraderType", traderType);
                 sp.AddParam("@LastIp", userIpAddress != null ? (object)userIpAddress : DBNull.Value);
-                sp.AddParam("@EmailOccupied", SqlDbType.Bit);
-                sp.AddParam("@InsertId", SqlDbType.Int);
+                sp.AddOutParam("@EmailOccupied", SqlDbType.Bit);
+                sp.AddOutParam("@InsertId", SqlDbType.Int);
 
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
@@ -868,7 +868,7 @@ namespace ManxAds
             using (StoredProceedure sp = new StoredProceedure("UserCheckEmailAddress"))
             {
                 sp.AddParam("@EmailAddress", emailAddress);
-                sp.AddParam("@EmailInUse", SqlDbType.Bit);
+                sp.AddOutParam("@EmailInUse", SqlDbType.Bit);
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
 
@@ -881,7 +881,7 @@ namespace ManxAds
             using (StoredProceedure sp = new StoredProceedure("UserVerify"))
             {
                 sp.AddParam("@AuthCode", authCode);
-                sp.AddParam("@UserId", SqlDbType.Int);
+                sp.AddOutParam("@UserId", SqlDbType.Int);
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
 
@@ -1046,7 +1046,7 @@ namespace ManxAds
             {
                 sp.AddParam("@UserType", userType);
                 sp.AddParam("@FromDate", fromDate);
-                sp.AddParam("@Count", System.Data.SqlDbType.Int);
+                sp.AddOutParam("@Count", System.Data.SqlDbType.Int);
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
                 return sp.GetParamValue<int>("@Count");
@@ -1063,7 +1063,7 @@ namespace ManxAds
             {
                 sp.AddParam("@FromDate", fromDate);
                 sp.AddParam("@TraderType", traderType);
-                sp.AddParam("@Count", System.Data.SqlDbType.Int);
+                sp.AddOutParam("@Count", System.Data.SqlDbType.Int);
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
                 return sp.GetParamValue<int>("@Count");

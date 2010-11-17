@@ -464,7 +464,7 @@ namespace ManxAds
                 sp.AddParam("@Hyperlink", this.hyperlink);
                 sp.AddParam("@Authorised", this.authorised);
                 sp.AddParam("@Html", this.Html);
-                sp.AddParam("@Insertid", System.Data.SqlDbType.Int);
+                sp.AddOutParam("@Insertid", System.Data.SqlDbType.Int);
 
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
@@ -517,7 +517,7 @@ namespace ManxAds
                 sp.AddParam("@AdvertId", this.databaseId);
                 sp.AddParam("@CategoryId", categoryId);
                 sp.AddParam("@RotateFrequency", rotateFrequency);
-                sp.AddParam("@Insertid", System.Data.SqlDbType.Int);
+                sp.AddOutParam("@Insertid", System.Data.SqlDbType.Int);
 
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();

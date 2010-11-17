@@ -27,8 +27,8 @@ namespace ManxAds
                 sp.AddParam("@EmailAddress", emailAddress);
                 sp.AddParam("@Password", ((Password)password).Encrypted);
                 sp.AddParam("@IpAddress", ipAddress);
-                sp.AddParam("@UserId", SqlDbType.Int);
-                sp.AddParam("@UserType", SqlDbType.Int);
+                sp.AddOutParam("@UserId", SqlDbType.Int);
+                sp.AddOutParam("@UserType", SqlDbType.Int);
 
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
@@ -107,7 +107,7 @@ namespace ManxAds
             using (StoredProceedure sp = new StoredProceedure("PasswordResetComplete"))
             {
                 sp.AddParam("@AuthCode", authCode);
-                sp.AddParam("@UserId", SqlDbType.Int);
+                sp.AddOutParam("@UserId", SqlDbType.Int);
 
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();

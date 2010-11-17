@@ -70,14 +70,14 @@ namespace ManxAds
             }
         }
 
-        public void AddParam(string parameterName, SqlDbType type, int size)
+        public void AddOutParam(string parameterName, SqlDbType type, int size)
         {
             SqlParameter param = new SqlParameter(parameterName, type, size);
             param.Direction = ParameterDirection.Output;
             command.Parameters.Add(param);
         }
 
-        public void AddParam(string parameterName, SqlDbType type)
+        public void AddOutParam(string parameterName, SqlDbType type)
         {
             SqlParameter param = new SqlParameter(parameterName, type);
             param.Direction = ParameterDirection.Output;

@@ -4,13 +4,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{c252feb5-a946-4202-b1d4-9916a0590387};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{6223C609-5B8B-40D5-B24A-E8BE5DC48081}</ProjectGuid>
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
-    <AssemblyName>ManxAds.Pimpmaster</AssemblyName>
-    <RootNamespace>ManxAds.Pimpmaster</RootNamespace>
+    <AssemblyName>ManxAds.Sql</AssemblyName>
+    <RootNamespace>ManxAds.Sql</RootNamespace>
     <SccProjectName>
     </SccProjectName>
     <SccLocalPath>
@@ -57,6 +57,7 @@
     <Compile Include="ListingKeywordUpdate.cs" />
     <Compile Include="ListingSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchOutputHandler.cs" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -65,4 +66,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <None Include="Test scripts\TestListingSearch.sql" />
+  </ItemGroup>
 </Project>

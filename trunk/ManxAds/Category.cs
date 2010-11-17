@@ -249,7 +249,7 @@ namespace ManxAds
                 sp.AddParam("@Priority", this.priority);
                 sp.AddParam("@HasImage", this.hasImage);
                 sp.AddParam("@Description", this.description);
-                sp.AddParam("@InsertId", SqlDbType.Int);
+                sp.AddOutParam("@InsertId", SqlDbType.Int);
 
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();

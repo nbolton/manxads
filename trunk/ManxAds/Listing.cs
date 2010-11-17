@@ -609,7 +609,7 @@ namespace ManxAds
                 sp.AddParam("@ShowLocation", this.showLocation);
                 sp.AddParam("@LocationId", this.locationId);
                 sp.AddParam("@Enabled", this.enabled);
-                sp.AddParam("@InsertId", SqlDbType.Int);
+                sp.AddOutParam("@InsertId", SqlDbType.Int);
 
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
@@ -1020,7 +1020,7 @@ namespace ManxAds
                 sp.AddParam("@FromDate", fromDate);
                 sp.AddParam("@Enabled", enabled);
                 sp.AddParam("@SellerId", sellerId);
-                sp.AddParam("@Count", System.Data.SqlDbType.Int);
+                sp.AddOutParam("@Count", System.Data.SqlDbType.Int);
 
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
@@ -1062,12 +1062,14 @@ namespace ManxAds
                 sp.AddParam("@sellerId", critera.SellerId);
                 sp.AddParam("@resultsLimit", -1);
                 sp.AddParam("@startIndex", -1);
-                sp.AddParam("@listingsXml", SqlDbType.Xml, 1);
 
                 sp.Connection.Open();
-                sp.Command.ExecuteNonQuery();
+                sp.ExecuteReader();
 
-                string xml = sp.GetParamValue<string>("@listingsXml");
+                if (!sp.Reader.Read())
+                    throw new InvalidOperationException("Could not get search results XML.");
+
+                string xml = sp.GetReaderValue<string>("ListingSearch");
                 listingList = ParseXmlListingSearch(xml);
             }
 
