@@ -25,7 +25,7 @@ namespace Rensoft.ManxAds
             this.task = task;
         }
         
-        public void RunIfNeccecary()
+        public void RunIfNecessary()
         {
             if (!running &&
                 (DateTime.Now.Hour == runTime.Hour) &&

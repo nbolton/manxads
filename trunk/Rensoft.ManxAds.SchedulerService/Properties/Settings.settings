@@ -54,5 +54,14 @@
     <Setting Name="WebsiteAbsolutePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\Websites\MNXD\manxads.com</Value>
     </Setting>
+    <Setting Name="EnableChecker" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EnableCrawler" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EnableScheduler" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

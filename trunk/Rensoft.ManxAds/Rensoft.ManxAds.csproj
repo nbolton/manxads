@@ -76,6 +76,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ScheduledPayload.cs" />
+    <Compile Include="Service\IEventLogHelper.cs" />
+    <Compile Include="Service\ServiceHost.cs" />
+    <Compile Include="Service\IServiceSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Rensoft.ErrorReporting\Rensoft.ErrorReporting\Rensoft.ErrorReporting.csproj">

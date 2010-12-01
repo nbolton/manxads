@@ -28,12 +28,6 @@ namespace Rensoft.ManxAds.SchedulerService
         /// </summary>
         private void InitializeComponent()
         {
-            this.initialBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-            // 
-            // initialBackgroundWorker
-            // 
-            this.initialBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.initialBackgroundWorker_DoWork);
-            this.initialBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.initialBackgroundWorker_RunWorkerCompleted);
             // 
             // MainService
             // 
@@ -43,7 +37,6 @@ namespace Rensoft.ManxAds.SchedulerService
 
         #endregion
 
-        private System.ComponentModel.BackgroundWorker initialBackgroundWorker;
 
     }
 }
