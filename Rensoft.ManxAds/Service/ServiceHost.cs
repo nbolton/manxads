@@ -74,22 +74,22 @@ namespace Rensoft.ManxAds.Service
 
         void autoDeleteTaskPayload_TaskCompleted(object sender, EventArgs e)
         {
-            eventLogHelper.Write("Auto delete task completed.", EventLogEntryType.Information);
+            tryWriteToEventLog("Auto delete task completed.", EventLogEntryType.Information);
         }
 
         void autoDeleteTaskPayload_TaskRunning(object sender, EventArgs e)
         {
-            eventLogHelper.Write("Auto delete task running.", EventLogEntryType.Information);
+            tryWriteToEventLog("Auto delete task running.", EventLogEntryType.Information);
         }
 
         void larPayload_TaskCompleted(object sender, EventArgs e)
         {
-            eventLogHelper.Write("Listing abuse reporter completed.", EventLogEntryType.Information);
+            tryWriteToEventLog("Listing abuse reporter completed.", EventLogEntryType.Information);
         }
 
         void larPayload_TaskRunning(object sender, EventArgs e)
         {
-            eventLogHelper.Write("Listing abuse reporter running.", EventLogEntryType.Information);
+            tryWriteToEventLog("Listing abuse reporter running.", EventLogEntryType.Information);
         }
 
         void scheduleTimer_Elapsed(object sender, ElapsedEventArgs e)
@@ -102,14 +102,14 @@ namespace Rensoft.ManxAds.Service
                 }
                 catch (Exception ex)
                 {
-                    reportError(ex);
+                    tryWriteToEventLog(ex);
                 }
             }
         }
 
         public void Start()
         {
-            eventLogHelper.Write("Service starting.", EventLogEntryType.Information);
+            tryWriteToEventLog("Service starting.", EventLogEntryType.Information);
 
             List<string> timerInfos = new List<string>();
 
@@ -146,11 +146,11 @@ namespace Rensoft.ManxAds.Service
             if (timerInfos.Count > 0)
             {
                 string timerInfo = "Timers started...\r\n" + string.Join("\r\n", timerInfos.ToArray());
-                eventLogHelper.Write(timerInfo, EventLogEntryType.Information);
+                tryWriteToEventLog(timerInfo, EventLogEntryType.Information);
             }
             else
             {
-                eventLogHelper.Write("No timers started.", EventLogEntryType.Warning);
+                tryWriteToEventLog("No timers started.", EventLogEntryType.Warning);
             }
         }
 
@@ -159,122 +159,43 @@ namespace Rensoft.ManxAds.Service
             searchEngineCrawlerTimer.Stop();
             listingCheckerTimer.Stop();
 
-            eventLogHelper.Write("Service stopped.", EventLogEntryType.Information);
-        }
-
-        private void reportError(Exception exception)
-        {
-            eventLogHelper.Write(exception);
+            tryWriteToEventLog("Service stopped.", EventLogEntryType.Information);
         }
 
         void searchEngineCrawlerTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            try
+            if (!crawlerRunning)
             {
-                if (!crawlerRunning)
-                {
-                    runSearchEngineCrawler();
-                }
-                else
-                {
-                    eventLogHelper.Write(
-                        "Search Engine Crawler skipped (already running).",
-                        EventLogEntryType.Warning);
-                }
+                tryRunSearchEngineCrawler();
             }
-            catch (Exception ex)
+            else
             {
-                reportError(ex);
+                tryWriteToEventLog(
+                    "Search Engine Crawler skipped (already running).",
+                    EventLogEntryType.Warning);
             }
         }
 
         void listingCheckerTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            try
+            if (!checkerRunning)
             {
-                if (!checkerRunning)
-                {
-                    runListingChecker();
-                }
-                else
-                {
-                    eventLogHelper.Write(
-                        "Listing Checker skipped (already running).", 
-                        EventLogEntryType.Warning);
-                }
+                tryRunListingChecker();
             }
-            catch (Exception ex)
+            else
             {
-                reportError(ex);
+                tryWriteToEventLog(
+                    "Listing Checker skipped (already running).",
+                    EventLogEntryType.Warning);
             }
-        }
-
-        private void runListingChecker()
-        {
-            checkerRunning = true;
-
-            if (settings.EnableDebugMessages)
-            {
-                eventLogHelper.Write(
-                    "Starting listing checker.", 
-                    EventLogEntryType.Information);
-            }
-
-            ListingChecker listingChecker = new ListingChecker(
-                settings.ManxAdsDatabase,
-                settings.WebSiteBaseUrl,
-                settings.EmailServer,
-                settings.EmailUsername,
-                settings.EmailPassword,
-                settings.EmailFromAddress,
-                settings.EmailBccAddress,
-                settings.NotifySleep);
-
-            listingChecker.NotifySet.Notify += new EventHandler<DebugEventArgs>(NotifySet_Notify);
-            listingChecker.RunCheck();
-
-            if (settings.EnableDebugMessages)
-            {
-                eventLogHelper.Write(
-                    "Listing checker completed.",
-                    EventLogEntryType.Information);
-            }
-
-            checkerRunning = false;
         }
 
         void NotifySet_Notify(object sender, DebugEventArgs e)
         {
             if (settings.EnableDebugMessages)
             {
-                eventLogHelper.Write(e.Message, EventLogEntryType.Information);
+                tryWriteToEventLog(e.Message, EventLogEntryType.Information);
             }
-        }
-
-        private void runSearchEngineCrawler()
-        {
-            crawlerRunning = true;
-
-            if (settings.EnableDebugMessages)
-            {
-                eventLogHelper.Write(
-                    "Starting search engine crawler.", 
-                    EventLogEntryType.Information);
-            }
-
-            Catalogue catalogue = Catalogue.GenerateCatalogue(
-                settings.ManxAdsDatabase);
-
-            catalogue.UpdateKeywords();
-
-            if (settings.EnableDebugMessages)
-            {
-                eventLogHelper.Write(
-                    "Search engine crawler completed.", 
-                    EventLogEntryType.Information);
-            }
-
-            crawlerRunning = false;
         }
 
         private void initialBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -290,11 +211,34 @@ namespace Rensoft.ManxAds.Service
         {
             try
             {
-                runSearchEngineCrawler();
+                crawlerRunning = true;
+
+                if (settings.EnableDebugMessages)
+                {
+                    tryWriteToEventLog(
+                        "Starting search engine crawler.",
+                        EventLogEntryType.Information);
+                }
+
+                Catalogue catalogue = Catalogue.GenerateCatalogue(
+                    settings.ManxAdsDatabase);
+
+                catalogue.UpdateKeywords();
+
+                if (settings.EnableDebugMessages)
+                {
+                    tryWriteToEventLog(
+                        "Search engine crawler completed.",
+                        EventLogEntryType.Information);
+                }
             }
             catch (Exception ex)
             {
-                reportError(ex);
+                tryWriteToEventLog(ex);
+            }
+            finally
+            {
+                crawlerRunning = false;
             }
         }
 
@@ -302,11 +246,66 @@ namespace Rensoft.ManxAds.Service
         {
             try
             {
-                runListingChecker();
+                checkerRunning = true;
+
+                if (settings.EnableDebugMessages)
+                {
+                    tryWriteToEventLog(
+                        "Starting listing checker.",
+                        EventLogEntryType.Information);
+                }
+
+                ListingChecker listingChecker = new ListingChecker(
+                    settings.ManxAdsDatabase,
+                    settings.WebSiteBaseUrl,
+                    settings.EmailServer,
+                    settings.EmailUsername,
+                    settings.EmailPassword,
+                    settings.EmailFromAddress,
+                    settings.EmailBccAddress,
+                    settings.NotifySleep);
+
+                listingChecker.NotifySet.Notify += new EventHandler<DebugEventArgs>(NotifySet_Notify);
+                listingChecker.RunCheck();
+
+                if (settings.EnableDebugMessages)
+                {
+                    tryWriteToEventLog(
+                        "Listing checker completed.",
+                        EventLogEntryType.Information);
+                }
             }
             catch (Exception ex)
             {
-                reportError(ex);
+                tryWriteToEventLog(ex);
+            }
+            finally
+            {
+                checkerRunning = false;
+            }
+        }
+
+        private void tryWriteToEventLog(string message, EventLogEntryType eventLogEntryType)
+        {
+            try
+            {
+                eventLogHelper.Write(message, eventLogEntryType);
+            }
+            catch
+            {
+                // nothing we can do - the service must stay up!
+            }
+        }
+
+        private void tryWriteToEventLog(Exception exception)
+        {
+            try
+            {
+                eventLogHelper.Write(exception);
+            }
+            catch
+            {
+                // nothing we can do - the service must stay up!
             }
         }
     }
