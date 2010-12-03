@@ -161,7 +161,7 @@ namespace Rensoft.ManxAds.SchedulerConsole.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool EnableCrawler {
             get {
                 return ((bool)(this["EnableCrawler"]));
@@ -179,7 +179,7 @@ namespace Rensoft.ManxAds.SchedulerConsole.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool EnableScheduler {
             get {
                 return ((bool)(this["EnableScheduler"]));
