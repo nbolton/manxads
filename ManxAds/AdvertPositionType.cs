@@ -6,15 +6,13 @@ namespace ManxAds
 {
     public enum AdvertPositionType
     {
-        Top,
-        Left1,
-        Left2,
-        Left3,
-        Left4,
-        Right,
-        Bottom,
-        Left5,
-        Left6,
+        TopLeaderboard,
+        Square1,
+        Square2,
+        Square3,
+        Square4,
+        Skyscraper,
+        BottomLeaderboard,
         RandomLeaderboard,
         RandomSquareButton,
         DisableRandom

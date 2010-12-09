@@ -86,38 +86,32 @@ namespace ManxAds
             {
                 switch (positionType)
                 {
-                    case AdvertPositionType.Top:
-                        return "Top";
+                    case AdvertPositionType.TopLeaderboard:
+                        return "Top Leaderboard";
 
-                    case AdvertPositionType.Bottom:
-                        return "Bottom";
+                    case AdvertPositionType.BottomLeaderboard:
+                        return "Bottom Leaderboard";
 
-                    case AdvertPositionType.Right:
-                        return "Right";
+                    case AdvertPositionType.Skyscraper:
+                        return "Skyscraper";
 
-                    case AdvertPositionType.Left1:
-                        return "Left 1";
+                    case AdvertPositionType.Square1:
+                        return "Square 1";
 
-                    case AdvertPositionType.Left2:
-                        return "Left 2";
+                    case AdvertPositionType.Square2:
+                        return "Square 2";
 
-                    case AdvertPositionType.Left3:
-                        return "Left 3";
+                    case AdvertPositionType.Square3:
+                        return "Square 3";
 
-                    case AdvertPositionType.Left4:
-                        return "Left 4";
-
-                    case AdvertPositionType.Left5:
-                        return "Left 5";
-
-                    case AdvertPositionType.Left6:
-                        return "Left 6";
+                    case AdvertPositionType.Square4:
+                        return "Square 4";
 
                     case AdvertPositionType.RandomLeaderboard:
-                        return "Random (Leaderboard)";
+                        return "Random Leaderboard";
 
                     case AdvertPositionType.RandomSquareButton:
-                        return "Random (Square Button)";
+                        return "Random Square";
 
                     default:
                         throw new NotSupportedException();
@@ -285,7 +279,7 @@ namespace ManxAds
                         return 125;
 
                     case AdvertSizeType.Skyscraper:
-                        return 120;
+                        return 160;
 
                     default:
                         throw new NotSupportedException(

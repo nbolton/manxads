@@ -160,37 +160,31 @@ public partial class AdvertModify : StandardPage
     protected void PopulatePositionTypeDropDown(AdvertPositionType selected)
     {
         ListItem top = new ListItem(
-            "Leaderboard - Top (1)", ((int)AdvertPositionType.Top).ToString());
+            "Top Leaderboard", ((int)AdvertPositionType.TopLeaderboard).ToString());
 
         ListItem left1 = new ListItem(
-            "Square Button (2)", ((int)AdvertPositionType.Left1).ToString());
+            "Square 1", ((int)AdvertPositionType.Square1).ToString());
 
         ListItem left2 = new ListItem(
-            "Square Button (3)", ((int)AdvertPositionType.Left2).ToString());
+            "Square 2", ((int)AdvertPositionType.Square2).ToString());
 
         ListItem left3 = new ListItem(
-            "Square Button (4)", ((int)AdvertPositionType.Left3).ToString());
+            "Square 3", ((int)AdvertPositionType.Square3).ToString());
 
         ListItem left4 = new ListItem(
-            "Square Button (6)", ((int)AdvertPositionType.Left4).ToString());
-
-        ListItem left5 = new ListItem(
-            "Square Button (7)", ((int)AdvertPositionType.Left5).ToString());
-
-        ListItem left6 = new ListItem(
-            "Square Button (8)", ((int)AdvertPositionType.Left6).ToString());
+            "Square 4", ((int)AdvertPositionType.Square4).ToString());
 
         ListItem bottom = new ListItem(
-            "Leaderboard - Bottom (9)", ((int)AdvertPositionType.Bottom).ToString());
+            "Bottom Leaderboard", ((int)AdvertPositionType.BottomLeaderboard).ToString());
 
         ListItem right = new ListItem(
-            "Skyscraper - Right (10)", ((int)AdvertPositionType.Right).ToString());
+            "Skyscraper", ((int)AdvertPositionType.Skyscraper).ToString());
 
         ListItem randomLeaderboard = new ListItem(
-            "Random (Leaderboard)", ((int)AdvertPositionType.RandomLeaderboard).ToString());
+            "Random Leaderboard", ((int)AdvertPositionType.RandomLeaderboard).ToString());
 
         ListItem randomSquareButton = new ListItem(
-            "Random (Square Button)", ((int)AdvertPositionType.RandomSquareButton).ToString());
+            "Random Square", ((int)AdvertPositionType.RandomSquareButton).ToString());
 
         PositionTypeDropDownList.Items.Clear();
         PositionTypeDropDownList.Items.Add(top);
@@ -199,48 +193,38 @@ public partial class AdvertModify : StandardPage
         PositionTypeDropDownList.Items.Add(left2);
         PositionTypeDropDownList.Items.Add(left3);
         PositionTypeDropDownList.Items.Add(left4);
-        PositionTypeDropDownList.Items.Add(left5);
-        PositionTypeDropDownList.Items.Add(left6);
         PositionTypeDropDownList.Items.Add(bottom);
         PositionTypeDropDownList.Items.Add(randomLeaderboard);
         PositionTypeDropDownList.Items.Add(randomSquareButton);
 
         switch (selected)
         {
-            case AdvertPositionType.Top:
+            case AdvertPositionType.TopLeaderboard:
                 top.Selected = true;
                 break;
 
-            case AdvertPositionType.Bottom:
+            case AdvertPositionType.BottomLeaderboard:
                 bottom.Selected = true;
                 break;
 
-            case AdvertPositionType.Right:
+            case AdvertPositionType.Skyscraper:
                 right.Selected = true;
                 break;
 
-            case AdvertPositionType.Left1:
+            case AdvertPositionType.Square1:
                 left1.Selected = true;
                 break;
 
-            case AdvertPositionType.Left2:
+            case AdvertPositionType.Square2:
                 left2.Selected = true;
                 break;
 
-            case AdvertPositionType.Left3:
+            case AdvertPositionType.Square3:
                 left3.Selected = true;
                 break;
 
-            case AdvertPositionType.Left4:
+            case AdvertPositionType.Square4:
                 left4.Selected = true;
-                break;
-
-            case AdvertPositionType.Left5:
-                left5.Selected = true;
-                break;
-
-            case AdvertPositionType.Left6:
-                left6.Selected = true;
                 break;
 
             case AdvertPositionType.RandomLeaderboard:
@@ -260,7 +244,7 @@ public partial class AdvertModify : StandardPage
             ((int)AdvertSizeType.Leaderboard).ToString());
 
         ListItem skyscraper = new ListItem(
-            "Skyscraper (120 x 600)",
+            "Skyscraper (160 x 600)",
             ((int)AdvertSizeType.Skyscraper).ToString());
 
         ListItem squareButton = new ListItem(

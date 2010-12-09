@@ -67,7 +67,7 @@ ul
 {
 	text-align: center;
 	margin: 0 auto;
-	width: 728px;
+	width: 768px;
 }
 
 #LayoutHeader
@@ -113,7 +113,7 @@ ul
 #LayoutSubHeaderMenu 
 {
 	float: left;
-	width: 538px;
+	width: 578px;
 }
 
 #LayoutSubHeaderMenuLinks 
@@ -126,23 +126,28 @@ ul
 #LayoutSubHeaderMenuNavigation 
 {
 	float: left;
+	position: absolute;
 }
 
 #LayoutSubHeaderMenuSecurity 
 {
-	float: right;
+	float: left;
 	margin-left: 10px;
+	text-align: right;
+	width: 568px;
+	position: absolute;
 }
 
 #LayoutSubHeaderMenuBar 
 {
 	float: left;
 	clear: both;
-	margin-top: 2px;
+	margin-top: 21px;
 	background-color: #2166B2;
 	height: 3px;
 	font-size: 0px;
-	width: 100%;
+	width: 578px;
+	position: absolute;
 }
 
 #LayoutMiddle 
@@ -151,11 +156,12 @@ ul
 	margin-top: 20px;
 }
 
-#LayoutLeftAdvert 
+#LayoutLeftAdvert
 {
 	margin-right: 20px;
 	float: left;
-	width: 125px;
+	width: 160px;
+	border-bottom: solid 1px white;
 }
 
 #LayoutMiddle 
@@ -164,7 +170,7 @@ ul
 	margin-bottom: 20px;
 }
 
-.LayoutLeftAdvertLayer 
+.LayoutSquareAdvertLayer 
 {
 	margin-bottom: 20px;
 	height: 125px;
@@ -794,6 +800,9 @@ ul
 	height: 90px;
 	text-align: left;
 	clear: both;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #F1F6FF;
 }
 
 #LayoutBottomAdvert 
@@ -801,6 +810,9 @@ ul
 	width: 728px;
 	height: 90px;
 	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #F1F6FF;
 }
 
 #LayoutRightAdvert 

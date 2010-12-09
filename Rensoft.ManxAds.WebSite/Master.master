@@ -46,11 +46,11 @@
                 </div>
                 
                 <div id="LayoutTopAdvert">
-                    <uc2:AdvertRotator ID="TopAdvertRotator" runat="server" />
+                    <uc2:AdvertRotator ID="TopLeaderboardAdvertRotator" runat="server" />
                 </div>
     			
                 <asp:Panel ID="temppanel3" runat="server" Visible="True">
-				    <div style="margin-top: 5px">
+				    <div style="margin-top: 15px">
 				    <script type="text/javascript"><!--
 				    google_ad_client = "pub-3305986762497110";
 				    /* ManxAds link block */
@@ -68,12 +68,7 @@
                 <div id="LayoutMiddle">
                     
                     <div id="LayoutLeftAdvert">
-					    <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator1" runat="server" /></div>
-                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator2" runat="server" /></div>
-                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator3" runat="server" /></div>
-                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator4" runat="server" /></div>
-                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator5" runat="server" /></div>
-                        <div class="LayoutLeftAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator6" runat="server" /></div>
+					    <uc2:AdvertRotator ID="SkyscraperAdvertRotator" runat="server" />
                     </div>
                     
                     <div id="LayoutContent">
@@ -81,13 +76,16 @@
                     </div>
                     
                     <div id="LayoutRightAdvert">
-                        <uc2:AdvertRotator ID="RightAdvertRotator" runat="server" />
+                        <div class="LayoutSquareAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator1" runat="server" /></div>
+                        <div class="LayoutSquareAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator2" runat="server" /></div>
+                        <div class="LayoutSquareAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator3" runat="server" /></div>
+                        <div class="LayoutSquareAdvertLayer"><uc2:AdvertRotator ID="LeftAdvertRotator4" runat="server" /></div>
                     </div>
                     
                 </div>
                 
                 <div id="LayoutBottomAdvert">
-                    <uc2:AdvertRotator ID="BottomAdvertRotator" runat="server" />
+                    <uc2:AdvertRotator ID="BottomLeaderboardAdvertRotator" runat="server" />
                 </div>
                 
                 <div id="LayoutFooter">
