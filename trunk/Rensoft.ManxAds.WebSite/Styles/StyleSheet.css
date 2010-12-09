@@ -127,6 +127,7 @@ ul
 {
 	float: left;
 	position: absolute;
+	z-index: 1;
 }
 
 #LayoutSubHeaderMenuSecurity 
@@ -161,6 +162,7 @@ ul
 	margin-right: 20px;
 	float: left;
 	width: 160px;
+	height: 600px;
 	border-bottom: solid 1px white;
 }
 
@@ -780,7 +782,8 @@ ul
 {
 	visibility: hidden;
 	position: absolute;
-    background: white;
+	text-align: center;
+	background-color: #F1F6FF;
 }
 
 .AdvertDebug 

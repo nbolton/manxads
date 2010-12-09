@@ -68,7 +68,9 @@
                 <div id="LayoutMiddle">
                     
                     <div id="LayoutLeftAdvert">
-					    <uc2:AdvertRotator ID="SkyscraperAdvertRotator" runat="server" />
+                        <div class="LayoutLeftAdvertLayer">
+					        <uc2:AdvertRotator ID="SkyscraperAdvertRotator" runat="server" />
+					    </div>
                     </div>
                     
                     <div id="LayoutContent">
