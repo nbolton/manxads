@@ -94,8 +94,8 @@ public partial class Master : StandardMaster
 
         leaderboardRotators.Clear();
         leaderboardRotators.AddRange(new AdvertRotator[] {
-            TopAdvertRotator,
-            BottomAdvertRotator
+            TopLeaderboardAdvertRotator,
+            BottomLeaderboardAdvertRotator
         });
 
         squareButtonRotators.Clear();
@@ -103,9 +103,7 @@ public partial class Master : StandardMaster
             LeftAdvertRotator1,
             LeftAdvertRotator2,
             LeftAdvertRotator3,
-            LeftAdvertRotator4,
-            LeftAdvertRotator5,
-            LeftAdvertRotator6
+            LeftAdvertRotator4
         });
 
         // Queue random adverts to be semi-evenly distributed top-down.
@@ -157,14 +155,12 @@ public partial class Master : StandardMaster
             base.Description = descriptions[fileName];
         }
 
-        TopAdvertRotator.PositionType = AdvertPositionType.Top;
-        LeftAdvertRotator1.PositionType = AdvertPositionType.Left1;
-        LeftAdvertRotator2.PositionType = AdvertPositionType.Left2;
-        LeftAdvertRotator3.PositionType = AdvertPositionType.Left3;
-        LeftAdvertRotator4.PositionType = AdvertPositionType.Left4;
-        LeftAdvertRotator5.PositionType = AdvertPositionType.Left5;
-        LeftAdvertRotator6.PositionType = AdvertPositionType.Left6;
-        RightAdvertRotator.PositionType = AdvertPositionType.Right;
-        BottomAdvertRotator.PositionType = AdvertPositionType.Bottom;
+        TopLeaderboardAdvertRotator.PositionType = AdvertPositionType.TopLeaderboard;
+        LeftAdvertRotator1.PositionType = AdvertPositionType.Square1;
+        LeftAdvertRotator2.PositionType = AdvertPositionType.Square2;
+        LeftAdvertRotator3.PositionType = AdvertPositionType.Square3;
+        LeftAdvertRotator4.PositionType = AdvertPositionType.Square4;
+        SkyscraperAdvertRotator.PositionType = AdvertPositionType.Skyscraper;
+        BottomLeaderboardAdvertRotator.PositionType = AdvertPositionType.BottomLeaderboard;
     }
 }

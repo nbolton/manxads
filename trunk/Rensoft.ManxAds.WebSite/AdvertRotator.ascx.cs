@@ -210,17 +210,17 @@ public partial class AdvertRotator : System.Web.UI.UserControl
     {
         switch (PositionType)
         {
-            case AdvertPositionType.Top:
+            case AdvertPositionType.TopLeaderboard:
                 PlaceholderImage.ImageUrl =
                     "~/Images/Static/Layout/PlaceholderLeaderboard.gif";
                 break;
 
-            case AdvertPositionType.Bottom:
+            case AdvertPositionType.BottomLeaderboard:
                 PlaceholderImage.ImageUrl =
                     "~/Images/Static/Layout/PlaceholderLeaderboard.gif";
                 break;
 
-            case AdvertPositionType.Right:
+            case AdvertPositionType.Skyscraper:
                 PlaceholderImage.ImageUrl =
                     "~/Images/Static/Layout/PlaceholderSkyscraper.gif";
                 break;

@@ -130,13 +130,13 @@ public partial class Master {
     protected global::SubHeader SubHeader;
     
     /// <summary>
-    /// TopAdvertRotator control.
+    /// TopLeaderboardAdvertRotator control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::AdvertRotator TopAdvertRotator;
+    protected global::AdvertRotator TopLeaderboardAdvertRotator;
     
     /// <summary>
     /// temppanel3 control.
@@ -146,6 +146,24 @@ public partial class Master {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Panel temppanel3;
+    
+    /// <summary>
+    /// SkyscraperAdvertRotator control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::AdvertRotator SkyscraperAdvertRotator;
+    
+    /// <summary>
+    /// ContentPlaceHolder1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
     
     /// <summary>
     /// LeftAdvertRotator1 control.
@@ -184,49 +202,13 @@ public partial class Master {
     protected global::AdvertRotator LeftAdvertRotator4;
     
     /// <summary>
-    /// LeftAdvertRotator5 control.
+    /// BottomLeaderboardAdvertRotator control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::AdvertRotator LeftAdvertRotator5;
-    
-    /// <summary>
-    /// LeftAdvertRotator6 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::AdvertRotator LeftAdvertRotator6;
-    
-    /// <summary>
-    /// ContentPlaceHolder1 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-    
-    /// <summary>
-    /// RightAdvertRotator control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::AdvertRotator RightAdvertRotator;
-    
-    /// <summary>
-    /// BottomAdvertRotator control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::AdvertRotator BottomAdvertRotator;
+    protected global::AdvertRotator BottomLeaderboardAdvertRotator;
     
     /// <summary>
     /// HyperLink1 control.
