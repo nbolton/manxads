@@ -59,6 +59,15 @@ namespace Rensoft.ManxAds.WebSite {
         protected global::Rensoft.ManxAds.WebSite.DonateControl DonateControl1;
         
         /// <summary>
+        /// BugsFixedView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View BugsFixedView;
+        
+        /// <summary>
         /// NoticeChristmasView control.
         /// </summary>
         /// <remarks>
@@ -84,14 +93,5 @@ namespace Rensoft.ManxAds.WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
-        
-        /// <summary>
-        /// BugsFixedView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View BugsFixedView;
     }
 }
