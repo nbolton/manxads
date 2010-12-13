@@ -64,23 +64,22 @@
 						<li><asp:HyperLink ID="SendToFriendHyperLink" runat="server">Send this listing</asp:HyperLink> to someone.</li>
 					</ul>
 				</td>
-				<td>
-				<asp:Panel id="AdsenseFillerPanel" runat="server" Visible="true">
-					<script type="text/javascript"><!--
-					google_ad_client = "pub-3305986762497110";
-					/* ManxAds filler (234x60) */
-					google_ad_slot = "6014498430";
-					google_ad_width = 234;
-					google_ad_height = 60;
-					//-->
-					</script>
-					<script type="text/javascript"
-					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-					</script>
-					</asp:Panel>
-				</td>
 			</tr>
 		</table>
+		
+		<div style="margin-top: 10px; margin-bottom: 10px">
+            <script type="text/javascript"><!--
+                google_ad_client = "ca-pub-3305986762497110";
+                /* ManxAds filler */
+                google_ad_slot = "6014498430";
+                google_ad_width = 234;
+                google_ad_height = 60;
+            //-->
+            </script>
+            <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+		</div>
 		
         <p><asp:Label ID="DetailsLabel" runat="server" /></p>
         

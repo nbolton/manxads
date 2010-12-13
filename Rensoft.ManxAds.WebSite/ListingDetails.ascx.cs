@@ -93,7 +93,6 @@ public partial class ListingDetails : StandardControl
                 if (Accessors.Listing.IsTraderListing)
                 {
                     this.BindTraderDetails(Accessors.Listing);
-                    AdsenseFillerPanel.Visible = false;
                 }
 
                 // When user visits page, record hit.

@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using ManxAds;
+using System.IO;
 
 
 public partial class Master : StandardMaster
@@ -162,5 +163,17 @@ public partial class Master : StandardMaster
         LeftAdvertRotator4.PositionType = AdvertPositionType.Square4;
         SkyscraperAdvertRotator.PositionType = AdvertPositionType.Skyscraper;
         BottomLeaderboardAdvertRotator.PositionType = AdvertPositionType.BottomLeaderboard;
+    }
+
+    // fix for Bug #228 - Old layout is still being cached for some visitors
+    public string GetDynamicPath(string virtualPath)
+    {
+        string mappedPath = MapPath(virtualPath);
+        FileInfo styleSheetInfo = new FileInfo(mappedPath);
+        
+        // not sure if this is the best approach to resolve virtual paths.
+        string relativePath = virtualPath.Replace("~/", Request.ApplicationPath);
+
+        return relativePath + "?" + styleSheetInfo.LastWriteTime.Ticks;
     }
 }
