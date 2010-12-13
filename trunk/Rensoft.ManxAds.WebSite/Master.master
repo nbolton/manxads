@@ -7,16 +7,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>ManxAds - The Manx Classifieds Website</title>
+    <title>Isle of Man classifieds - ManxAds</title>
     <meta id="descriptionMeta" name="description" content="" />
     <meta id="keywordsMeta" name="keywords" content="" />
     <meta id="cacheMeta" http-equiv="Cache-Control" content="" /> 
 	<meta id="robotsMeta" name="robots" content="index, follow" />
 	<meta name="verify-v1" content="8y2PaaWejtyb7wqgN/q3vVDB67ZFH9G4V8SY1boSfzo=" />
-	<link rel="stylesheet" type="text/css" href="~/Styles/StyleSheet.css" />
-	<script type="text/javascript" language="javascript" src="<%=WebsiteRoot%>/Scripts/AdvertRotator.js"></script>
-	<script type="text/javascript" language="javascript" src="<%=WebsiteRoot%>/Scripts/DefaultButton.js"></script>
-	<script type="text/javascript" language="javascript" src="<%=WebsiteRoot%>/Scripts/OpenWindow.js"></script>
+	<link rel="stylesheet" type="text/css" href="<%= GetDynamicPath("~/Styles/StyleSheet.css") %>" />
+	<script type="text/javascript" language="javascript" src="<%= GetDynamicPath("~/Scripts/AdvertRotator.js") %>"></script>
+	<script type="text/javascript" language="javascript" src="<%= GetDynamicPath("~/Scripts/DefaultButton.js") %>"></script>
+	<script type="text/javascript" language="javascript" src="<%= GetDynamicPath("~/Scripts/OpenWindow.js") %>"></script>
 </head>
 <body>
     <form id="form1" runat="server">
