@@ -15,14 +15,14 @@
         <td class="BrowserDetails">
             <table width="100%" cellpadding="0" cellspacing="0">
                 <tr class="BrowserDetailsSummary">
-                    <td class="ListingsMiniRowTitle"><asp:HyperLink ID="ShortTitleHyperLink" runat="server" /></td>
+                    <td class="ListingsMiniRowTitle"><h2><asp:HyperLink ID="ShortTitleHyperLink" runat="server" /></h2></td>
                     <td class="ListingsMiniRowPrice"><asp:Label ID="PriceColouredLabel" runat="server" /></td>
                 </tr>
                 <tr>
                     <td class="BrowserDetailsSeparator"></td>
                 </tr>
                 <tr class="BrowserDetailsDescription">
-                    <td colspan="3"><asp:Label ID="DescriptionLabel" runat="server" CssClass="ListingsMiniRowDetails" /></td>
+                    <td colspan="3"><p><asp:Label ID="DescriptionLabel" runat="server" CssClass="ListingsMiniRowDetails" /></p></td>
                 </tr>
             </table>
         </td>

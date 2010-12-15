@@ -47,7 +47,6 @@
                         <td class="ListingHeaderTitle">Title</td>
                         <td class="ListingHeaderPrice">Price</td>
                         <td class="ListingHeaderDate">Listed</td>
-                        <td class="ListingHeaderId">Tag</td>
                     </tr>
                 </table>
             </HeaderTemplate>

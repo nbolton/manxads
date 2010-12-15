@@ -372,9 +372,13 @@ ul
 
 .BrowserDetailsDescription p
 {
-	margin: 0px;
 	padding: 0px;
-	margin-top: 4px;
+	margin: 0px;
+}
+
+.ListingRowEditorPanel
+{
+	margin-top: 3px;
 }
 
 .BrowserHeaderNoThumbnail,
@@ -457,10 +461,13 @@ ul
 	margin-top: 10px;
 }
 
-.ListingsMiniRowTitle 
+.ListingsMiniRowTitle h2
 {
 	font-size: 1em;
+	font-weight: normal;
 	white-space: nowrap;
+	margin: 0px;
+	padding: 0px;
 }
 
 .ListingsMiniRowPrice 
@@ -509,6 +516,14 @@ ul
 .ListingsMiniRowTitle a:hover
 {
 	text-decoration: underline;
+}
+
+.CategoryRowTitle h2
+{
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
 }
 
 .CategoryNanoRowListingCountWithZeros 
@@ -578,6 +593,19 @@ ul
 .ListingRowTitle
 {
 	width: 50%;
+}
+
+.ListingRowTitle h2
+{
+	font-size: 1em;
+	font-weight: normal;
+	padding: 0px;
+	margin: 0px;
+}
+
+.ListingRowTitle h2 a
+{
+	text-decoration: underline;
 }
 
 .ListingHeaderPrice,

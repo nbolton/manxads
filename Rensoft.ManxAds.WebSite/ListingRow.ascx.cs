@@ -89,7 +89,6 @@ public partial class ListingRow : BrowserRow
         this.PriceColouredLabel.Text = Listing.PriceColoured;
         this.CreateDateLabel.Text = Listing.FormattedCreateDate;
         this.DescriptionLabel.Text = Listing.LongDetails;
-        this.ManxAdsIdLabel.Text = Listing.ManxAdsId;
         this.BoostLinkButton.CommandArgument = listing.DatabaseId.ToString();
         this.RestoreLinkButton.CommandArgument = listing.DatabaseId.ToString();
 
