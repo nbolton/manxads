@@ -10,7 +10,7 @@
         <td class="BrowserDetails">
             <table width="100%" cellpadding="0" cellspacing="0">
                 <tr class="BrowserDetailsSummary">
-                    <td class="CategoryRowTitle"><asp:HyperLink ID="TitleHyperLink" runat="server" /></td>
+                    <td class="CategoryRowTitle"><h2><asp:HyperLink ID="TitleHyperLink" runat="server" /></h2></td>
                     <td class="CategoryRowListingCount"><asp:Label ID="ListingCountLabel" runat="server" /></td>
                     <td class="CategoryRowLatestListing"><asp:Label ID="LatestListingLabel" runat="server" /></td>
                 </tr>
@@ -19,14 +19,12 @@
                 </tr>
                 <tr class="BrowserDetailsDescription">
                     <td colspan="3">
-                        <asp:Label ID="DescriptionLabel" runat="server" />
+                        <p><asp:Label ID="DescriptionLabel" runat="server" /></p>
                         <asp:Panel ID="EditorPanel" runat="server" Visible="False">
-                            <p>
-                                <asp:Literal ID="DatabaseIdLiteral" runat="server" Visible="False" />
-                                <asp:LinkButton ID="ModifyLinkButton" runat="server" OnClick="EditorLinkButton_Click">Edit</asp:LinkButton> |
-                                <asp:LinkButton ID="RemoveLinkButton" runat="server" OnClick="EditorLinkButton_Click">Delete</asp:LinkButton> |
-                                Priority <asp:TextBox ID="PriorityTextBox" Width="15px" runat="server" CssClass="GenericFormTextBox" EnableTheming="True" OnTextChanged="PriorityTextBox_TextChanged" /> <asp:LinkButton ID="UpdateLinkButton" runat="server" OnClick="UpdateLinkButton_Click">Update</asp:LinkButton>
-                            </p>
+                            <asp:Literal ID="DatabaseIdLiteral" runat="server" Visible="False" />
+                            <asp:LinkButton ID="ModifyLinkButton" runat="server" OnClick="EditorLinkButton_Click">Edit</asp:LinkButton> |
+                            <asp:LinkButton ID="RemoveLinkButton" runat="server" OnClick="EditorLinkButton_Click">Delete</asp:LinkButton> |
+                            Priority <asp:TextBox ID="PriorityTextBox" Width="15px" runat="server" CssClass="GenericFormTextBox" EnableTheming="True" OnTextChanged="PriorityTextBox_TextChanged" /> <asp:LinkButton ID="UpdateLinkButton" runat="server" OnClick="UpdateLinkButton_Click">Update</asp:LinkButton>
                         </asp:Panel>
                     </td>
                 </tr>

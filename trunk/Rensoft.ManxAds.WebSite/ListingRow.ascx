@@ -15,10 +15,9 @@
         <td class="BrowserDetails">
             <table width="100%" cellpadding="0" cellspacing="0">
                 <tr class="BrowserDetailsSummary">
-                    <td class="ListingRowTitle"><asp:HyperLink ID="TitleHyperLink" runat="server" /></td>
+                    <td class="ListingRowTitle"><h2><asp:HyperLink ID="TitleHyperLink" runat="server" /></h2></td>
                     <td class="ListingRowPrice"><asp:Label ID="PriceColouredLabel" runat="server" /></td>
                     <td class="ListingRowDate"><asp:Label ID="CreateDateLabel" runat="server" /></td>
-                    <td class="ListingRowId"><asp:Label ID="ManxAdsIdLabel" runat="server" /></td>
                 </tr>
                 <tr>
                     <td class="BrowserDetailsSeparator"></td>
@@ -28,14 +27,12 @@
                         <asp:Panel ID="TraderPanel" runat="server" CssClass="TraderLayer" Visible="False">
                             <asp:Image ID="TraderLogoImage" runat="server" />
                         </asp:Panel>
-                        <asp:Label ID="DescriptionLabel" runat="server" />
-                        <asp:Panel ID="EditorPanel" runat="server" Visible="False">
-                            <p>
-                                <asp:LinkButton ID="ModifyLinkButton" runat="server" OnClick="EditorLinkButton_Click">Edit</asp:LinkButton> |
-                                <asp:LinkButton ID="RemoveLinkButton" runat="server" OnClick="EditorLinkButton_Click">Delete</asp:LinkButton>
-                                <asp:LinkButton ID="RestoreLinkButton" runat="server" Visible="False" OnClick="RestoreLinkButton_Click">Restore</asp:LinkButton> |
-                                <asp:LinkButton ID="BoostLinkButton" runat="server" OnClick="BoostLinkButton_Click">Boost</asp:LinkButton>
-                            </p>
+                        <p><asp:Label ID="DescriptionLabel" runat="server" /></p>
+                        <asp:Panel ID="EditorPanel" runat="server" Visible="False" CssClass="ListingRowEditorPanel">
+                            <asp:LinkButton ID="ModifyLinkButton" runat="server" OnClick="EditorLinkButton_Click">Edit</asp:LinkButton> |
+                            <asp:LinkButton ID="RemoveLinkButton" runat="server" OnClick="EditorLinkButton_Click">Delete</asp:LinkButton>
+                            <asp:LinkButton ID="RestoreLinkButton" runat="server" Visible="False" OnClick="RestoreLinkButton_Click">Restore</asp:LinkButton> |
+                            <asp:LinkButton ID="BoostLinkButton" runat="server" OnClick="BoostLinkButton_Click">Boost</asp:LinkButton>
                         </asp:Panel>
                     </td>
                 </tr>
