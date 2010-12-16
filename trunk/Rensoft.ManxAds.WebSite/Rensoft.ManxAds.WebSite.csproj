@@ -628,6 +628,7 @@
     <Content Include="Images\Static\Layout\Loading.gif" />
     <Content Include="Images\Static\Layout\Logo.gif" />
     <Content Include="Images\Static\Layout\LogOnButton.gif" />
+    <Content Include="Images\Static\Layout\LogoSquare.png" />
     <Content Include="Images\Static\Layout\MyManxAdsButton.gif" />
     <Content Include="Images\Static\Layout\NextButton.gif" />
     <Content Include="Images\Static\Layout\PlaceholderLeaderboard.gif" />
