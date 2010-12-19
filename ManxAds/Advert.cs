@@ -25,6 +25,8 @@ namespace ManxAds
         public int HitsMonth { get; set; }
         public int HitsTotal { get; set; }
         public string Html { get; set; }
+        public int Weight { get; set; }
+        public bool IsExclusive { get; set; }
 
         public string HitsMonthString
         {
@@ -441,6 +443,8 @@ namespace ManxAds
             advert.HitsMonth = sp.GetReaderValue<int>("HitsMonth");
             advert.HitsTotal = sp.GetReaderValue<int>("HitsTotal");
             advert.Html = sp.GetReaderValue<string>("Html");
+            advert.Weight = sp.GetReaderValue<int>("Weight");
+            advert.IsExclusive = sp.GetReaderValue<bool>("IsExclusive");
             return advert;
         }
 

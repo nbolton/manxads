@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-
+using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
 using ManxAds;
@@ -26,8 +26,9 @@ public partial class AdvertRotator : System.Web.UI.UserControl
     protected FlashAdvertInline FlashAdvertInline;
     protected Literal LayerStart;
     protected Literal LayerEnd;
-    protected Random Random;
     protected int AdvertEnumerator = 0;
+
+    private Random random = new Random(Environment.TickCount);
 
     public AdvertPositionType PositionType;
     public Advert SingleAdvert;
@@ -60,46 +61,64 @@ public partial class AdvertRotator : System.Web.UI.UserControl
             ModeMultiView.SetActiveView(EmptyView);
             return;
         }
-
-        AdvertGroupAdd.Text = "<script type=\"text/javascript\" " +
-            "language=\"javascript\">AddGroup('" + ClientID + "')</script>";
-        AdvertGroupRotate.Text = "<script type=\"text/javascript\" " +
-            "language=\"javascript\">Rotate('" + ClientID + "')</script>";
-    
-        Random = new Random(Environment.TickCount);
-        QueryAccessors accessors = new QueryAccessors(this.Request);
-
+        
         advertsList.AddRange(Advert.Fetch(PositionType));
-
         if (advertsList.Count > 0)
         {
-            List<int> usedIndexes = new List<int>();
-            List<Advert> randomList = new List<Advert>();
             Random random = new Random(Environment.TickCount);
+            List<RandomAdvert> randomList = new List<RandomAdvert>();
 
-            while (randomList.Count < advertsList.Count)
+            foreach (Advert advert in advertsList)
             {
-                int randomIndex;
-                do
-                {
-                    // Try to find an unused index.
-                    randomIndex = random.Next(0, advertsList.Count);
-                }
-                while (usedIndexes.Contains(randomIndex));
+                RandomAdvert randomAdvert = new RandomAdvert();
+                randomAdvert.Advert = advert;
 
-                usedIndexes.Add(randomIndex);
-                randomList.Add(advertsList[randomIndex]);
+                int randomWeight = random.Next(0, advertsList.Count);
+                float weightFactor = (1 + ((float)advert.Weight / 100));
+
+                // still show advert randomly, but give adverts with a
+                // higher weight more chance of appearing first.
+                randomAdvert.Weight = (float)randomWeight * weightFactor;
+
+                randomList.Add(randomAdvert);
             }
 
-            ModeMultiView.SetActiveView(AdvertView);
+            // sort list in order of randomised weight
+            randomList.Sort(new Comparison<RandomAdvert>(CompareRandomAdvert));
 
-            AdvertRepeater.DataSource = randomList;
+            List<Advert> resultList = new List<Advert>();
+            if (randomList[0].Advert.IsExclusive)
+            {
+                // if ad is exclusive, don't allow any other ads to show on this page load
+                resultList.Add(randomList[0].Advert);
+            }
+            else
+            {
+                // select non-exclusive ads when the first wasn't exclusive
+                resultList.AddRange(randomList.Select(ra => ra.Advert).Where(a => !a.IsExclusive));
+
+                // only use rotator javascript if not in exclusive mode
+                AdvertGroupAdd.Text = "<script type=\"text/javascript\" " +
+                    "language=\"javascript\">AddGroup('" + ClientID + "')</script>";
+                AdvertGroupRotate.Text = "<script type=\"text/javascript\" " +
+                    "language=\"javascript\">Rotate('" + ClientID + "')</script>";
+            }
+
+            AdvertRepeater.DataSource = resultList;
             AdvertRepeater.DataBind();
+
+            ModeMultiView.SetActiveView(AdvertView);
         }
         else
         {
             ModeMultiView.SetActiveView(EmptyView);
         }
+    }
+
+    private int CompareRandomAdvert(RandomAdvert x, RandomAdvert y)
+    {
+        // reverse the normal sort result (for descending sort)
+        return -x.Weight.CompareTo(y.Weight);
     }
 
     protected void AdvertRepeater_ItemDataBound(
@@ -133,7 +152,10 @@ public partial class AdvertRotator : System.Web.UI.UserControl
                 break;
         }
 
-        if (SingleAdvert == null)
+        // don't show rotator javascript if in single advert mode,
+        // or if current ad is exclusive (there is only 1 shown),
+        // which is really the same thing as single advert mode.
+        if ((SingleAdvert == null) && !advert.IsExclusive)
         {
             LayerStart.Text = string.Format(
                 "<div id='{0}' class='AdvertDefaultState' >", layerId);
@@ -158,7 +180,7 @@ public partial class AdvertRotator : System.Web.UI.UserControl
         // Must be equal when items are the same.
         if (x == y) return 0;
 
-        return Random.Next(-1, +1);
+        return random.Next(-1, +1);
     }
 
     protected void TypeMultiView_Init(object sender, EventArgs e)
@@ -229,6 +251,21 @@ public partial class AdvertRotator : System.Web.UI.UserControl
                 PlaceholderImage.ImageUrl =
                     "~/Images/Static/Layout/PlaceholderSquareButton.gif";
                 break;
+        }
+    }
+
+    class RandomAdvert
+    {
+        public float Weight
+        {
+            get;
+            set;
+        }
+
+        public Advert Advert
+        {
+            get;
+            set;
         }
     }
 }

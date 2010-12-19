@@ -588,21 +588,6 @@
     <Content Include="Help\Search.xml" />
     <Content Include="Help\Searching.xml" />
     <Content Include="Help\Trader.xml" />
-    <Content Include="Images\Dynamic\Listing\Full-1615-2186.jpg" />
-    <Content Include="Images\Dynamic\Listing\Full-1615-2187.jpg" />
-    <Content Include="Images\Dynamic\Listing\Full-1615-2188.jpg" />
-    <Content Include="Images\Dynamic\Listing\Full-1615-2189.jpg" />
-    <Content Include="Images\Dynamic\Listing\Full-1615-2190.jpg" />
-    <Content Include="Images\Dynamic\Listing\Small-1615-2186.jpg" />
-    <Content Include="Images\Dynamic\Listing\Small-1615-2187.jpg" />
-    <Content Include="Images\Dynamic\Listing\Small-1615-2188.jpg" />
-    <Content Include="Images\Dynamic\Listing\Small-1615-2189.jpg" />
-    <Content Include="Images\Dynamic\Listing\Small-1615-2190.jpg" />
-    <Content Include="Images\Dynamic\Listing\Thumb-1615-2186.gif" />
-    <Content Include="Images\Dynamic\Listing\Thumb-1615-2187.gif" />
-    <Content Include="Images\Dynamic\Listing\Thumb-1615-2188.gif" />
-    <Content Include="Images\Dynamic\Listing\Thumb-1615-2189.gif" />
-    <Content Include="Images\Dynamic\Listing\Thumb-1615-2190.gif" />
     <Content Include="Images\Static\Help\Listing-Boosting.png" />
     <Content Include="Images\Static\Help\Listing-Categories-A.png" />
     <Content Include="Images\Static\Help\Listing-Categories-B.png" />
@@ -701,6 +686,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Dynamic\Advert\" />
+    <Folder Include="Images\Dynamic\Listing\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
