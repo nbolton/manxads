@@ -46,6 +46,11 @@ public partial class ListingDetails : StandardControl
     {
         base.Page_Load(sender, e);
 
+        // HACK: this can be called from the index page when there is no listing,
+        // so just drop out here if no listing was requested.
+        if (!Accessors.HasListing)
+            return;
+
         try
         {
             // Force title appendage (default could be false).
@@ -65,6 +70,11 @@ public partial class ListingDetails : StandardControl
 
             if (Accessors.Listing.ImageCount != 0)
                 StandardMaster.LinkImageUrl = Accessors.Listing.SmallImageUrl;
+
+            // show listing details admin control for users with admin right
+            ListingDetailsAdmin1.Visible =
+                (Auth.IsAuthenticated) &&
+                ((Auth.ActiveUser.UserType & WebsiteUserType.AdministratorOnly) != 0);
 
             this.BindBreadcrumbNode(Accessors.Listing);
 

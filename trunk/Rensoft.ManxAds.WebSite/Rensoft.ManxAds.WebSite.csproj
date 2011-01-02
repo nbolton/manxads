@@ -183,6 +183,13 @@
     <Compile Include="ListingDetails.ascx.designer.cs">
       <DependentUpon>ListingDetails.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ListingDetailsAdmin.ascx.cs">
+      <DependentUpon>ListingDetailsAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListingDetailsAdmin.ascx.designer.cs">
+      <DependentUpon>ListingDetailsAdmin.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ListingDetailsInline.aspx.designer.cs">
       <DependentUpon>ListingDetailsInline.aspx</DependentUpon>
     </Compile>
@@ -630,6 +637,7 @@
     <Content Include="ListingBrowser.ascx" />
     <Content Include="ListingBrowser.aspx" />
     <Content Include="ListingDetails.ascx" />
+    <Content Include="ListingDetailsAdmin.ascx" />
     <Content Include="ListingDetailsInline.aspx" />
     <Content Include="ListingDetailsPopup.aspx" />
     <Content Include="ListingMiniRow.ascx" />

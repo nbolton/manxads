@@ -121,6 +121,11 @@ public class QueryAccessors
         get { return getQueryStringInt("User", "UserId"); }
     }
 
+    public bool HasListing
+    {
+        get { return ListingId != 0; }
+    }
+
     public Category Category
     {
         get
