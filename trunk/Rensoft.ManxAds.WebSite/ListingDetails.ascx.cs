@@ -71,10 +71,13 @@ public partial class ListingDetails : StandardControl
             if (Accessors.Listing.ImageCount != 0)
                 StandardMaster.LinkImageUrl = Accessors.Listing.SmallImageUrl;
 
-            // show listing details admin control for users with admin right
-            ListingDetailsAdmin1.Visible =
-                (Auth.IsAuthenticated) &&
-                ((Auth.ActiveUser.UserType & WebsiteUserType.AdministratorOnly) != 0);
+            if ((Auth.IsAuthenticated) &&
+                ((Auth.ActiveUser.UserType & WebsiteUserType.AdministratorOnly) != 0))
+            {
+                // show listing details admin control for users with admin right
+                ListingDetailsAdmin1.Visible = true;
+                ListingDetailsAdmin1.Initialize(Accessors.Listing);
+            }
 
             this.BindBreadcrumbNode(Accessors.Listing);
 
