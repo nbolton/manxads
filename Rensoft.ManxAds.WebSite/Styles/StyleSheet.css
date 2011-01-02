@@ -1054,6 +1054,7 @@ ul
 	text-align: center;
 }
 
+.GenericNotice,
 .HomeGenericNotice,
 .PayPalDonationHome,
 .PayPalDonationListingBrowser
@@ -1062,6 +1063,12 @@ ul
 	border: solid 1px #2166B1;
 	background-color: #F1F6FF;
 	clear: both;
+}
+
+.GenericNotice
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .HomeGenericNotice,

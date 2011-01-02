@@ -4,6 +4,8 @@
 <%@ Register Src="BreadcrumbTrail.ascx" TagName="BreadcrumbTrail" TagPrefix="uc1" %>
 <%@ Register src="DonateControl.ascx" tagname="DonateControl" tagprefix="uc2" %>
 
+<%@ Register src="ListingDetailsAdmin.ascx" tagname="ListingDetailsAdmin" tagprefix="uc3" %>
+
 <asp:MultiView ID="MultiView" runat="server">
     <asp:View ID="DetailsView" runat="server">
         
@@ -53,6 +55,8 @@
                 <asp:HyperLink ID="TraderWebsiteHyperLink" runat="server" Target="_blank">Visit Website</asp:HyperLink>
             </p>
         </asp:Panel>
+        
+        <uc3:ListingDetailsAdmin ID="ListingDetailsAdmin1" runat="server" Visible="false" />
         
 		<ul class="ListingDetailsOptions" style="padding: 0px">
 			<li>Listing has had <b><asp:Label ID="PageHitsLabel1" runat="server" /></b> hits.</li>
@@ -146,6 +150,7 @@
                 </div>
             </asp:View>
         </asp:MultiView>
+        
     </asp:View>
     <asp:View ID="DeletedView" runat="server" OnActivate="DeletedView_Activate">
         <h1>Listing Deleted</h1>
