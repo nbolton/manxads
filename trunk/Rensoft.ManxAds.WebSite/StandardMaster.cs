@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
+using System.IO;
 
 /// <summary>
 /// Provides helper properties for master pages.
@@ -49,6 +50,12 @@ public class StandardMaster : System.Web.UI.MasterPage
     {
         get { return getRobotFlags(); }
         set { setRobotFlags(value); }
+    }
+
+    public string LinkImageUrl
+    {
+        get;
+        set;
     }
 
     private void setRobotFlags(RobotFlag flags)
@@ -127,5 +134,17 @@ public class StandardMaster : System.Web.UI.MasterPage
         base.OnLoad(e);
 
         //RobotFlags = RobotFlag.Index | RobotFlag.Follow;
+    }
+
+    // fix for Bug #228 - Old layout is still being cached for some visitors
+    public string GetDynamicPath(string virtualPath)
+    {
+        string mappedPath = MapPath(virtualPath);
+        FileInfo styleSheetInfo = new FileInfo(mappedPath);
+
+        // not sure if this is the best approach to resolve virtual paths.
+        string relativePath = virtualPath.Replace("~/", Request.ApplicationPath);
+
+        return relativePath + "?" + styleSheetInfo.LastWriteTime.Ticks;
     }
 }
