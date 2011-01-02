@@ -41,10 +41,10 @@ public partial class Master : StandardMaster
         get
         {
             string imageUrl;
-            if (string.IsNullOrEmpty(LinkImageUrl))
-                imageUrl = "~/Images/Static/Layout/LogoSquare.png";
-            else
+            if (!string.IsNullOrEmpty(LinkImageUrl))
                 imageUrl = LinkImageUrl;
+            else
+                imageUrl = "~/Images/Static/Layout/LogoSquare.png";
 
             return string.Format("href=\"{0}\"", GetDynamicPath(imageUrl));
         }
