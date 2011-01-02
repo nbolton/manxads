@@ -4,22 +4,6 @@
 
 <div class="HomeGenericNotice">
     <asp:MultiView ID="NoticeMultiView" runat="server" ActiveViewIndex=0>
-        
-        <asp:View ID="NoticeAddToFavorites" runat="server">
-            <p><b>Share the love!</b></p>
-            <p>If you like ManxAds, why not tell your friends?</p>
-            
-            <div class="AddThis">
-                <div class="addthis_toolbox addthis_default_style">
-                    <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=manxads" class="addthis_button_compact">Share</a>
-                    <a class="addthis_button_preferred_1"></a>
-                    <a class="addthis_button_preferred_2"></a>
-                </div>
-            </div>
-            <script type="text/javascript">    var addthis_config = { "data_track_clickback": true };</script>
-            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=manxads"></script>
-            
-        </asp:View>
     
         <asp:View ID="NoticeScamView" runat="server">
             <p><b>Please be aware of scams!</b></p>

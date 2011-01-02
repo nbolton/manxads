@@ -31,6 +31,14 @@ public class StandardControl : UserControl
         set { Common.Accessors = value; }
     }
 
+    protected StandardMaster StandardMaster
+    {
+        get
+        {
+            return (StandardMaster)Page.Master;
+        }
+    }
+
     protected virtual void Page_Load(object sender, EventArgs e) { }
 
     protected void UpdatePagingAssistant(object sender, EventArgs e)

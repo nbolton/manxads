@@ -23,15 +23,6 @@ namespace Rensoft.ManxAds.WebSite {
         protected global::System.Web.UI.WebControls.MultiView NoticeMultiView;
         
         /// <summary>
-        /// NoticeAddToFavorites control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View NoticeAddToFavorites;
-        
-        /// <summary>
         /// NoticeScamView control.
         /// </summary>
         /// <remarks>

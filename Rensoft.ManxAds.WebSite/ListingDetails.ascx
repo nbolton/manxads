@@ -53,21 +53,31 @@
                 <asp:HyperLink ID="TraderWebsiteHyperLink" runat="server" Target="_blank">Visit Website</asp:HyperLink>
             </p>
         </asp:Panel>
-		<table cellpadding="0" cellspacing="0" border="0">
-			<tr>
-				<td style="padding-right: 10px">
-					<ul class="ListingDetailsOptions" style="padding: 0px">
-						<li>Listing has had <b><asp:Label ID="PageHitsLabel1" runat="server" /></b> hits.</li>
-						<li><asp:HyperLink ID="SellerContactHyperLink" runat="server">Contact seller</asp:HyperLink> about this listing.</li>
-						<li><asp:HyperLink ID="SellerListingsHyperLink" runat="server">More listings</asp:HyperLink> from this seller.</li>
-						<li><asp:HyperLink ID="SearchListingsHyperLink" runat="server">Similar listings</asp:HyperLink> from all sellers.</li>
-						<li><asp:HyperLink ID="SendToFriendHyperLink" runat="server">Send this listing</asp:HyperLink> to someone.</li>
-					</ul>
-				</td>
-			</tr>
-		</table>
+        
+		<ul class="ListingDetailsOptions" style="padding: 0px">
+			<li>Listing has had <b><asp:Label ID="PageHitsLabel1" runat="server" /></b> hits.</li>
+			<li><asp:HyperLink ID="SellerContactHyperLink" runat="server">Contact seller</asp:HyperLink> about this listing.</li>
+			<li><asp:HyperLink ID="SellerListingsHyperLink" runat="server">More listings</asp:HyperLink> from this seller.</li>
+			<li><asp:HyperLink ID="SearchListingsHyperLink" runat="server">Similar listings</asp:HyperLink> from all sellers.</li>
+			<li><asp:HyperLink ID="SendToFriendHyperLink" runat="server">Send this listing</asp:HyperLink> to someone.</li>
+		</ul>
+        
+        <div style="margin-top: 10px; margin-bottom: 10px">
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style ">
+            <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=manxads" class="addthis_button_compact">Share</a>
+            <span class="addthis_separator">|</span>
+            <a class="addthis_button_preferred_1"></a>
+            <a class="addthis_button_preferred_2"></a>
+            <a class="addthis_button_preferred_3"></a>
+            <a class="addthis_button_preferred_4"></a>
+            </div>
+            <script type="text/javascript">    var addthis_config = { "data_track_clickback": true };</script>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=manxads"></script>
+            <!-- AddThis Button END -->
+        </div>
 		
-		<div style="margin-top: 10px; margin-bottom: 10px">
+		<div style="margin-top: 10px; margin-bottom: 10px" runat="server" visible="false">
             <script type="text/javascript"><!--
                 google_ad_client = "ca-pub-3305986762497110";
                 /* ManxAds filler */
