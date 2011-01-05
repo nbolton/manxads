@@ -68,11 +68,6 @@ namespace ManxAds.Search
 
         public SearchCriteria(string phrase, bool anyKeywords)
         {
-            if (String.IsNullOrEmpty(phrase))
-            {
-                throw new ArgumentNullException("phrase", "Cannot be null or empty.");
-            }
-
             this.phrase = phrase;
             this.anyKeywords = anyKeywords;
         }

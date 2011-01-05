@@ -81,11 +81,10 @@ public partial class ListingBrowser : StandardControl
         TitleLabel.Visible = false;
 
         string searchPhrase = Request.QueryString["Search"].Trim();
-        if (String.IsNullOrEmpty(searchPhrase))
-        {
-            MultiView.SetActiveView(SearchErrorView);
-            return;
-        }
+
+        // if search terms are empty, use a wildcard char
+        if (string.IsNullOrEmpty(searchPhrase))
+            searchPhrase = "*";
 
         // Show extended seach panel.
         SearchPanel.Visible = true;
@@ -118,42 +117,59 @@ public partial class ListingBrowser : StandardControl
             catch (NotFoundException) { }
         }
 
-
-        this.Common.Title = searchPhrase;
-        this.Common.Description = "View the ManxAds search results for '" + searchPhrase + "'.";
-        this.TitleLabel.Text = "Results for '" + searchPhrase + "'";
-        this.MultiView.SetActiveView(DefaultView);
-
-        bool advancedMode = false;
-        if (!String.IsNullOrEmpty(Request.QueryString["Advanced"]))
+        if (searchPhrase != "*")
         {
-            advancedMode = true;
+            this.Common.Title = searchPhrase;
+            this.Common.Description = "ManxAds search results for '" + searchPhrase + "'.";
+        }
+        else
+        {
+            this.Common.Title = "Search";
+            this.Common.Description = "ManxAds search results.";
         }
 
-        bool anyKeywords = false;
-        if (!String.IsNullOrEmpty(Request.QueryString["Any"]))
+        this.MultiView.SetActiveView(DefaultView);
+
+        bool advancedMode = !string.IsNullOrEmpty(Request.QueryString["Advanced"]);
+        bool anyKeywords = !string.IsNullOrEmpty(Request.QueryString["Any"]);
+
+        if (!advancedMode && (searchPhrase == "*"))
         {
-            anyKeywords = true;
+            MultiView.SetActiveView(SimpleSearchErrorView);
+            return;
         }
 
         string catIdString = Request.QueryString["SearchCategoryId"];
         SearchCriteria critera = new SearchCriteria(searchPhrase, anyKeywords);
 
-        if (advancedMode ||
-            !String.IsNullOrEmpty(catIdString) ||
-            !String.IsNullOrEmpty(Request.QueryString["Seller"]))
-        {
+        if (!String.IsNullOrEmpty(catIdString))
             critera.SetCategoryId(catIdString);
+
+        if (!String.IsNullOrEmpty(Request.QueryString["Seller"]))
             critera.SetSellerId(Request.QueryString["Seller"]);
 
-            if (advancedMode)
+        if (advancedMode)
+        {
+            string startDate = Request.QueryString["StartDate"];
+            string endDate = Request.QueryString["EndDate"];
+            string startPrice = Request.QueryString["StartPrice"];
+            string endPrice = Request.QueryString["EndPrice"];
+
+            bool dateOrPriceEmpty = 
+                ((string.IsNullOrEmpty(startDate) && string.IsNullOrEmpty(endDate)) &&
+                (string.IsNullOrEmpty(startPrice) && string.IsNullOrEmpty(endPrice)));
+
+            if ((searchPhrase == "*") && (string.IsNullOrEmpty(catIdString) || dateOrPriceEmpty))
             {
-                critera.SetStartDate(Request.QueryString["StartDate"]);
-                critera.SetEndDate(Request.QueryString["EndDate"]);
-                critera.SetStartPrice(Request.QueryString["StartPrice"]);
-                critera.SetEndPrice(Request.QueryString["EndPrice"]);
-                critera.SetLocationId(Request.QueryString["LocationId"]);
+                MultiView.SetActiveView(AdvancedSearchErrorView);
+                return;
             }
+
+            critera.SetStartDate(startDate);
+            critera.SetEndDate(endDate);
+            critera.SetStartPrice(startPrice);
+            critera.SetEndPrice(endPrice);
+            critera.SetLocationId(Request.QueryString["LocationId"]);
         }
 
         // Start the timer for database transaction.

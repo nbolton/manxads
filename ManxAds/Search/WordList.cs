@@ -71,7 +71,14 @@ namespace ManxAds.Search
         {
             bool operatorPrevious = false;
             List<string> cleanList = new List<string>(), finalList = new List<string>();
-            string[] rawList = context.Split(SplitChars, StringSplitOptions.RemoveEmptyEntries);
+            
+            // handle wildcard searches
+            string[] rawList;
+            if (context != "*")
+                rawList = context.Split(SplitChars, StringSplitOptions.RemoveEmptyEntries);
+            else
+                rawList = new string[] { "*" };
+
             List<char> wordJoinCharList = new List<char>(WordJoinChars);
 
             // Split each segment word, recording individual segments and whole words.

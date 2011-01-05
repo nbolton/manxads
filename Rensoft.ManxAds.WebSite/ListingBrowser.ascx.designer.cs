@@ -247,13 +247,31 @@ public partial class ListingBrowser {
     protected global::System.Web.UI.WebControls.View ErrorView;
     
     /// <summary>
-    /// SearchErrorView control.
+    /// SimpleSearchErrorView control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.View SearchErrorView;
+    protected global::System.Web.UI.WebControls.View SimpleSearchErrorView;
+    
+    /// <summary>
+    /// SearchDialog3 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::SearchDialog SearchDialog3;
+    
+    /// <summary>
+    /// AdvancedSearchErrorView control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.View AdvancedSearchErrorView;
     
     /// <summary>
     /// SearchDialog1 control.

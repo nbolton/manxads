@@ -67,6 +67,7 @@
   </Target>
   -->
   <ItemGroup>
+    <None Include="Test scripts\TestListingSearchWildcard.sql" />
     <None Include="Test scripts\TestListingSearch.sql" />
   </ItemGroup>
 </Project>
