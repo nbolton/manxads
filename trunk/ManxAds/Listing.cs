@@ -1073,8 +1073,12 @@ namespace ManxAds
                 listingList = ParseXmlListingSearch(xml);
             }
 
-            Comparison<Listing> weightSort = new Comparison<Listing>(CompareWeights);
-            listingList.Sort(weightSort);
+            // don't sort wildcard searches
+            if (critera.Phrase != "*")
+            {
+                Comparison<Listing> weightSort = new Comparison<Listing>(CompareWeights);
+                listingList.Sort(weightSort);
+            }
 
             return listingList;
         }

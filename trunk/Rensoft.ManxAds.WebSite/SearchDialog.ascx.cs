@@ -167,10 +167,15 @@ public partial class SearchDialog : StandardControl
 
     protected void AdvancedSearchButton_Click(object sender, ImageClickEventArgs e)
     {
-        string url = "~/Listings.aspx?Advanced=1&Search=" +
-            Server.UrlEncode(AdvancedSearchTextBox.Text);
+        string url = "~/Listings.aspx?Advanced=1";
 
-        if (!String.IsNullOrEmpty(Request.QueryString["Any"])) url += "&Any=1";
+        if (!string.IsNullOrEmpty(AdvancedSearchTextBox.Text))
+            url += "&Search=" + Server.UrlEncode(AdvancedSearchTextBox.Text);
+        else
+            url += "&Search=*";
+
+        if (!String.IsNullOrEmpty(Request.QueryString["Any"])) 
+            url += "&Any=1";
 
         int categoryId = int.Parse(AdvancedCategoryDropDownList.SelectedValue);
         int locationId = int.Parse(AdvancedLocationDropDownList.SelectedValue);

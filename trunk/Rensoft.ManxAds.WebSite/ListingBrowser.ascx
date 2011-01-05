@@ -84,9 +84,19 @@
         <p>The specified category does not exist.</p>
     </asp:View>
     
-    <asp:View ID="SearchErrorView" runat="server">
+    <asp:View ID="SimpleSearchErrorView" runat="server">
         <h1>ManxAds Search</h1>
-        <p>You did not search for anything. Please type some words to search for.</p>
+        <p>Unable to search; enter some search terms and try again.</p>
+        <uc6:SearchDialog ID="SearchDialog3" runat="server" />
+    </asp:View>
+    
+    <asp:View ID="AdvancedSearchErrorView" runat="server">
+        <h1>ManxAds Search</h1>
+        <p>
+            Unable to search; some of the required fields were missing. 
+            If there are no search terms, then category must be selected 
+            along with a price and/or date range.
+        </p>
         <uc6:SearchDialog ID="SearchDialog1" runat="server" />
     </asp:View>
     

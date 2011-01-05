@@ -36,10 +36,27 @@ public partial class StoredProcedures
             bool enableCategory = (categoryId > 0) ? true : false;
             bool enableLocation = (locationId > 0) ? true : false;
             bool enableSeller = (sellerId > 0) ? true : false;
+            
+            Dictionary<int, Listing> listingTable = new Dictionary<int, Listing>();
+            Dictionary<string, SearchWord> searchKeywordTable = WordsXmlToDictionary(wordsXml);
+
+            // Convert table to simple word string list.
+            List<string> searchKeywordList = new List<string>();
+            foreach (KeyValuePair<string, SearchWord> searchWord in searchKeywordTable)
+            {
+                searchKeywordList.Add(searchWord.Value.Word);
+            }
+
+            bool wildcardSearch = (searchKeywordList.Count == 1) && (searchKeywordList[0] == "*");
 
             // Fetch all listing IDs related to the keyword.
-            string indexQuery =
-                "SELECT lk.ListingId, lk.Weight, k.Word FROM Keywords AS k " +
+            string indexQuery = "SELECT ";
+
+            if (wildcardSearch)
+                indexQuery += "TOP 1000 ";
+
+            indexQuery +=
+                "lk.ListingId, lk.Weight, k.Word FROM Keywords AS k " +
                 "INNER JOIN ListingKeywords AS lk ON lk.KeywordId = k.KeywordId " +
                 "INNER JOIN Listings AS l ON lk.ListingId = l.ListingId ";
 
@@ -71,19 +88,21 @@ public partial class StoredProcedures
                 indexQuery += "AND l.UserId = @SellerId ";
             }
 
-            Dictionary<int, Listing> listingTable = new Dictionary<int, Listing>();
-            Dictionary<string, SearchWord> searchKeywordTable = WordsXmlToDictionary(wordsXml);
-
-            // Convert table to simple word string list.
-            List<string> searchKeywordList = new List<string>();
-            foreach (KeyValuePair<string, SearchWord> searchWord in searchKeywordTable)
+            if (!wildcardSearch)
             {
-                searchKeywordList.Add(searchWord.Value.Word);
+                // Append all keywords to query.
+                indexQuery += "AND (k.Word = '" +
+                    String.Join("' OR k.Word = '", searchKeywordList.ToArray()) + "')";
+            }
+            else
+            {
+                indexQuery += "AND k.Word LIKE '%' ";
             }
 
-            // Append all keywords to query.
-            indexQuery += "AND (k.Word = '" +
-                String.Join("' OR k.Word = '", searchKeywordList.ToArray()) + "')";
+            // since there are no keywords to order by weight, we should
+            // order by something sensible like the boost date as a compromise.
+            if (wildcardSearch)
+                indexQuery += "ORDER BY l.CreateDate DESC";
 
             SqlCommand indexCommand = new SqlCommand(indexQuery, connection);
             indexCommand.Parameters.AddWithValue("@MinDate", minDate);
@@ -102,9 +121,14 @@ public partial class StoredProcedures
                 {
                     int listingId = (int)reader["ListingId"];
                     double weight = (double)reader["Weight"];
-                    SearchWord word = searchKeywordTable[(string)reader["Word"]];
 
-                    Keyword keyword = new Keyword(word, weight);
+                    Keyword keyword = null;
+                    if (!wildcardSearch)
+                    {
+                        SearchWord word = searchKeywordTable[(string)reader["Word"]];
+                        keyword = new Keyword(word, weight);
+                    }
+
                     if (!listingTable.ContainsKey(listingId))
                     {
                         // If listing not yet created, do so.
@@ -112,8 +136,11 @@ public partial class StoredProcedures
                         listingTable.Add(listingId, listing);
                     }
 
-                    // Then, always add the keyword.
-                    listingTable[listingId].Keywords.Add(keyword);
+                    if (keyword != null)
+                    {
+                        // Then, add the keyword (but not for wildcards).
+                        listingTable[listingId].Keywords.Add(keyword);
+                    }
                 }
             }
 
@@ -124,18 +151,21 @@ public partial class StoredProcedures
                 listingList.Add(kvp.Value);
             }
 
-            // Now filter out all the non-and matches for and keywords.
-            foreach (Listing listing in listingList)
+            if (!wildcardSearch)
             {
-                foreach (string searchKeyword in searchKeywordList)
+                // Now filter out all the non-and matches for and keywords.
+                foreach (Listing listing in listingList)
                 {
-                    SearchWord searchWord = searchKeywordTable[searchKeyword];
-                    SearchWord.Operator swo = searchWord.SearchOperator;
-
-                    if ((swo == SearchWord.Operator.And) &&
-                        !listing.StringKeywords.Contains(searchKeyword))
+                    foreach (string searchKeyword in searchKeywordList)
                     {
-                        listingTable.Remove(listing.DatabaseId);
+                        SearchWord searchWord = searchKeywordTable[searchKeyword];
+                        SearchWord.Operator swo = searchWord.SearchOperator;
+
+                        if ((swo == SearchWord.Operator.And) &&
+                            !listing.StringKeywords.Contains(searchKeyword))
+                        {
+                            listingTable.Remove(listing.DatabaseId);
+                        }
                     }
                 }
             }
@@ -180,7 +210,8 @@ public partial class StoredProcedures
         string listingQuery =
             "SELECT * FROM VW_ListingFetch " +
             "WHERE (ListingId = " + idJoin + ") " +
-            "AND Enabled = 1";
+            "AND Enabled = 1 " +
+            "ORDER BY CreateDate DESC"; // only really matters for wildcard searches
 
         SqlCommand listingCommand = new SqlCommand(listingQuery, connection);
         SqlDataReader reader = listingCommand.ExecuteReader();

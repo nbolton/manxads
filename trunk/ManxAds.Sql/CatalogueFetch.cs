@@ -9,6 +9,7 @@ using System.IO;
 
 namespace ManxAds.Sql
 {
+    // I DONT THINK THIS IS USED ANY MORE!
     public partial class StoredProcedures
     {
         [SqlProcedure]
