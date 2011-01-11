@@ -23,6 +23,15 @@ namespace Rensoft.ManxAds.WebSite {
         protected global::System.Web.UI.WebControls.HyperLink EditListingHyperLink;
         
         /// <summary>
+        /// DeleteListingHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink DeleteListingHyperLink;
+        
+        /// <summary>
         /// EditUserHyperLink control.
         /// </summary>
         /// <remarks>
@@ -30,5 +39,14 @@ namespace Rensoft.ManxAds.WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink EditUserHyperLink;
+        
+        /// <summary>
+        /// BanUserHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink BanUserHyperLink;
     }
 }
