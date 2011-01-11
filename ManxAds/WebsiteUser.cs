@@ -480,6 +480,11 @@ namespace ManxAds
             get { return String.Format(LocalSettings.SellerListingsUrlFormat, databaseId); }
         }
 
+        public string BanUrl
+        {
+            get { return String.Format(LocalSettings.ListingBanUrlFormat, databaseId); }
+        }
+
         public bool ListingLimitReached
         {
             get
