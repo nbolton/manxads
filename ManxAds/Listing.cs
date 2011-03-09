@@ -622,7 +622,7 @@ namespace ManxAds
                 _DatabaseId = sp.GetParamValue<int>("@InsertId");
             }
 
-            updateSearchIndex(connectionString);
+            UpdateSearchIndex(connectionString);
         }
 
         public void Modify()
@@ -654,10 +654,10 @@ namespace ManxAds
                 sp.Command.ExecuteNonQuery();
             }
 
-            updateSearchIndex(connectionString);
+            UpdateSearchIndex(connectionString);
         }
 
-        private void updateSearchIndex(string connectionString)
+        public void UpdateSearchIndex(string connectionString)
         {
             SearchIndexUpdater searchIndexUpdater = new SearchIndexUpdater(connectionString);
             searchIndexUpdater.Update(this);
@@ -876,12 +876,12 @@ namespace ManxAds
             }
         }
 
-        public static List<Listing> Fetch(int limit, int page)
+        public static ICollection<IListing> Fetch(int limit, int page)
         {
             return Fetch(limit, page, "BoostDate", "DESC");
         }
 
-        public static List<Listing> Fetch(int limit, int page, string sortColumn, string sortDirection)
+        public static ICollection<IListing> Fetch(int limit, int page, string sortColumn, string sortDirection)
         {
             string queryFormat =
                 "SELECT * FROM ( " +
@@ -908,7 +908,7 @@ namespace ManxAds
             string oppositDir = (sortDirection == "ASC") ? "DESC" : "ASC";
             string query = string.Format(queryFormat, sortColumn, sortDirection, oppositDir, priceExlude);
 
-            List<Listing> listingList = new List<Listing>();
+            List<IListing> listingList = new List<IListing>();
             using (SqlConnection connection = new SqlConnection(LocalSettings.ConnectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);

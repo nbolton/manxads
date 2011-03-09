@@ -42,6 +42,11 @@ namespace ManxAds.Test.Listings
             throw new NotImplementedException();
         }
 
+        public void UpdateSearchIndex(string connectionString)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
     }
 }

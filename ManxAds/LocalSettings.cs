@@ -234,12 +234,20 @@ namespace ManxAds
         public const string UserRemoveUrlFormat =
             "~/UserModify.aspx?User={0}&Remove=1";
 
+        private static string connectionString = null;
         public static string ConnectionString
         {
             get
             {
-                return ConfigurationManager.
-                    ConnectionStrings["Pimpmaster"].ConnectionString;
+                if (connectionString == null)
+                    return ConfigurationManager.
+                        ConnectionStrings["Pimpmaster"].ConnectionString;
+                else
+                    return connectionString;
+            }
+            set
+            {
+                connectionString = value;
             }
         }
 

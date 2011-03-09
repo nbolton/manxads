@@ -12,7 +12,7 @@ namespace ManxAds.Test.DataGateways
 
         #region IListingDataGateway Members
 
-        public List<IListingBase> FetchBases()
+        public ICollection<IListingBase> FetchBases()
         {
             throw new NotImplementedException();
         }
@@ -22,7 +22,7 @@ namespace ManxAds.Test.DataGateways
             throw new NotImplementedException();
         }
 
-        public List<ICategory> GetCategories(IListing listing)
+        public ICollection<ICategory> GetCategories(IListing listing)
         {
             return StubCategories;
         }
@@ -35,6 +35,16 @@ namespace ManxAds.Test.DataGateways
         public int GetImageCount(IListing listing)
         {
             return 1;
+        }
+
+        public void UpdateSearchIndex(IListing listing)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICollection<IListing> Fetch(int limit, int page)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

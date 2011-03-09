@@ -59,7 +59,7 @@ namespace ManxAds.Search
         [Obsolete("Use GenerateFromSingle instead.")]
         public void GenerateFromAll()
         {
-            List<IListingBase> listingList = data.Listing.FetchBases();
+            ICollection<IListingBase> listingList = data.Listing.FetchBases();
             foreach (IListingBase listing in listingList)
             {
                 IListing fullListing = data.Listing.Fetch(listing.DatabaseId);

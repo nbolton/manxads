@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManxAds.Sql", "ManxAds.Sql\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManxAds.Test", "ManxAds.Test\ManxAds.Test.csproj", "{E2FCD2F4-219B-4B0B-8BCB-8A13C072B71A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManxAds.Console", "ManxAds.Console\ManxAds.Console.csproj", "{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Rensoft.ManxAds1.vsmdi
@@ -143,6 +145,16 @@ Global
 		{E2FCD2F4-219B-4B0B-8BCB-8A13C072B71A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E2FCD2F4-219B-4B0B-8BCB-8A13C072B71A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E2FCD2F4-219B-4B0B-8BCB-8A13C072B71A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Release|.NET.ActiveCfg = Release|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{21AB2668-2161-47EE-9ECA-C4DB0D97BF12}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

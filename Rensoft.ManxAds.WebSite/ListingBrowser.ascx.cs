@@ -374,7 +374,7 @@ public partial class ListingBrowser : StandardControl
         }
 
         // Fetch a pre-limited list of listings.
-        List<Listing> listingList = Listing.Fetch(
+        ICollection<IListing> listingList = Listing.Fetch(
             LocalSettings.DefaultPageLimit, Common.PageNumber, sortColumn, sortDirection);
 
         int totalListings = Listing.RunCount(SqlDateTime.MinValue.Value);
@@ -383,7 +383,7 @@ public partial class ListingBrowser : StandardControl
             totalListings = LocalSettings.DefaultPageMaximum;
         }
 
-        Common.PagingManager = new PagingManager<Listing>(
+        Common.PagingManager = new PagingManager<IListing>(
             listingList, LocalSettings.DefaultPageLimit,
             Common.PageNumber, totalListings);
 
