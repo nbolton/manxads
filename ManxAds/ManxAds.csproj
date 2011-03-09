@@ -62,7 +62,17 @@
     <Compile Include="AdvertSizeType.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="CategoryAdvert.cs" />
+    <Compile Include="DataGateway\DataGatewayProvider.cs" />
+    <Compile Include="DataGateway\IDataGatewayProvider.cs" />
+    <Compile Include="DataGateway\IListingDataGateway.cs" />
+    <Compile Include="DataGateway\ISearchDataGateway.cs" />
+    <Compile Include="DataGateway\ListingDataGateway.cs" />
+    <Compile Include="DataGateway\SearchDataGateway.cs" />
     <Compile Include="EmailTools.cs" />
+    <Compile Include="ICategory.cs" />
+    <Compile Include="IListing.cs" />
+    <Compile Include="IListingBase.cs" />
+    <Compile Include="ISeller.cs" />
     <Compile Include="PathUtility.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -70,6 +80,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="PublicListing.cs" />
+    <Compile Include="Search\SearchIndexUpdater.cs" />
     <Compile Include="Search\WordStem.cs" />
     <Compile Include="TextType.cs" />
     <Compile Include="StringTools.cs" />

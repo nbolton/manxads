@@ -13,7 +13,7 @@ using System.Linq;
 
 namespace ManxAds
 {
-    public class WebsiteUser : IEquatable<WebsiteUser>
+    public class WebsiteUser : IEquatable<WebsiteUser>, ISeller
     {
         private const int displayNameTrim = 15;
         private const int emailAddressTrim = 25;

@@ -14,7 +14,7 @@ using System.Net.Mail;
 
 namespace ManxAds
 {
-    public class Listing : ListingBase
+    public class Listing : ListingBase, IListing
     {
         private int sellerId;
         private int masterImageId;
@@ -417,7 +417,7 @@ namespace ManxAds
         /// <summary>
         /// Gets the categories where this listing is displayed.
         /// </summary>
-        public List<Category> Categories
+        public List<ICategory> Categories
         {
             get { return Category.Fetch(this); }
         }
@@ -593,7 +593,12 @@ namespace ManxAds
 
         public void Create()
         {
-            using (StoredProceedure sp = new StoredProceedure("ListingCreate"))
+            Create(LocalSettings.ConnectionString);
+        }
+
+        public void Create(string connectionString)
+        {
+            using (StoredProceedure sp = new StoredProceedure("ListingCreate", connectionString))
             {
                 sp.AddParam("@SellerId", this.sellerId);
                 sp.AddParam("@Title", this.Title);
@@ -616,6 +621,8 @@ namespace ManxAds
 
                 _DatabaseId = sp.GetParamValue<int>("@InsertId");
             }
+
+            updateSearchIndex(connectionString);
         }
 
         public void Modify()
@@ -646,6 +653,14 @@ namespace ManxAds
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
             }
+
+            updateSearchIndex(connectionString);
+        }
+
+        private void updateSearchIndex(string connectionString)
+        {
+            SearchIndexUpdater searchIndexUpdater = new SearchIndexUpdater(connectionString);
+            searchIndexUpdater.Update(this);
         }
 
         public void Restore()
@@ -1218,12 +1233,12 @@ namespace ManxAds
             this.BoostDate = dateTime;
         }
 
-        public WebsiteUser GetSeller(string connectionString)
+        public ISeller GetSeller(string connectionString)
         {
             return WebsiteUser.Fetch(sellerId, connectionString);
         }
 
-        public List<Category> GetCategories(string connectionString)
+        public List<ICategory> GetCategories(string connectionString)
         {
             return Category.Fetch(this, connectionString);
         }

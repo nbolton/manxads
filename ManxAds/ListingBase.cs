@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ManxAds
 {
-    public class ListingBase
+    public class ListingBase : IListingBase
     {
         private int databaseId;
         private string title;
@@ -281,14 +281,14 @@ namespace ManxAds
             this.boostDate = boostDate;
         }
 
-        public static List<ListingBase> Fetch()
+        public static List<IListingBase> Fetch()
         {
             return Fetch(LocalSettings.ConnectionString);
         }
 
-        public static List<ListingBase> Fetch(string connectionString)
+        public static List<IListingBase> Fetch(string connectionString)
         {
-            List<ListingBase> listingList = new List<ListingBase>();
+            List<IListingBase> listingList = new List<IListingBase>();
             using (StoredProceedure sp = new StoredProceedure("ListingFetchBase", connectionString))
             {
                 sp.Connection.Open();

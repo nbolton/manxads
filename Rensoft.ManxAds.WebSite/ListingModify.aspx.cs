@@ -510,7 +510,7 @@ public partial class ListingModify : StandardPage
 
     protected void CategoryDataBind(bool setFocus)
     {
-        List<Category> listingCategories = getTempListing().Categories;
+        List<ICategory> listingCategories = getTempListing().Categories;
         ListingCategoryDataList.DataSource = listingCategories;
         ListingCategoryDataList.DataBind();
 
@@ -544,7 +544,7 @@ public partial class ListingModify : StandardPage
     protected void PopulateCategoryDropDown()
     {
         // Use an empty ignore list so all categories are added.
-        this.PopulateCategoryDropDown(new List<Category>());
+        this.PopulateCategoryDropDown(new List<ICategory>());
     }
 
     /// <summary>
@@ -552,7 +552,7 @@ public partial class ListingModify : StandardPage
     /// </summary>
     /// <param name="ignorables">Category items not to add.</param>
     /// <returns>False if drop down list is not visible.</returns>
-    protected bool PopulateCategoryDropDown(List<Category> ignorables)
+    protected bool PopulateCategoryDropDown(List<ICategory> ignorables)
     {
         int categoryCount = 0;
         ListItem tempListItem;

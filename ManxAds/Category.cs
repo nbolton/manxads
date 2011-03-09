@@ -10,7 +10,7 @@ namespace ManxAds
 {
     public class CategoryEmptyException : Exception { }
 
-    public class Category : IEquatable<Category>
+    public class Category : IEquatable<Category>, ICategory
     {
         private int databaseId;
         private string title;
@@ -365,7 +365,7 @@ namespace ManxAds
             return categoryList;
         }
 
-        public static List<Category> Fetch(Listing listing)
+        public static List<ICategory> Fetch(Listing listing)
         {
             return Fetch(listing, LocalSettings.ConnectionString);
         }
@@ -375,9 +375,9 @@ namespace ManxAds
         /// </summary>
         /// <param name="listing">Listing to fetch categories for.</param>
         /// <returns>List of populated categories.</returns>
-        public static List<Category> Fetch(Listing listing, string connectionString)
+        public static List<ICategory> Fetch(Listing listing, string connectionString)
         {
-            List<Category> categoryList = new List<Category>();
+            List<ICategory> categoryList = new List<ICategory>();
             using (StoredProceedure sp = new StoredProceedure("CategoryFetchByListingId", connectionString))
             {
                 sp.AddParam("@ListingId", listing.DatabaseId);
