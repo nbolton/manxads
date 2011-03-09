@@ -15,7 +15,7 @@ namespace Rensoft.ManxAds.Service
         private DateTime abuseReportRunTime;
         private DateTime autoDeleteRunTime;
         private bool checkerRunning;
-        private bool crawlerRunning;
+        //private bool crawlerRunning;
         private Timer searchEngineCrawlerTimer;
         private Timer listingCheckerTimer;
         private Timer scheduleTimer;
@@ -30,6 +30,11 @@ namespace Rensoft.ManxAds.Service
         {
             this.settings = settings;
             this.eventLogHelper = eventLogHelper;
+            
+            if (settings.EnableCrawler)
+                throw new NotSupportedException(
+                    "Enabling the search engine crawler is not supported; listing " +
+                    "keywords are now updated each time a listing is created or modified.");
 
             initialBackgroundWorker.DoWork += new DoWorkEventHandler(initialBackgroundWorker_DoWork);
 
@@ -40,7 +45,7 @@ namespace Rensoft.ManxAds.Service
             listingCheckerTimer = new Timer(settings.ListingCheckInterval);
             scheduleTimer = new Timer(1000);
 
-            searchEngineCrawlerTimer.Elapsed += new ElapsedEventHandler(searchEngineCrawlerTimer_Elapsed);
+            //searchEngineCrawlerTimer.Elapsed += new ElapsedEventHandler(searchEngineCrawlerTimer_Elapsed);
             listingCheckerTimer.Elapsed += new ElapsedEventHandler(listingCheckerTimer_Elapsed);
             scheduleTimer.Elapsed += new ElapsedEventHandler(scheduleTimer_Elapsed);
 
@@ -162,6 +167,7 @@ namespace Rensoft.ManxAds.Service
             tryWriteToEventLog("Service stopped.", EventLogEntryType.Information);
         }
 
+        /*
         void searchEngineCrawlerTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
             if (!crawlerRunning)
@@ -175,6 +181,7 @@ namespace Rensoft.ManxAds.Service
                     EventLogEntryType.Warning);
             }
         }
+        */
 
         void listingCheckerTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
@@ -200,13 +207,16 @@ namespace Rensoft.ManxAds.Service
 
         private void initialBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
+            /*
             if (settings.EnableCrawler)
                 tryRunSearchEngineCrawler();
+            */
 
             if (settings.EnableChecker)
                 tryRunListingChecker();
         }
 
+        /*
         private void tryRunSearchEngineCrawler()
         {
             try
@@ -220,9 +230,8 @@ namespace Rensoft.ManxAds.Service
                         EventLogEntryType.Information);
                 }
 
-                Catalogue catalogue = Catalogue.GenerateCatalogue(
-                    settings.ManxAdsDatabase);
-
+                Catalogue catalogue = new Catalogue(settings.ManxAdsDatabase);
+                catalogue.GenerateFromAll();
                 catalogue.UpdateKeywords();
 
                 if (settings.EnableDebugMessages)
@@ -241,6 +250,7 @@ namespace Rensoft.ManxAds.Service
                 crawlerRunning = false;
             }
         }
+        */
 
         private void tryRunListingChecker()
         {

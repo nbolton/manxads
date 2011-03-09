@@ -179,7 +179,7 @@ public partial class ListingDetails : StandardControl
             }
             else if (listing.Categories.Count > 0)
             {
-                Category parent = listing.Categories[0];
+                ICategory parent = listing.Categories[0];
                 this.BreadcrumbTrail.AddNode(parent.Title, parent.NavigateUrl);
             }
 

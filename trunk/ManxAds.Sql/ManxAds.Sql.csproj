@@ -52,12 +52,10 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatalogueFetch.cs" />
-    <Compile Include="CataloguePublish.cs" />
-    <Compile Include="ListingKeywordUpdate.cs" />
+    <Compile Include="ListingIndexUpdate.cs" />
     <Compile Include="ListingSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchOutputHandler.cs" />
+    <Compile Include="SearchDataGateway.cs" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -67,6 +65,7 @@
   </Target>
   -->
   <ItemGroup>
+    <None Include="Test scripts\TestListingIndexUpdate.sql" />
     <None Include="Test scripts\TestListingSearchWildcard.sql" />
     <None Include="Test scripts\TestListingSearch.sql" />
   </ItemGroup>

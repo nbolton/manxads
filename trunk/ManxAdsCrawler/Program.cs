@@ -18,13 +18,16 @@ namespace ManxAdsCrawler
     {
         static void Main(string[] args)
         {
+            /*
 #if DEBUG
             updateKeywords();
 #else
             updateKeywordsReportError();
 #endif
+            */
         }
 
+        [Obsolete("Indexing all listings is not reccommended (bad performance).")]
         private static void updateKeywords()
         {
             Console.WriteLine("ManxAds Crawler " + Assembly.GetExecutingAssembly().GetName().Version);
@@ -33,7 +36,8 @@ namespace ManxAdsCrawler
             Console.WriteLine("Indexing listings... ");
             Console.WriteLine();
 
-            Catalogue catalogue = Catalogue.GenerateCatalogue(LocalSettings.ConnectionString);
+            Catalogue catalogue = new Catalogue(LocalSettings.ConnectionString);
+            catalogue.GenerateFromAll();
 
             Console.WriteLine();
             Console.WriteLine("Got " + catalogue.KeywordCount + " keywords.");
@@ -45,6 +49,7 @@ namespace ManxAdsCrawler
             Console.WriteLine("Done");
         }
 
+        /*
         private static void updateKeywordsReportError()
         {
             try
@@ -63,5 +68,6 @@ namespace ManxAdsCrawler
                 throw ex;
             }
         }
+        */
     }
 }

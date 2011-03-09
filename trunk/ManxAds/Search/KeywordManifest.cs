@@ -6,11 +6,11 @@ namespace ManxAds.Search
 {
     public class KeywordManifest
     {
-        private ListingBase listing;
+        private IListing listing;
         private float weight;
         private int occurrences = 1;
 
-        public ListingBase Listing
+        public IListing Listing
         {
             get { return listing; }
             set { listing = value; }
@@ -28,7 +28,7 @@ namespace ManxAds.Search
             set { occurrences = value; }
         }
 
-        public KeywordManifest(ListingBase listing, float weight, int occurrences)
+        public KeywordManifest(IListing listing, float weight, int occurrences)
         {
             this.listing = listing;
             this.weight = weight;

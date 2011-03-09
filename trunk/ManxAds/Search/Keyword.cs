@@ -68,7 +68,7 @@ namespace ManxAds.Search
             this.manifiestList = new Dictionary<int, KeywordManifest>();
         }
 
-        public Keyword(string name, ListingBase initialListing, float initialWeight)
+        public Keyword(string name, IListing initialListing, float initialWeight)
             : this(name)
         {
             this.AddListing(initialListing, initialWeight, 1);
@@ -78,7 +78,7 @@ namespace ManxAds.Search
         /// Add a listing and determin weight factor based on factor
         /// number and number of occurances in keyword.
         /// </summary>
-        public void AddListing(ListingBase listing, float weightFactor, int reverseThreshold)
+        public void AddListing(IListing listing, float weightFactor, int reverseThreshold)
         {
             KeywordManifest keywordManifest =
                 new KeywordManifest(listing, weightFactor, 1);
