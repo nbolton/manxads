@@ -12,5 +12,7 @@ namespace ManxAds
         ISeller GetSeller(string connectionString);
 
         int GetImageCount(string connectionString);
+
+        void UpdateSearchIndex(string connectionString);
     }
 }

@@ -16,7 +16,7 @@ namespace ManxAds.DataGateway
 
         #region IListingDataGateway Members
 
-        public List<IListingBase> FetchBases()
+        public ICollection<IListingBase> FetchBases()
         {
             return ListingBase.Fetch(connectionString);
         }
@@ -26,7 +26,7 @@ namespace ManxAds.DataGateway
             return Listing.Fetch(id, connectionString);
         }
 
-        public List<ICategory> GetCategories(IListing listing)
+        public ICollection<ICategory> GetCategories(IListing listing)
         {
             return listing.GetCategories(connectionString);
         }
@@ -39,6 +39,16 @@ namespace ManxAds.DataGateway
         public int GetImageCount(IListing listing)
         {
             return listing.GetImageCount(connectionString);
+        }
+
+        public void UpdateSearchIndex(IListing listing)
+        {
+            listing.UpdateSearchIndex(connectionString);
+        }
+
+        public ICollection<IListing> Fetch(int limit, int page)
+        {
+            return Listing.Fetch(limit, page);
         }
 
         #endregion

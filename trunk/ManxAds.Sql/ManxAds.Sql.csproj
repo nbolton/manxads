@@ -52,6 +52,7 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PartialKeyword.cs" />
     <Compile Include="ListingIndexUpdate.cs" />
     <Compile Include="ListingSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

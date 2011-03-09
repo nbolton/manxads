@@ -95,7 +95,7 @@ public class PagingManager<T> : IPagingManager
         }
     }
 
-    public List<T> Range
+    public ICollection<T> Range
     {
         get
         {
@@ -128,34 +128,34 @@ public class PagingManager<T> : IPagingManager
     /// <summary>
     /// Creates an instance where the page is automatically limited.
     /// </summary>
-    public PagingManager(List<T> items, int limit, int page)
+    public PagingManager(ICollection<T> items, int limit, int page)
         : this(items, limit, page, true, false) { }
 
     /// <summary>
     /// Creates an instance where the page is automatically limited, and an item limit is applied.
     /// </summary>
-    public PagingManager(List<T> items, int limit, int page, int itemLimit)
+    public PagingManager(ICollection<T> items, int limit, int page, int itemLimit)
         : this(items, limit, page, true, itemLimit) { }
 
     /// <summary>
     /// Creates an instance where the automatic page limit can be enabled or disabled.
     /// </summary>
-    public PagingManager(List<T> items, int limit, int page, bool autoLimitPages)
+    public PagingManager(ICollection<T> items, int limit, int page, bool autoLimitPages)
         : this(items, limit, page, autoLimitPages, false) { }
 
     /// <summary>
     /// Creates an instance where the automatic page limit can be enabled or disabled, and an 
     /// item limit is applied.
     /// </summary>
-    public PagingManager(List<T> items, int limit, int page, bool autoLimitPages, int itemLimit)
+    public PagingManager(ICollection<T> items, int limit, int page, bool autoLimitPages, int itemLimit)
         : this(items, limit, page, autoLimitPages, true)
     {
         this.itemLimitCount = itemLimit;
     }
 
-    protected PagingManager(List<T> items, int limit, int page, bool autoLimitPages, bool limitItems)
+    protected PagingManager(ICollection<T> items, int limit, int page, bool autoLimitPages, bool limitItems)
     {
-        this.items = items;
+        this.items = new List<T>(items);
         this.limit = limit;
         this.page = page;
         this.itemLimitEnable = limitItems;

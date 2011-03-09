@@ -122,11 +122,11 @@ public partial class StoredProcedures
                     int listingId = (int)reader["ListingId"];
                     double weight = (double)reader["Weight"];
 
-                    Keyword keyword = null;
+                    WeightedKeyword keyword = null;
                     if (!wildcardSearch)
                     {
                         SearchWord word = searchKeywordTable[(string)reader["Word"]];
-                        keyword = new Keyword(word, weight);
+                        keyword = new WeightedKeyword(word, weight);
                     }
 
                     if (!listingTable.ContainsKey(listingId))
@@ -264,7 +264,7 @@ public partial class StoredProcedures
             XmlElement contextKeywords = document.CreateElement("RelevantKeywords");
             listing.AppendChild(contextKeywords);
 
-            foreach (Keyword keyword in listingTable[listingIdInt].Keywords)
+            foreach (WeightedKeyword keyword in listingTable[listingIdInt].Keywords)
             {
                 XmlElement keywordXml = document.CreateElement("Keyword");
                 contextKeywords.AppendChild(keywordXml);
@@ -286,14 +286,14 @@ public partial class StoredProcedures
     public class Listing
     {
         public int DatabaseId;
-        public List<Keyword> Keywords;
+        public List<WeightedKeyword> Keywords;
 
         public List<string> StringKeywords
         {
             get
             {
                 List<string> list = new List<string>();
-                foreach (Keyword keyword in Keywords)
+                foreach (WeightedKeyword keyword in Keywords)
                 {
                     list.Add(keyword.SearchWord.Word);
                 }
@@ -304,16 +304,16 @@ public partial class StoredProcedures
         public Listing(int databaseId)
         {
             this.DatabaseId = databaseId;
-            this.Keywords = new List<Keyword>();
+            this.Keywords = new List<WeightedKeyword>();
         }
     }
 
-    public class Keyword
+    public class WeightedKeyword
     {
         public SearchWord SearchWord;
         public double Weight;
 
-        public Keyword(SearchWord searchWord, double weight)
+        public WeightedKeyword(SearchWord searchWord, double weight)
         {
             this.SearchWord = searchWord;
             this.Weight = weight;
