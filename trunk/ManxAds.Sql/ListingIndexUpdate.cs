@@ -22,7 +22,7 @@ public partial class StoredProcedures
             ICollection<PartialKeyword> keywords = data.PersistKeywords(keywordStrings);
             data.ClearListingKeywords(listingId);
             data.InsertListingKeywords(listingId, catalogueDocument, keywords);
-            data.CleanupOrphanedKeywords();
+            //data.CleanupOrphanedKeywords();
         }
         finally
         {

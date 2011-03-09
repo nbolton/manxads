@@ -75,6 +75,14 @@ namespace ManxAds.Sql
 
             foreach (XmlNode node in catalogue.SelectNodes("//Keyword"))
             {
+                string keyword = node.Attributes["Name"].Value;
+
+                // HACK: some times values will not be added to the dictionary
+                // (maybe some unicode chars are not allowed?) -- in this
+                // case, just ignore the keyword and move to the next.
+                if (!keywordToIdDictionary.ContainsKey(keyword))
+                    continue;
+
                 XmlElement listingKeywordElement = document.CreateElement("ListingKeyword");
                 root.AppendChild(listingKeywordElement);
 
@@ -84,8 +92,7 @@ namespace ManxAds.Sql
                 XmlElement weightElement = document.CreateElement("Weight");
                 listingKeywordElement.AppendChild(weightElement);
 
-                // lookup the keyword id from the keywords
-                int keywordId = keywordToIdDictionary[node.Attributes["Name"].Value];
+                int keywordId = keywordToIdDictionary[keyword];
 
                 keywordIdElement.InnerText = keywordId.ToString();
                 weightElement.InnerText = node.Attributes["Weight"].Value;
