@@ -68,7 +68,7 @@ public partial class ListingDetails : StandardControl
             SendToFriendHyperLink.NavigateUrl = Request.RawUrl + "&SendToFriend=1";
             SendToFriendBackHyperLink.NavigateUrl = Request.RawUrl.Replace("&SendToFriend=1", null);
 
-            if (Accessors.Listing.ImageCount != 0)
+            if ((StandardMaster != null) && (Accessors.Listing.ImageCount != 0))
                 StandardMaster.LinkImageUrl = Accessors.Listing.SmallImageUrl;
 
             if ((Auth.IsAuthenticated) &&
