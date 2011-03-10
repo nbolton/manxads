@@ -155,6 +155,7 @@
     <asp:View ID="DeletedView" runat="server" OnActivate="DeletedView_Activate">
         <h1>Listing Deleted</h1>
         <p>This listing has been deleted by it's seller.</p>
+        <uc3:ListingDetailsAdmin ID="ListingDetailsAdmin2" runat="server" Visible="false" />
         <h3>Suggestions:</h3>
         <ul>
             <li>Try <asp:HyperLink ID="SearchHyperLink1" runat="server">searching</asp:HyperLink> for similar listings.</li>

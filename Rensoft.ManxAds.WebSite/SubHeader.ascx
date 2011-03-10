@@ -21,10 +21,10 @@
         <div id="LayoutSubHeaderMenuSecurity">
             <asp:MultiView ID="StatusMultiView" runat="server">
                 <asp:View ID="LoggedOnView" runat="server">
-                    Hello, <asp:Label ID="UserFullName" runat="server" />! (Not you? <asp:LinkButton ID="LogOnLinkButton" runat="server" OnClick="LogOnLinkButton_Click" CausesValidation="False">Log On</asp:LinkButton>).
+                    Hello, <asp:Label ID="UserFullName" runat="server" />! (Not you? <asp:LinkButton ID="LogOnLinkButton" runat="server" OnClick="LogOnLinkButton_Click" CausesValidation="False">Log in</asp:LinkButton>)
                 </asp:View>
                 <asp:View ID="LoggedOutView" runat="server">
-                    Welcome to ManxAds! <asp:HyperLink ID="LogOnHyperLink" NavigateUrl="~/Logon.aspx" runat="server">Log on</asp:HyperLink> or <asp:HyperLink ID="RegisterHyperLink" NavigateUrl="~/Register.aspx" runat="server">register</asp:HyperLink>.
+                    <asp:HyperLink ID="LogOnHyperLink" NavigateUrl="~/Logon.aspx" runat="server">Log in</asp:HyperLink> or <asp:HyperLink ID="RegisterHyperLink" NavigateUrl="~/Register.aspx" runat="server">register</asp:HyperLink>
                 </asp:View>
             </asp:MultiView>
         </div>

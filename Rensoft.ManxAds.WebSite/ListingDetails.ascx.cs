@@ -77,6 +77,9 @@ public partial class ListingDetails : StandardControl
                 // show listing details admin control for users with admin right
                 ListingDetailsAdmin1.Visible = true;
                 ListingDetailsAdmin1.Initialize(Accessors.Listing);
+
+                ListingDetailsAdmin2.Visible = true;
+                ListingDetailsAdmin2.Initialize(Accessors.Listing);
             }
 
             this.BindBreadcrumbNode(Accessors.Listing);

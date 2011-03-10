@@ -382,6 +382,15 @@ public partial class ListingDetails {
     protected global::System.Web.UI.WebControls.View DeletedView;
     
     /// <summary>
+    /// ListingDetailsAdmin2 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::Rensoft.ManxAds.WebSite.ListingDetailsAdmin ListingDetailsAdmin2;
+    
+    /// <summary>
     /// SearchHyperLink1 control.
     /// </summary>
     /// <remarks>
