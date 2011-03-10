@@ -39,43 +39,27 @@ public class ErrorReporting
     /// </summary>
     /// <param name="exception">Exception which to report.</param>
     /// <param name="request">Server request for extra details.</param>
-    /// <returns>True if error was reported.</returns>
-    [Obsolete()]
-    public static bool Record(
-        Exception exception, Page page)
-    {
-        return Record(exception, page, null);
-    }
-    
-
-    /// <summary>
-    /// If enabled in the application configuration, a report of
-    /// the exception will be emailed to the ErrorReportingRecipient
-    /// found in the application configuration.
-    /// </summary>
-    /// <param name="exception">Exception which to report.</param>
-    /// <param name="request">Server request for extra details.</param>
     /// <param name="auth">Provider of user information.</param>
     /// <returns>True if error was reported.</returns>
-    public static bool Record(
-        Exception exception, Page page, Authentication auth)
+    public static bool RecordLastError(StandardPage page)
     {
+        Exception exception = page.Server.GetLastError();
+
         // Return if error reporting disabled.
         if (!EnableErrorReporting) return false;
 
-        // Save original reference for later use.
-        Exception origionalException = exception;
         StringBuilder errorMessage = new StringBuilder();
-
         errorMessage.AppendLine("User host: " + page.Request.UserHostName);
         errorMessage.AppendLine("User agent: " + page.Request.UserAgent);
         errorMessage.AppendLine("Request URL: " + page.Request.Url.ToString());
 
         if (page.Request.UrlReferrer != null)
         {
-            errorMessage.AppendLine("Referer URL: " + page.Request.UrlReferrer.ToString());
+            errorMessage.AppendLine(
+                "Referer URL: " + page.Request.UrlReferrer.ToString());
         }
-        
+
+        Authentication auth = page.Auth;
         if ((auth != null) && auth.IsAuthenticated)
         {
             errorMessage.AppendLine(
@@ -83,21 +67,8 @@ public class ErrorReporting
                 " (" + auth.ActiveUser.EmailAddress + ")");
         }
 
-        while (exception != null)
-        {
-            errorMessage.AppendLine();
-            errorMessage.AppendLine("Exception type: " + exception.GetType().FullName);
-            errorMessage.AppendLine("Error message: " + exception.Message.ToString());
-
-            if (exception.StackTrace != null)
-            {
-                errorMessage.AppendLine("Stack trace:");
-                errorMessage.AppendLine(exception.StackTrace.ToString());
-            }
-
-            // Change reference to inner ex to recurse.
-            exception = exception.InnerException;
-        }
+        errorMessage.AppendLine();
+        errorMessage.AppendLine(exception.ToString());
 
         MaEventLogHelper helper = new MaEventLogHelper("Website");
         helper.Write(errorMessage.ToString(), EventLogEntryType.Error);
@@ -105,7 +76,7 @@ public class ErrorReporting
         return true;
     }
 
-    public static void Record(
+    public static void RecordException(
         Exception exception, HttpRequest request, HttpResponse response)
     {
         if (exception is HttpUnhandledException)

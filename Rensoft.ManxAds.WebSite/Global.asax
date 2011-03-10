@@ -83,7 +83,7 @@
         else
         {
 #if !DEBUG
-            ErrorReporting.Record(Server.GetLastError(), Request, Response);
+            ErrorReporting.RecordException(Server.GetLastError(), Request, Response);
 #endif
         }
     }

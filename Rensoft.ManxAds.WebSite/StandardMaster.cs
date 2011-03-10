@@ -58,6 +58,20 @@ public class StandardMaster : System.Web.UI.MasterPage
         set;
     }
 
+    public StandardMaster()
+    {
+        Error += new EventHandler(StandardMaster_Error);
+    }
+
+    void StandardMaster_Error(object sender, EventArgs e)
+    {
+#if !DEBUG
+        // records the current user and requested page - very important!
+        if (Page is StandardPage)
+            ErrorReporting.RecordLastError((StandardPage)Page);
+#endif
+    }
+
     private void setRobotFlags(RobotFlag flags)
     {
         string indexString = string.Empty;
