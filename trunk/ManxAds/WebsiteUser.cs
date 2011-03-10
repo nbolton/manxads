@@ -566,8 +566,11 @@ namespace ManxAds
         {
             get
             {
-                return string.Format(
-                    "{0} ({1})", LastIp, LastActive.ToString());
+                if (LastIp != null)
+                    return string.Format(
+                        "{0} ({1})", LastIp, LastActive.ToString());
+                else
+                    return "Unknown";
             }
         }
 
@@ -941,7 +944,10 @@ namespace ManxAds
             user.tradingWebsite = sp.GetReaderValue<string>("TradingWebsite");
             user.traderType = sp.GetReaderValue<TraderType>("TraderType");
             user.banUntil = sp.GetReaderValue<DateTime>("BanUntil");
-            user.LastIp = IPAddress.Parse(sp.GetReaderValue<string>("LastIp"));
+
+            string lastIp = sp.GetReaderValue<string>("LastIp");
+            if (lastIp != null)
+                user.LastIp = IPAddress.Parse(lastIp);
             return user;
         }
 
