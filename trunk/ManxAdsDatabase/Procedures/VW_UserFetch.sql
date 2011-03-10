@@ -29,6 +29,7 @@ SELECT
 	u.TradingWebsite,
 	u.TraderType,
 	u.BanUntil,
+	u.LastIp,
 	v.VerifyDate,
 	v.AuthCode AS VerifyAuthCode,
 	(

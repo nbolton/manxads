@@ -1057,7 +1057,8 @@ ul
 .GenericNotice,
 .HomeGenericNotice,
 .PayPalDonationHome,
-.PayPalDonationListingBrowser
+.PayPalDonationListingBrowser,
+.ListingAdminPanel
 {
 	padding: 3px 7px 3px 7px;
 	border: solid 1px #2166B1;
@@ -1065,10 +1066,17 @@ ul
 	clear: both;
 }
 
-.GenericNotice
+.GenericNotice,
+.ListingAdminPanel
 {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.ListingAdminPanel p
+{
+	margin: 3px 0px 2px 0px;
+	padding: 0px;
 }
 
 .HomeGenericNotice,

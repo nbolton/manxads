@@ -556,6 +556,21 @@ namespace ManxAds
             }
         }
 
+        public IPAddress LastIp
+        {
+            get;
+            set;
+        }
+
+        public string LastIpAndDate
+        {
+            get
+            {
+                return string.Format(
+                    "{0} ({1})", LastIp, LastActive.ToString());
+            }
+        }
+
         protected WebsiteUser() { }
         protected WebsiteUser(int databaseId)
         {
@@ -926,6 +941,7 @@ namespace ManxAds
             user.tradingWebsite = sp.GetReaderValue<string>("TradingWebsite");
             user.traderType = sp.GetReaderValue<TraderType>("TraderType");
             user.banUntil = sp.GetReaderValue<DateTime>("BanUntil");
+            user.LastIp = IPAddress.Parse(sp.GetReaderValue<string>("LastIp"));
             return user;
         }
 

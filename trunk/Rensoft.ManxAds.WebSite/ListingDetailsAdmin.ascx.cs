@@ -16,6 +16,7 @@ namespace Rensoft.ManxAds.WebSite
             EditUserHyperLink.NavigateUrl = listing.Seller.ModifyUrl;
             DeleteListingHyperLink.NavigateUrl = listing.RemoveUrl;
             BanUserHyperLink.NavigateUrl = listing.Seller.BanUrl;
+            LastKnownIpLabel.Text = listing.Seller.LastIpAndDate;
         }
     }
 }
