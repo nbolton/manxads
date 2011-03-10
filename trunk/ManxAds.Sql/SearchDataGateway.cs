@@ -76,12 +76,9 @@ namespace ManxAds.Sql
             foreach (XmlNode node in catalogue.SelectNodes("//Keyword"))
             {
                 string keyword = node.Attributes["Name"].Value;
-
-                // HACK: some times values will not be added to the dictionary
-                // (maybe some unicode chars are not allowed?) -- in this
-                // case, just ignore the keyword and move to the next.
+                
                 if (!keywordToIdDictionary.ContainsKey(keyword))
-                    continue;
+                    throw new Exception("Unknown keyword: " + keyword);
 
                 XmlElement listingKeywordElement = document.CreateElement("ListingKeyword");
                 root.AppendChild(listingKeywordElement);

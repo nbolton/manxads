@@ -22,9 +22,15 @@ namespace Rensoft.ManxAds.SchedulerService
         {
             InitializeComponent();
 
-            host = new ServiceHost(
-                Settings.Default,
-                new MaEventLogHelper("Scheduler"));
+            MaEventLogHelper eventLogHelper = new MaEventLogHelper("Scheduler");
+            try
+            {
+                host = new ServiceHost(Settings.Default, eventLogHelper);
+            }
+            catch (Exception ex)
+            {
+                eventLogHelper.Write(ex.ToString(), EventLogEntryType.Error);
+            }
         }
 
         protected override void OnStart(string[] args)

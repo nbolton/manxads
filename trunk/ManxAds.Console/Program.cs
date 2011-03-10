@@ -25,6 +25,8 @@ namespace ManxAds.Console
                 if (arg == "--update-search-index")
                     updateSearchIndex();
             }
+
+            System.Console.Read();
         }
 
         private void updateSearchIndex()
@@ -37,13 +39,21 @@ namespace ManxAds.Console
             {
                 DateTime start = DateTime.Now;
 
-                data.UpdateSearchIndex(listing);
+                try
+                {
+                    data.UpdateSearchIndex(listing);
 
-                TimeSpan elapsed = DateTime.Now - start;
-                totalElapsed += elapsed.TotalMilliseconds;
+                    TimeSpan elapsed = DateTime.Now - start;
+                    totalElapsed += elapsed.TotalMilliseconds;
 
-                System.Console.WriteLine(string.Format(
-                    "updated id: {0} in {1}ms", listing.DatabaseId, elapsed.TotalMilliseconds));
+                    System.Console.WriteLine(string.Format(
+                        "updated id: {0} in {1}ms", listing.DatabaseId, elapsed.TotalMilliseconds));
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine(string.Format(
+                        "failed to update id: {0}\r\n{1}", listing.DatabaseId, ex));
+                }
 
                 totalUpdated++;
             }
