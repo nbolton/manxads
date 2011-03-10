@@ -39,6 +39,18 @@ public class StandardControl : UserControl
         }
     }
 
+    public StandardControl()
+    {
+        Error += new EventHandler(StandardControl_Error);
+    }
+
+    void StandardControl_Error(object sender, EventArgs e)
+    {
+        // records the current user and requested page - very important!
+        if (Page is StandardPage)
+            ErrorReporting.RecordLastError((StandardPage)Page);
+    }
+
     protected virtual void Page_Load(object sender, EventArgs e) { }
 
     protected void UpdatePagingAssistant(object sender, EventArgs e)

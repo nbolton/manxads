@@ -34,7 +34,7 @@ public class StandardPage : System.Web.UI.Page
         set { Common.PageMode = value; }
     }
 
-    protected Authentication Auth
+    public Authentication Auth
     {
         get { return Common.Auth; }
     }
@@ -122,8 +122,8 @@ public class StandardPage : System.Web.UI.Page
     void StandardPage_Error(object sender, EventArgs e)
     {
 #if !DEBUG
-        // wtf?!
-        //ErrorReporting.Record(ex, Page, Auth);
+        // records the current user and requested page - very important!
+        ErrorReporting.RecordLastError(this);
 #endif
     }
 
