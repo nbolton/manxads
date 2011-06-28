@@ -378,10 +378,6 @@ public partial class ListingBrowser : StandardControl
             LocalSettings.DefaultPageLimit, Common.PageNumber, sortColumn, sortDirection);
 
         int totalListings = Listing.RunCount(SqlDateTime.MinValue.Value);
-        if (totalListings > LocalSettings.DefaultPageMaximum)
-        {
-            totalListings = LocalSettings.DefaultPageMaximum;
-        }
 
         Common.PagingManager = new PagingManager<IListing>(
             listingList, LocalSettings.DefaultPageLimit,
