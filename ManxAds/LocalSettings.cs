@@ -84,7 +84,6 @@ namespace ManxAds
         public const int BrowserRowPopupHeight = 450;
 
         public const int DefaultPageRange = 10;
-        public const int DefaultPageMaximum = 5000;
         public const int DefaultPageLimit = 10;
         public const int ListingThumbnailWidth = 50;
         public const int ListingThumbnailHeight = 50;
