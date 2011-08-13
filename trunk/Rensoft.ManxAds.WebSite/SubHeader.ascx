@@ -10,7 +10,6 @@
         <div id="LayoutSubHeaderMenuNavigation">
             <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/">Home</asp:HyperLink> |
             <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Search.aspx?Advanced=1">Search</asp:HyperLink> |
-            <a href="http://getsatisfaction.com/manxads" target="_blank">Feedback</a> <span style="vertical-align: super; font-size: 0.7em; color: Red; font-weight: bold">New!</span> |
             <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Help.aspx">Help</asp:HyperLink> |
             <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/CharityList.aspx">Charities</asp:HyperLink> |
             <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/TraderList.aspx">Traders</asp:HyperLink>
