@@ -708,9 +708,16 @@ namespace ManxAds
             if (!String.IsNullOrEmpty(phone))
             {
                 this.landlinePhone = StringTools.StripHtmlTags(phone);
-                if (!String.IsNullOrEmpty(area) && area != LocalSettings.DefaultLandlineArea)
+                if (!String.IsNullOrEmpty(area))
                 {
-                    this.landlineArea = StringTools.StripHtmlTags(area);
+                    if (area != LocalSettings.DefaultLandlineArea)
+                    {
+                        this.landlineArea = StringTools.StripHtmlTags(area);
+                    }
+                    else
+                    {
+                        this.landlineArea = LocalSettings.DefaultLandlineArea;
+                    }
                 }
             }
             else
@@ -725,9 +732,16 @@ namespace ManxAds
             if (!String.IsNullOrEmpty(phone))
             {
                 this.mobilePhone = StringTools.StripHtmlTags(phone);
-                if (!String.IsNullOrEmpty(area) && area != LocalSettings.DefaultMobileArea)
+                if (!String.IsNullOrEmpty(area))
                 {
-                    this.mobileArea = StringTools.StripHtmlTags(area);
+                    if (area != LocalSettings.DefaultMobileArea)
+                    {
+                        this.mobileArea = StringTools.StripHtmlTags(area);
+                    }
+                    else
+                    {
+                        this.mobileArea = LocalSettings.DefaultMobileArea;
+                    }
                 }
             }
             else
