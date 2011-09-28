@@ -8,8 +8,8 @@ namespace Rensoft.ManxAds
 {
     public class ListingChecker : NotifierTask
     {
-        private const int reminderElapedDays = 90;
-        private const int deleteElapsedDays = 104;
+        private const int reminderElapedDays = 42;
+        private const int deleteElapsedDays = 56;
 
         private ListingNotifySet notifySet;
 
