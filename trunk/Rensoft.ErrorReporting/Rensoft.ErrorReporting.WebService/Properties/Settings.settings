@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Rensoft.ErrorReporting.WebService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FromEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Rensoft &lt;webmaster@rensoft.net&gt;</Value>
+    </Setting>
+    <Setting Name="ToEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">errors@rensoft.net</Value>
+    </Setting>
+    <Setting Name="SmtpServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mail.rensoft.net</Value>
+    </Setting>
+    <Setting Name="SmtpUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">auto@rensoft.net</Value>
+    </Setting>
+    <Setting Name="SmtpPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TbCUifvI6XAUVvGLzAaY</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
