@@ -81,13 +81,13 @@
     <Compile Include="Service\IServiceSettings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Rensoft.ErrorReporting\Rensoft.ErrorReporting\Rensoft.ErrorReporting.csproj">
-      <Project>{4DC206E8-BDF6-4CF6-B626-36DDE18A9303}</Project>
-      <Name>Rensoft.ErrorReporting</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ManxAds\ManxAds.csproj">
       <Project>{8CFCBAF1-FAD8-478B-82FB-CD7715D96B4B}</Project>
       <Name>ManxAds</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rensoft.ErrorReporting\Rensoft.ErrorReporting\Rensoft.ErrorReporting.csproj">
+      <Project>{4DC206E8-BDF6-4CF6-B626-36DDE18A9303}</Project>
+      <Name>Rensoft.ErrorReporting</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
