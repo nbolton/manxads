@@ -69,7 +69,7 @@
                         <asp:CustomValidator ID="PriceValueCustomValidator" runat="server" ControlToValidate="PriceValueTextBox" Display="Dynamic" OnServerValidate="PriceValueCustomValidator_ServerValidate" ValidateEmptyText="True" ValidationGroup="Details">
                             <br />You have not entered a price, please do so.
                         </asp:CustomValidator>
-                        <asp:RegularExpressionValidator ID="PriceValueRegularExpressionValidator" runat="server" ControlToValidate="PriceValueTextBox" Display="Dynamic" ValidationExpression="\d+([\.,]+\d+)*" ValidationGroup="Details">
+                        <asp:RegularExpressionValidator ID="PriceValueRegularExpressionValidator" runat="server" ControlToValidate="PriceValueTextBox" Display="Dynamic" ValidationExpression="\d+(,\d+)*(\.\d+)?" ValidationGroup="Details">
                             <br />Make sure you only type a number (currency signs and letters are not allowed).
                         </asp:RegularExpressionValidator>
                     </div>
