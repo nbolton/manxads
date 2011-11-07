@@ -1,0 +1,4 @@
+DBRefFolders found in your dbp file
+Connect String: Data Source=.\SQLEXPRESS;Initial Catalog=ManxAdsWebsite;Integrated Security=True
+Provider: Microsoft SQL Server
+
