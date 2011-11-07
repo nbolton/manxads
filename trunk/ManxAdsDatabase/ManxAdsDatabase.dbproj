@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <PostUpgradeAddToSCC>;C:\Projects\manxads\trunk\ManxAdsDatabase\ManxAdsDatabase.dbproj;C:\Projects\manxads\trunk\ManxAdsDatabase\Connections.txt;C:\Projects\manxads\trunk\ManxAdsDatabase\Scripts\Post-Deployment\Script.PostDeployment.sql;C:\Projects\manxads\trunk\ManxAdsDatabase\Scripts\Pre-Deployment\Script.PreDeployment.sql</PostUpgradeAddToSCC>
+    <PreviousProjectVersion>4.0</PreviousProjectVersion>
+    <UpgradedFromDBP>True</UpgradedFromDBP>
+    <Name>dbpProjectName</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.0</ProjectVersion>
+    <ProjectGuid>{67cbc824-a49e-4e9b-a947-360f3dfe65c3}</ProjectGuid>
+    <DSP>Microsoft.Data.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchema</DefaultFileStructure>
+    <DeployToDatabaseAddToServerExplorer>True</DeployToDatabaseAddToServerExplorer>
+    <DeployToScript>True</DeployToScript>
+    <CatalogPropertiesFile>Properties\Database.sqlsettings</CatalogPropertiesFile>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\TeamData\Microsoft.Data.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+    <Folder Include="Schema Comparisons" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertiesFile Include="Properties\Database.sqlsettings">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqldeployment">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqlcmdvars">
+    </PropertiesFile>
+    <Build Include="Properties\Database.sqlpermissions">
+      <ModelBuilderType>Permissions</ModelBuilderType>
+    </Build>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql">
+      <SubType>Code</SubType>
+    </PreDeploy>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql">
+      <SubType>Code</SubType>
+    </PostDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Schema Objects" />
+    <Folder Include="Schema Objects\Schemas" />
+    <Folder Include="Schema Objects\Schemas\dbo" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Defaults" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Functions" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Rules" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker\Queues" />
+    <Folder Include="Schema Objects\Schemas\dbo\Synonyms" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Constraints" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Triggers" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Statistics" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Indexes" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Triggers" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Statistics" />
+    <Folder Include="Schema Objects\Database Level Objects" />
+    <Folder Include="Schema Objects\Database Level Objects\Assemblies" />
+    <Folder Include="Schema Objects\Database Level Objects\Database Triggers" />
+    <Folder Include="Schema Objects\Database Level Objects\Security" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Schemas" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Users" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Certificates" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Asymmetric Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Master Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Signatures" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Symmetric Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Encryption Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Audit Specification" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Application Roles" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Database Roles" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Broker Priorities" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Contracts" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Event Notifications" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Message Types" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Remote Service Binding" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Routes" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Services" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Stoplists" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Filegroups" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Files" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Catalogs" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Functions" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Schemes" />
+    <Folder Include="Procedures" />
+    <Folder Include="Queries" />
+    <Folder Include="Properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <NotInBuild Include="Connections.txt" />
+    <NotInBuild Include="Procedures\AdvertCreate.sql" />
+    <NotInBuild Include="Procedures\AdvertFetch.sql" />
+    <NotInBuild Include="Procedures\AdvertFetchByAdvertiserId.sql" />
+    <NotInBuild Include="Procedures\AdvertFetchByCategoryId.sql" />
+    <NotInBuild Include="Procedures\AdvertFetchById.sql" />
+    <NotInBuild Include="Procedures\AdvertFetchByListingId.sql" />
+    <NotInBuild Include="Procedures\AdvertFetchByPosition.sql" />
+    <NotInBuild Include="Procedures\AdvertModify.sql" />
+    <NotInBuild Include="Procedures\AdvertMonthHit.sql" />
+    <NotInBuild Include="Procedures\AdvertRemove.sql" />
+    <NotInBuild Include="Procedures\Authenticate.sql" />
+    <NotInBuild Include="Procedures\CategoryAdvertAssociate.sql" />
+    <NotInBuild Include="Procedures\CategoryAdvertDisassociate.sql" />
+    <NotInBuild Include="Procedures\CategoryAdvertFetchByAdvertId.sql" />
+    <NotInBuild Include="Procedures\CategoryCreate.sql" />
+    <NotInBuild Include="Procedures\CategoryFetch.sql" />
+    <NotInBuild Include="Procedures\CategoryFetchById.sql" />
+    <NotInBuild Include="Procedures\CategoryFetchByListingId.sql" />
+    <NotInBuild Include="Procedures\CategoryFetchByStaticName.sql" />
+    <NotInBuild Include="Procedures\CategoryFetchOrderAsc.sql" />
+    <NotInBuild Include="Procedures\CategoryFetchTop.sql" />
+    <NotInBuild Include="Procedures\CategoryModify.sql" />
+    <NotInBuild Include="Procedures\CategoryModifyPriority.sql" />
+    <NotInBuild Include="Procedures\CategoryRemove.sql" />
+    <NotInBuild Include="Procedures\EmailLogWrite.sql" />
+    <NotInBuild Include="Procedures\KeywordGetIds.sql" />
+    <NotInBuild Include="Procedures\KeywordInsertXml.sql" />
+    <NotInBuild Include="Procedures\ListingAbuseCreate.sql" />
+    <NotInBuild Include="Procedures\ListingAbuseExists.sql" />
+    <NotInBuild Include="Procedures\ListingAbuseGetAsXml.sql" />
+    <NotInBuild Include="Procedures\ListingAbuseSetAdminNotified.sql" />
+    <NotInBuild Include="Procedures\ListingCategoryAssociate.sql" />
+    <NotInBuild Include="Procedures\ListingCategoryDisassociate.sql" />
+    <NotInBuild Include="Procedures\ListingCount.sql" />
+    <NotInBuild Include="Procedures\ListingCreate.sql" />
+    <NotInBuild Include="Procedures\ListingExpiryNotified.sql" />
+    <NotInBuild Include="Procedures\ListingFetchBase.sql" />
+    <NotInBuild Include="Procedures\ListingFetchByCategoryId.sql" />
+    <NotInBuild Include="Procedures\ListingFetchById.sql" />
+    <NotInBuild Include="Procedures\ListingFetchBySellerId.sql" />
+    <NotInBuild Include="Procedures\ListingFetchLimit.sql" />
+    <NotInBuild Include="Procedures\ListingFetchRecycleBinItems.sql" />
+    <NotInBuild Include="Procedures\ListingFetchTop.sql" />
+    <NotInBuild Include="Procedures\ListingFetchWhereHasAbuseVotes.sql" />
+    <NotInBuild Include="Procedures\ListingImageCreate.sql" />
+    <NotInBuild Include="Procedures\ListingImageFetchByListingId.sql" />
+    <NotInBuild Include="Procedures\ListingImageRemove.sql" />
+    <NotInBuild Include="Procedures\ListingImageSetMaster.sql" />
+    <NotInBuild Include="Procedures\ListingKeywordCreate.sql" />
+    <NotInBuild Include="Procedures\ListingKeywordFetchByWord.sql" />
+    <NotInBuild Include="Procedures\ListingKeywordInsertXml.sql" />
+    <NotInBuild Include="Procedures\ListingModify.sql" />
+    <NotInBuild Include="Procedures\ListingPageHitIncrement.sql" />
+    <NotInBuild Include="Procedures\ListingRemove.sql" />
+    <NotInBuild Include="Procedures\ListingRemoveFromRecycleBin.sql" />
+    <NotInBuild Include="Procedures\ListingRestore.sql" />
+    <NotInBuild Include="Procedures\LocationFetch.sql" />
+    <NotInBuild Include="Procedures\LocationFetchById.sql" />
+    <NotInBuild Include="Procedures\LocationFetchByTitle.sql" />
+    <NotInBuild Include="Procedures\PasswordResetComplete.sql" />
+    <NotInBuild Include="Procedures\PasswordResetRequest.sql" />
+    <NotInBuild Include="Procedures\SettingsFetch.sql" />
+    <NotInBuild Include="Procedures\SettingsFetchByUserId.sql" />
+    <NotInBuild Include="Procedures\SettingsModify.sql" />
+    <NotInBuild Include="Procedures\UserCheckEmailAddress.sql" />
+    <NotInBuild Include="Procedures\UserCountByTraderType.sql" />
+    <NotInBuild Include="Procedures\UserCountByUserType.sql" />
+    <NotInBuild Include="Procedures\UserCreate.sql" />
+    <NotInBuild Include="Procedures\UserEmptyRecycleBin.sql" />
+    <NotInBuild Include="Procedures\UserFetch.sql" />
+    <NotInBuild Include="Procedures\UserFetchByEmail.sql" />
+    <NotInBuild Include="Procedures\UserFetchById.sql" />
+    <NotInBuild Include="Procedures\UserFetchByTraderType.sql" />
+    <NotInBuild Include="Procedures\UserFetchPromoEmails.sql" />
+    <NotInBuild Include="Procedures\UserModify.sql" />
+    <NotInBuild Include="Procedures\UserRemove.sql" />
+    <NotInBuild Include="Procedures\UserSearch.sql" />
+    <NotInBuild Include="Procedures\UserVerify.sql" />
+    <NotInBuild Include="Procedures\VW_AdvertFetch.sql" />
+    <NotInBuild Include="Procedures\VW_CategoryFetch.sql" />
+    <NotInBuild Include="Procedures\VW_ListingFetch.sql" />
+    <NotInBuild Include="Procedures\VW_LocationFetch.sql" />
+    <NotInBuild Include="Procedures\VW_UserFetch.sql" />
+    <NotInBuild Include="Queries\EnableCLR.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+</Project>
