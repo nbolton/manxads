@@ -48,7 +48,7 @@ namespace Rensoft.ManxAds.SchedulerService
             // 
             // serviceController
             // 
-            this.serviceController.ServiceName = "Rensoft.ManxAds.SchedulerService";
+            this.serviceController.ServiceName = "ManxAdsScheduler";
             // 
             // ProjectInstaller
             // 
