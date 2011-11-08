@@ -15,13 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_5582860577C52AA79E8A7AEA9A869B77"
+        "MsmKey" = "8:_4D5B462A92939B41FD2E1DAEFCEB4BBF"
         "OwnerKey" = "8:_789B373F8796404D88216151FA28C849"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5582860577C52AA79E8A7AEA9A869B77"
+        "MsmKey" = "8:_4D5B462A92939B41FD2E1DAEFCEB4BBF"
         "OwnerKey" = "8:_871943BE75FB41FC8F0CFF86611AD5D3"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -39,62 +39,74 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EEB1AD1F0CD2484E011D01406F587EAA"
+        "MsmKey" = "8:_8BB8AFE49393DFA1BE979B7F6E017704"
         "OwnerKey" = "8:_789B373F8796404D88216151FA28C849"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EEB1AD1F0CD2484E011D01406F587EAA"
+        "MsmKey" = "8:_8BB8AFE49393DFA1BE979B7F6E017704"
         "OwnerKey" = "8:_871943BE75FB41FC8F0CFF86611AD5D3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EEB1AD1F0CD2484E011D01406F587EAA"
-        "OwnerKey" = "8:_5582860577C52AA79E8A7AEA9A869B77"
+        "MsmKey" = "8:_8BB8AFE49393DFA1BE979B7F6E017704"
+        "OwnerKey" = "8:_4D5B462A92939B41FD2E1DAEFCEB4BBF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F710746A0BABAA9F60B51F26BE1ABB71"
+        "MsmKey" = "8:_CA6F555C42A76AB49C9DF4976EFD574B"
+        "OwnerKey" = "8:_871943BE75FB41FC8F0CFF86611AD5D3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CFF8CC409AFE0EDD6869940323D62F2B"
         "OwnerKey" = "8:_789B373F8796404D88216151FA28C849"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F710746A0BABAA9F60B51F26BE1ABB71"
-        "OwnerKey" = "8:_871943BE75FB41FC8F0CFF86611AD5D3"
+        "MsmKey" = "8:_CFF8CC409AFE0EDD6869940323D62F2B"
+        "OwnerKey" = "8:_4D5B462A92939B41FD2E1DAEFCEB4BBF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_871943BE75FB41FC8F0CFF86611AD5D3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CA6F555C42A76AB49C9DF4976EFD574B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4D5B462A92939B41FD2E1DAEFCEB4BBF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CFF8CC409AFE0EDD6869940323D62F2B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8BB8AFE49393DFA1BE979B7F6E017704"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_789B373F8796404D88216151FA28C849"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F710746A0BABAA9F60B51F26BE1ABB71"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5582860577C52AA79E8A7AEA9A869B77"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EEB1AD1F0CD2484E011D01406F587EAA"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -156,10 +168,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.2.0"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0"
                     {
-                    "Name" = "8:Microsoft .NET Framework 2.0"
-                    "ProductCode" = "8:Microsoft.Net.Framework.2.0"
+                    "Name" = "8:Microsoft .NET Framework 4 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0"
                     }
                 }
             }
@@ -240,7 +252,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "Version" = "8:2.0.50727"
+                "FrameworkVersion" = "8:2.0.50727"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=9832"
                 }
@@ -248,14 +260,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5582860577C52AA79E8A7AEA9A869B77"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4D5B462A92939B41FD2E1DAEFCEB4BBF"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Rensoft.ManxAds, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5582860577C52AA79E8A7AEA9A869B77"
+                    "_4D5B462A92939B41FD2E1DAEFCEB4BBF"
                     {
                     "Name" = "8:Rensoft.ManxAds.dll"
                     "Attributes" = "3:512"
@@ -279,14 +291,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EEB1AD1F0CD2484E011D01406F587EAA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8BB8AFE49393DFA1BE979B7F6E017704"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ManxAds, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_EEB1AD1F0CD2484E011D01406F587EAA"
+                    "_8BB8AFE49393DFA1BE979B7F6E017704"
                     {
                     "Name" = "8:ManxAds.dll"
                     "Attributes" = "3:512"
@@ -310,14 +322,45 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F710746A0BABAA9F60B51F26BE1ABB71"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CA6F555C42A76AB49C9DF4976EFD574B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Rensoft.ErrorReporting, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F710746A0BABAA9F60B51F26BE1ABB71"
+                    "_CA6F555C42A76AB49C9DF4976EFD574B"
+                    {
+                    "Name" = "8:Rensoft.ErrorReporting.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Rensoft.ErrorReporting.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_72112DD449E3476FAD4B1D34E66A9679"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CFF8CC409AFE0EDD6869940323D62F2B"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Rensoft.ErrorReporting, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_CFF8CC409AFE0EDD6869940323D62F2B"
                     {
                     "Name" = "8:Rensoft.ErrorReporting.dll"
                     "Attributes" = "3:512"
@@ -391,14 +434,16 @@
         "MsiBootstrapper"
         {
         "LangId" = "3:1033"
+        "RequiresElevation" = "11:FALSE"
         }
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ManxAds Scheduler"
         "ProductCode" = "8:{623770D4-F619-4ABE-A6F8-8D10073CE37D}"
-        "PackageCode" = "8:{4D47D251-83E3-4A5D-A44C-C09D93A1AD1A}"
+        "PackageCode" = "8:{8E06B982-94A6-4591-912B-A736152AFD22}"
         "UpgradeCode" = "8:{2804AEA0-CB08-41EA-8B10-C8F1ACB9B618}"
+        "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
@@ -971,9 +1016,6 @@
                 {
                 }
             }
-        }
-        "VJSharpPlugin"
-        {
         }
     }
 }
