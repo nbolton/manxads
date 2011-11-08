@@ -41,8 +41,8 @@ namespace Rensoft.ManxAds.SchedulerService
             // serviceInstaller
             // 
             this.serviceInstaller.Description = "Automates the ManxAds Listing Check and Search Engine Crawl activities.";
-            this.serviceInstaller.DisplayName = "Rensoft ManxAds Scheduler";
-            this.serviceInstaller.ServiceName = "Rensoft.ManxAds.SchedulerService";
+            this.serviceInstaller.DisplayName = "ManxAds Scheduler";
+            this.serviceInstaller.ServiceName = "ManxAdsScheduler";
             this.serviceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             this.serviceInstaller.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceInstaller_AfterInstall);
             // 

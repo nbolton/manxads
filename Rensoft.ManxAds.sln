@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManxAds.Console", "ManxAds.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rensoft.ErrorReporting", "Rensoft.ErrorReporting\Rensoft.ErrorReporting\Rensoft.ErrorReporting.csproj", "{4DC206E8-BDF6-4CF6-B626-36DDE18A9303}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ManxAds.SchedulerSetup", "ManxAds.SchedulerSetup\ManxAds.SchedulerSetup.vdproj", "{5C8792B3-2BB6-4CCC-9C93-B7FF2F59DB43}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Rensoft.ManxAds1.vsmdi
@@ -161,6 +163,12 @@ Global
 		{4DC206E8-BDF6-4CF6-B626-36DDE18A9303}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4DC206E8-BDF6-4CF6-B626-36DDE18A9303}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{4DC206E8-BDF6-4CF6-B626-36DDE18A9303}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5C8792B3-2BB6-4CCC-9C93-B7FF2F59DB43}.Debug|.NET.ActiveCfg = Debug
+		{5C8792B3-2BB6-4CCC-9C93-B7FF2F59DB43}.Debug|Any CPU.ActiveCfg = Debug
+		{5C8792B3-2BB6-4CCC-9C93-B7FF2F59DB43}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{5C8792B3-2BB6-4CCC-9C93-B7FF2F59DB43}.Release|.NET.ActiveCfg = Release
+		{5C8792B3-2BB6-4CCC-9C93-B7FF2F59DB43}.Release|Any CPU.ActiveCfg = Release
+		{5C8792B3-2BB6-4CCC-9C93-B7FF2F59DB43}.Release|Mixed Platforms.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
