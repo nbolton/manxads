@@ -18,8 +18,6 @@ Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "ManxAdsDatabase", "ManxAdsD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rensoft.ManxAds.SchedulerService", "Rensoft.ManxAds.SchedulerService\Rensoft.ManxAds.SchedulerService.csproj", "{E5D1C1C7-B100-4135-A1E3-31E485D2D39D}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Rensoft.ManxAds.SchedulerServiceSetup", "Rensoft.ManxAds.SchedulerServiceSetup\Rensoft.ManxAds.SchedulerServiceSetup.vdproj", "{C1B5843C-8679-4F5A-AFDD-31504A7EC02D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rensoft.ManxAds.SchedulerConsole", "Rensoft.ManxAds.SchedulerConsole\Rensoft.ManxAds.SchedulerConsole.csproj", "{DA72A4FE-137E-4128-A96D-AF49B71DC64D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rensoft.ManxAds.WebSite", "Rensoft.ManxAds.WebSite\Rensoft.ManxAds.WebSite.csproj", "{46996987-84D2-493A-A1D7-6910C56169BE}"
@@ -93,12 +91,6 @@ Global
 		{E5D1C1C7-B100-4135-A1E3-31E485D2D39D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E5D1C1C7-B100-4135-A1E3-31E485D2D39D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E5D1C1C7-B100-4135-A1E3-31E485D2D39D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{C1B5843C-8679-4F5A-AFDD-31504A7EC02D}.Debug|.NET.ActiveCfg = Debug
-		{C1B5843C-8679-4F5A-AFDD-31504A7EC02D}.Debug|Any CPU.ActiveCfg = Debug
-		{C1B5843C-8679-4F5A-AFDD-31504A7EC02D}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{C1B5843C-8679-4F5A-AFDD-31504A7EC02D}.Release|.NET.ActiveCfg = Release
-		{C1B5843C-8679-4F5A-AFDD-31504A7EC02D}.Release|Any CPU.ActiveCfg = Release
-		{C1B5843C-8679-4F5A-AFDD-31504A7EC02D}.Release|Mixed Platforms.ActiveCfg = Release
 		{DA72A4FE-137E-4128-A96D-AF49B71DC64D}.Debug|.NET.ActiveCfg = Debug|Any CPU
 		{DA72A4FE-137E-4128-A96D-AF49B71DC64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA72A4FE-137E-4128-A96D-AF49B71DC64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
