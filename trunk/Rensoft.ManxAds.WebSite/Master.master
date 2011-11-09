@@ -62,28 +62,22 @@
                 <div id="LayoutTopAdvert">
                     <uc2:AdvertRotator ID="TopLeaderboardAdvertRotator" runat="server" />
                 </div>
-    			
-                <asp:Panel ID="temppanel3" runat="server" Visible="True">
-				    <div style="margin-top: 15px">
-				    <script type="text/javascript"><!--
-				    google_ad_client = "pub-3305986762497110";
-				    /* ManxAds link block */
-				    google_ad_slot = "1539753621";
-				    google_ad_width = 728;
-				    google_ad_height = 15;
-				    //-->
-				    </script>
-				    <script type="text/javascript"
-				    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-				    </script>
-				    </div>
-			    </asp:Panel>
                 
                 <div id="LayoutMiddle">
                     
                     <div id="LayoutLeftAdvert">
                         <div class="LayoutLeftAdvertLayer">
-					        <uc2:AdvertRotator ID="SkyscraperAdvertRotator" runat="server" />
+                            <script type="text/javascript"><!--
+                                google_ad_client = "ca-pub-3305986762497110";
+                                /* ManxAds wide skyscraper */
+                                google_ad_slot = "2813539043";
+                                google_ad_width = 160;
+                                google_ad_height = 600;
+                            //-->
+                            </script>
+                            <script type="text/javascript"
+                            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                            </script>
 					    </div>
                     </div>
                     
@@ -91,13 +85,25 @@
                         <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />
                     </div>
                     
-                    <div id="LayoutRightAdvert"></div>
+                    <div id="LayoutRightAdvert">
+                        <script type="text/javascript"><!--
+                            google_ad_client = "ca-pub-3305986762497110";
+                            /* ManxAds wide skyscraper */
+                            google_ad_slot = "2813539043";
+                            google_ad_width = 160;
+                            google_ad_height = 600;
+                        //-->
+                        </script>
+                        <script type="text/javascript"
+                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                        </script>
+                    </div>
                     
                 </div>
                 
                 <div id="LayoutFooter">
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Terms.aspx" Target="_blank">Terms &amp; Conditions</asp:HyperLink> | <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Privacy.aspx" target="_blank">Privacy Policy</asp:HyperLink> | <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Contact.aspx" Target="_blank">Contact ManxAds</asp:HyperLink><br />
-                    Copyright &copy; 2006-2007 ManxAds. All rights reserved.
+                    Copyright &copy; 2006-2011 ManxAds. All rights reserved.
                 </div>
                 
             </div>
