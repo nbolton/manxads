@@ -32,25 +32,6 @@ public partial class ListingMiniRow : BrowserRow
         this.DescriptionLabel.Text = listing.ShortDetails;
         this.PriceColouredLabel.Text = listing.PriceColoured;
         
-        if (listing.Seller.IsTrader)
-        {
-            this.TraderTagPanel.Visible = true;
-            this.TraderTagHyperLink.NavigateUrl = NavigateUrl;
-        }
-
-        switch (listing.Seller.TraderType)
-        {
-            case TraderType.Corporate:
-                TraderTagImage.ImageUrl = "~/Images/Static/Layout/CorporateTraderTag.gif";
-                TraderTagImage.AlternateText = "Trader Listing";
-                break;
-
-            case TraderType.Charity:
-                TraderTagImage.ImageUrl = "~/Images/Static/Layout/CharityTraderTag.gif";
-                TraderTagImage.AlternateText = "Charity Listing";
-                break;
-        }
-
         if (IsPopup)
         {
             ShortTitleHyperLink.Attributes.Add(

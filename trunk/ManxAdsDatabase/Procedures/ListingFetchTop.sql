@@ -1,29 +1,20 @@
-IF EXISTS (SELECT * FROM sysobjects WHERE type = 'P' AND name = 'ListingFetchTop')
-	BEGIN
-		DROP  Procedure  ListingFetchTop
-	END
-
-GO
-
-CREATE Procedure ListingFetchTop
+ALTER Procedure ListingFetchTop
 (
 	@Limit int,
 	@OnlyImages bit
 )
 AS
 
-IF @OnlyImages = 1
-BEGIN
-	SELECT TOP (@Limit) * FROM VW_ListingFetch
-	WHERE Enabled = 1
-	AND MasterImageId != 0
-	ORDER BY BoostDate DESC
-END
-ELSE
-BEGIN
-	SELECT TOP (@Limit) * FROM VW_ListingFetch
-	WHERE Enabled = 1
-	ORDER BY BoostDate DESC
-END
+SELECT TOP 10
+	l.ListingId, l.Title, l.Details, l.PriceValue,
+	l.PriceType, li.ListingImageId AS MasterImageId
+FROM Listings AS l
+INNER JOIN ListingImages AS li
+	ON li.ListingId = l.ListingId
+	AND li.Master = 1
+INNER JOIN Users AS u
+	ON u.UserId = l.UserId
+	AND (u.BanUntil <= GETDATE() OR u.BanUntil IS NULL)
+ORDER BY BoostDate DESC
 
 GO

@@ -824,15 +824,15 @@ namespace ManxAds
                 {
                     tempListing = new Listing(
                         sp.GetReaderValue<int>("ListingId"),
-                        sp.GetReaderValue<int>("SellerId"),
+                        0,
                         sp.GetReaderValue<int>("MasterImageId"),
                         sp.GetReaderValue<string>("Title"),
                         sp.GetReaderValue<string>("Details"),
                         sp.GetReaderValue<decimal>("PriceValue"),
                         sp.GetReaderValue<PriceType>("PriceType"),
-                        sp.GetReaderValue<DateTime>("BoostDate"),
-                        sp.GetReaderValue<DateTime>("CreateDate"),
-                        sp.GetReaderValue<TextType>("DetailsType"));
+                        DateTime.MinValue,
+                        DateTime.MinValue,
+                        TextType.Html);
 
                     listingList.Add(tempListing);
                 }
