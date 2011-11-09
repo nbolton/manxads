@@ -167,6 +167,5 @@ public partial class Master : StandardMaster
         }
 
         TopLeaderboardAdvertRotator.PositionType = AdvertPositionType.TopLeaderboard;
-        SkyscraperAdvertRotator.PositionType = AdvertPositionType.Skyscraper;
     }
 }

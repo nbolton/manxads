@@ -138,24 +138,6 @@ public partial class Master {
     protected global::AdvertRotator TopLeaderboardAdvertRotator;
     
     /// <summary>
-    /// temppanel3 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Panel temppanel3;
-    
-    /// <summary>
-    /// SkyscraperAdvertRotator control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::AdvertRotator SkyscraperAdvertRotator;
-    
-    /// <summary>
     /// ContentPlaceHolder1 control.
     /// </summary>
     /// <remarks>
