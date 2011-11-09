@@ -44,18 +44,25 @@ namespace Rensoft.ManxAds
         {
             foreach (ListingBase listingBase in ListingBase.Fetch(ConnectionString))
             {
-                if (listingBase.BoostDate.AddDays(deleteElapsedDays) < DateTime.Now)
+                try
                 {
-                    // Fetch full listing again from DB to remove ang get user (design flaw).
-                    Listing listing = Listing.Fetch(listingBase.DatabaseId, ConnectionString);
-                    notifySet.Add(new ListingDeleteNotify(listing, this));
+                    if (listingBase.BoostDate.AddDays(deleteElapsedDays) < DateTime.Now)
+                    {
+                        // Fetch full listing again from DB to remove ang get user (design flaw).
+                        Listing listing = Listing.Fetch(listingBase.DatabaseId, ConnectionString);
+                        notifySet.Add(new ListingDeleteNotify(listing, this));
+                    }
+                    else if (!listingBase.ExpiryNotified && // Only send where not sent before.
+                        listingBase.BoostDate.AddDays(reminderElapedDays) < DateTime.Now)
+                    {
+                        // Fetch full listing again from DB to get user (design flaw).
+                        Listing listing = Listing.Fetch(listingBase.DatabaseId, ConnectionString);
+                        notifySet.Add(new ListingExpiryNotify(listing, this));
+                    }
                 }
-                else if (!listingBase.ExpiryNotified && // Only send where not sent before.
-                    listingBase.BoostDate.AddDays(reminderElapedDays) < DateTime.Now)
+                catch (Exception ex)
                 {
-                    // Fetch full listing again from DB to get user (design flaw).
-                    Listing listing = Listing.Fetch(listingBase.DatabaseId, ConnectionString);
-                    notifySet.Add(new ListingExpiryNotify(listing, this));
+                    Log.Error(ex);
                 }
             }
             notifySet.Execute();

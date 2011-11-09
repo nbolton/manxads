@@ -69,6 +69,7 @@
     <Compile Include="ListingNotifiy.cs" />
     <Compile Include="DebugEventArgs.cs" />
     <Compile Include="ListingNotifySet.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="MaEventLogHelper.cs" />
     <Compile Include="NotifierTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

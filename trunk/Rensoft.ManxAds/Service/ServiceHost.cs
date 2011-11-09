@@ -30,6 +30,8 @@ namespace Rensoft.ManxAds.Service
         {
             this.settings = settings;
             this.eventLogHelper = eventLogHelper;
+
+            Log.Helper = eventLogHelper;
             
             if (settings.EnableCrawler)
                 throw new NotSupportedException(
