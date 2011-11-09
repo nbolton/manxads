@@ -114,16 +114,7 @@ public partial class Master : StandardMaster
 
         leaderboardRotators.Clear();
         leaderboardRotators.AddRange(new AdvertRotator[] {
-            TopLeaderboardAdvertRotator,
-            BottomLeaderboardAdvertRotator
-        });
-
-        squareButtonRotators.Clear();
-        squareButtonRotators.AddRange(new AdvertRotator[] {
-            LeftAdvertRotator1,
-            LeftAdvertRotator2,
-            LeftAdvertRotator3,
-            LeftAdvertRotator4
+            TopLeaderboardAdvertRotator
         });
 
         // Queue random adverts to be semi-evenly distributed top-down.
@@ -176,11 +167,6 @@ public partial class Master : StandardMaster
         }
 
         TopLeaderboardAdvertRotator.PositionType = AdvertPositionType.TopLeaderboard;
-        LeftAdvertRotator1.PositionType = AdvertPositionType.Square1;
-        LeftAdvertRotator2.PositionType = AdvertPositionType.Square2;
-        LeftAdvertRotator3.PositionType = AdvertPositionType.Square3;
-        LeftAdvertRotator4.PositionType = AdvertPositionType.Square4;
         SkyscraperAdvertRotator.PositionType = AdvertPositionType.Skyscraper;
-        BottomLeaderboardAdvertRotator.PositionType = AdvertPositionType.BottomLeaderboard;
     }
 }
