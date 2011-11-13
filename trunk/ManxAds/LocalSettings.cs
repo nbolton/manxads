@@ -134,6 +134,9 @@ namespace ManxAds
         public const string ListingBanUrlFormat =
             "~/UserModify.aspx?User={0}&Ban=1";
 
+        public const string ListingUnbanUrlFormat =
+            "~/UserModify.aspx?User={0}&Unban=1";
+
         public const string AdvertModifyUrlFormat =
             "~/AdvertModify.aspx?Advert={0}";
 

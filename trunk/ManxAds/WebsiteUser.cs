@@ -40,9 +40,9 @@ namespace ManxAds
         private DateTime verifyDate;
         private string verifyAuthCode;
         private TraderType traderType;
-        private DateTime banUntil;
+        private DateTime? banUntil;
 
-        public DateTime BanUntil
+        public DateTime? BanUntil
         {
             get { return banUntil; }
             set { banUntil = value; }
@@ -485,6 +485,11 @@ namespace ManxAds
             get { return String.Format(LocalSettings.ListingBanUrlFormat, databaseId); }
         }
 
+        public string UnbanUrl
+        {
+            get { return String.Format(LocalSettings.ListingUnbanUrlFormat, databaseId); }
+        }
+
         public bool ListingLimitReached
         {
             get
@@ -844,9 +849,9 @@ namespace ManxAds
                     sp.AddParam("@Password", DBNull.Value);
                 }
 
-                if (banUntil != default(DateTime))
+                if (banUntil != null)
                 {
-                    sp.AddParam("@BanUntil", banUntil);
+                    sp.AddParam("@BanUntil", banUntil.Value);
                 }
                 else
                 {
@@ -957,7 +962,7 @@ namespace ManxAds
             user.tradingName = sp.GetReaderValue<string>("TradingName");
             user.tradingWebsite = sp.GetReaderValue<string>("TradingWebsite");
             user.traderType = sp.GetReaderValue<TraderType>("TraderType");
-            user.banUntil = sp.GetReaderValue<DateTime>("BanUntil");
+            user.banUntil = sp.GetReaderValue<DateTime?>("BanUntil");
 
             string lastIp = sp.GetReaderValue<string>("LastIp");
             if (lastIp != null)
@@ -1033,6 +1038,22 @@ namespace ManxAds
             {
                 sp.AddParam("@TraderType", traderType);
 
+                sp.Connection.Open();
+                sp.Reader = sp.Command.ExecuteReader();
+
+                while (sp.Reader.Read())
+                {
+                    users.Add(WebsiteUser.Parse(sp));
+                }
+            }
+            return users;
+        }
+
+        public static List<WebsiteUser> FetchBanned()
+        {
+            List<WebsiteUser> users = new List<WebsiteUser>();
+            using (StoredProceedure sp = new StoredProceedure("UserFetchBanned"))
+            {
                 sp.Connection.Open();
                 sp.Reader = sp.Command.ExecuteReader();
 
@@ -1178,6 +1199,12 @@ namespace ManxAds
                 LocalSettings.MasterSendFromEmail, emailAddress, subject, body);
 
             EmailTools.SendMessage(mailMessage);
+        }
+
+        public void Unban()
+        {
+            banUntil = null;
+            Modify();
         }
     }
 }

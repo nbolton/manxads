@@ -56,6 +56,10 @@ public partial class UserModify : StandardPage
                     this.MultiView.SetActiveView(BanStartView);
                     break;
 
+                case PageMode.Unban:
+                    UnbanUser();
+                    break;
+
                 default:
                     this.TitleLabel.Text = "Edit '" + Accessors.User.FullName + "'";
                     this.PopulateFields(Accessors.User);
@@ -68,6 +72,15 @@ public partial class UserModify : StandardPage
         }
 
         base.InitializePage();
+    }
+
+    private void UnbanUser()
+    {
+        var user = Accessors.User;
+        user.Unban();
+
+        this.UnbanUserLabel.Text = user.FullName;
+        this.MultiView.SetActiveView(UnbanFinishView);
     }
 
     private void PopulateTypeDropDown(WebsiteUser user)
@@ -390,7 +403,7 @@ public partial class UserModify : StandardPage
 
         if (BanPeriodTextBox.Text != "-1")
         {
-            BanUntilDateLabel.Text = "until " + Accessors.User.BanUntil.ToShortDateString();
+            BanUntilDateLabel.Text = "until " + Accessors.User.BanUntil.Value.ToShortDateString();
         }
         else
         {

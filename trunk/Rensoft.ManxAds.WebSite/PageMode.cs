@@ -17,5 +17,6 @@ public enum PageMode
     SelfOnly,
     Search,
     Seller,
-    Ban
+    Ban,
+    Unban
 }

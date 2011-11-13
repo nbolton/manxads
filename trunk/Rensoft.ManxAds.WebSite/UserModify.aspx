@@ -166,6 +166,10 @@
             <h3>User banned</h3>
             <p>You have banned the user <asp:Label ID="BanUntilDateLabel" runat="server" />. The user cannot login until after this date.</p>
         </asp:View>
+        <asp:View ID="UnbanFinishView" runat="server">
+            <h3>User unbanned</h3>
+            <p>You have unbanned the user <asp:Label ID="UnbanUserLabel" runat="server" />, the user can now log in.</p>
+        </asp:View>
     </asp:MultiView>
 </asp:Content>
 

@@ -17,7 +17,7 @@ public partial class UserHome : StandardPage
 
     protected override void InitializePage()
     {
-        if (Auth.ActiveUser.BanUntil <= DateTime.Now)
+        if (Auth.ActiveUser.BanUntil == null)
         {
             MultiView.SetActiveView(DefaultView);
 

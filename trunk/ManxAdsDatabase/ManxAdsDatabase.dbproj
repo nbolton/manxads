@@ -181,7 +181,7 @@
     <NotInBuild Include="Procedures\ListingFetchByCategoryId.sql" />
     <NotInBuild Include="Procedures\ListingFetchById.sql" />
     <NotInBuild Include="Procedures\ListingFetchBySellerId.sql" />
-    <NotInBuild Include="Procedures\ListingFetchLimit.sql" />
+    <NotInBuild Include="Procedures\UserFetchLimit.sql" />
     <NotInBuild Include="Procedures\ListingFetchRecycleBinItems.sql" />
     <NotInBuild Include="Procedures\ListingFetchTop.sql" />
     <NotInBuild Include="Procedures\ListingFetchWhereHasAbuseVotes.sql" />
@@ -225,6 +225,9 @@
     <NotInBuild Include="Procedures\VW_LocationFetch.sql" />
     <NotInBuild Include="Procedures\VW_UserFetch.sql" />
     <NotInBuild Include="Queries\EnableCLR.sql" />
+    <NotInBuild Include="Procedures\UserFetchBanned.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
   <ItemGroup>
     <BuildContributorArgument Include="OutDir=$(OutDir)" />

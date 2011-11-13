@@ -184,5 +184,9 @@ public class CommonPageProperties
         {
             PageMode = PageMode.Ban;
         }
+        else if (_request.QueryString["Unban"] != null)
+        {
+            PageMode = PageMode.Unban;
+        }
     }
 }

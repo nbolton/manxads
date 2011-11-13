@@ -14,6 +14,8 @@ using System.IO;
 /// </summary>
 public class StandardMaster : System.Web.UI.MasterPage
 {
+    private bool enableAdverts = true;
+
     private HtmlMeta descriptionMeta
     {
         get { return this.FindControl("descriptionMeta") as HtmlMeta; }
@@ -56,6 +58,12 @@ public class StandardMaster : System.Web.UI.MasterPage
     {
         get;
         set;
+    }
+
+    public bool EnableAdverts
+    {
+        get { return enableAdverts; }
+        set { enableAdverts = value; }
     }
 
     public StandardMaster()
