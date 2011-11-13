@@ -48,6 +48,22 @@ namespace ManxAds
             set { banUntil = value; }
         }
 
+        public string BanUntilString
+        {
+            get
+            {
+                if (banUntil == null || banUntil <= DateTime.Now)
+                {
+                    return "Not banned";
+                }
+                else if (banUntil == SqlDateTime.MaxValue.Value)
+                {
+                    return "Forever";
+                }
+                return banUntil.ToString();
+            }
+        }
+
         private string _tradingName;
         private string _tradingWebsite;
 

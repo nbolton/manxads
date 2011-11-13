@@ -22,7 +22,6 @@
                     <asp:BoundField DataField="IsVerifiedShortString" HeaderText="V" ItemStyle-BackColor="#B6FF9C" />
                     <asp:BoundField DataField="IsDisabledShortString" HeaderText="D" ItemStyle-BackColor="#FFD1D1" />
                     <asp:BoundField DataField="EmailOptOutShortString" HeaderText="E" ItemStyle-BackColor="#FEFFAF" />
-                    <asp:BoundField DataField="BanUntil" HeaderText="Ban until" />
                     <asp:BoundField DataField="LastIp" HeaderText="Last IP" />
                     <asp:TemplateField HeaderText="Actions" ItemStyle-Wrap="False">
                         <ItemTemplate>
@@ -48,6 +47,8 @@
                 <Columns>
                     <asp:BoundField DataField="FullName" HeaderText="Name" />
                     <asp:BoundField DataField="EmailAddress" HeaderText="Email" />
+                    <asp:BoundField DataField="BanUntilString" HeaderText="Ban until" />
+                    <asp:BoundField DataField="LastIp" HeaderText="Last IP" />
                     <asp:TemplateField HeaderText="Actions" ItemStyle-Wrap="False">
                         <ItemTemplate>
                             <asp:HyperLink ID="UnbanHyperLink" runat="server" NavigateUrl='<%# Bind("UnbanUrl") %>'>Unban</asp:HyperLink>

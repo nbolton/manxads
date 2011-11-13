@@ -42,7 +42,7 @@
                         <li><asp:LinkButton ID="CharityRequestLinkButton" runat="server" OnClick="CharityRequestLinkButton_Click">Upgrade to Charity</asp:LinkButton> (<a href="Help.aspx?Topic=Trader" target="_blank">Help</a>)</li>
                     </ul>
                 </asp:Panel>
-            </div>
+            </dDatabaseId")")
         </asp:View>
         <asp:View ID="BannedView" runat="server">
             <p>We're sorry, but you have been banned from using ManxAds. Please check your email inbox for full details.</p>
