@@ -129,6 +129,15 @@ public partial class Master {
     protected global::SubHeader SubHeader;
     
     /// <summary>
+    /// LayoutTopAdvertServer control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlGenericControl LayoutTopAdvertServer;
+    
+    /// <summary>
     /// TopLeaderboardAdvertRotator control.
     /// </summary>
     /// <remarks>
@@ -138,6 +147,24 @@ public partial class Master {
     protected global::AdvertRotator TopLeaderboardAdvertRotator;
     
     /// <summary>
+    /// LayoutLeftAdvertServer control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlGenericControl LayoutLeftAdvertServer;
+    
+    /// <summary>
+    /// LayoutContentServer control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlGenericControl LayoutContentServer;
+    
+    /// <summary>
     /// ContentPlaceHolder1 control.
     /// </summary>
     /// <remarks>
@@ -145,6 +172,15 @@ public partial class Master {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+    
+    /// <summary>
+    /// LayoutRightAdvertServer control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlGenericControl LayoutRightAdvertServer;
     
     /// <summary>
     /// HyperLink1 control.

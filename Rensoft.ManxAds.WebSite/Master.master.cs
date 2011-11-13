@@ -110,6 +110,15 @@ public partial class Master : StandardMaster
             LayoutHeaderLogoImage.AlternateText = "Merry Christmas from ManxAds!";
         }
 
+        LayoutTopAdvertServer.Visible = EnableAdverts;
+        LayoutLeftAdvertServer.Visible = EnableAdverts;
+        LayoutRightAdvertServer.Visible = EnableAdverts;
+
+        if (!EnableAdverts)
+        {
+            LayoutContentServer.Style.Add("width", "100%");
+        }
+
         AdvertDebug.Value = LocalSettings.AdvertDebug.ToString();
 
         leaderboardRotators.Clear();

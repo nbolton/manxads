@@ -59,14 +59,38 @@
                     <uc1:SubHeader ID="SubHeader" runat="server" />
                 </div>
                 
-                <div id="LayoutTopAdvert">
-                    <uc2:AdvertRotator ID="TopLeaderboardAdvertRotator" runat="server" />
+                <div id="LayoutTopAdvertServer" runat="Server" style="float:left">
+                    <div id="LayoutTopAdvert">
+                        <uc2:AdvertRotator ID="TopLeaderboardAdvertRotator" runat="server" />
+                    </div>
                 </div>
                 
                 <div id="LayoutMiddle">
                     
-                    <div id="LayoutLeftAdvert">
-                        <div class="LayoutLeftAdvertLayer">
+                    <div id="LayoutLeftAdvertServer" runat="Server" style="float:left">
+                        <div id="LayoutLeftAdvert">
+                            <div class="LayoutLeftAdvertLayer">
+                                <script type="text/javascript"><!--
+                                    google_ad_client = "ca-pub-3305986762497110";
+                                    /* ManxAds wide skyscraper */
+                                    google_ad_slot = "2813539043";
+                                    google_ad_width = 160;
+                                    google_ad_height = 600;
+                                //-->
+                                </script>
+                                <script type="text/javascript"
+                                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                </script>
+					        </div>
+                        </div>
+                    </div>
+                    
+                    <div id="LayoutContentServer" class="LayoutContent" runat="Server">
+                        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />
+                    </div>
+                    
+                    <div id="LayoutRightAdvertServer" runat="Server" style="float:left">
+                        <div id="LayoutRightAdvert">
                             <script type="text/javascript"><!--
                                 google_ad_client = "ca-pub-3305986762497110";
                                 /* ManxAds wide skyscraper */
@@ -78,27 +102,9 @@
                             <script type="text/javascript"
                             src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                             </script>
-					    </div>
+                        </div>
                     </div>
-                    
-                    <div id="LayoutContent">
-                        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />
-                    </div>
-                    
-                    <div id="LayoutRightAdvert">
-                        <script type="text/javascript"><!--
-                            google_ad_client = "ca-pub-3305986762497110";
-                            /* ManxAds wide skyscraper */
-                            google_ad_slot = "2813539043";
-                            google_ad_width = 160;
-                            google_ad_height = 600;
-                        //-->
-                        </script>
-                        <script type="text/javascript"
-                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                        </script>
-                    </div>
-                    
+
                 </div>
                 
                 <div id="LayoutFooter">
