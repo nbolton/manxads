@@ -155,9 +155,9 @@ namespace ManxAds
         {
             if (pathUtility != null)
             {
-                File.Delete(pathUtility.GetAbsolutePath(this.ThumbnailUrl));
-                File.Delete(pathUtility.GetAbsolutePath(this.SmallImageUrl));
-                File.Delete(pathUtility.GetAbsolutePath(this.FullImageUrl));
+                tryDelete(pathUtility.GetAbsolutePath(this.ThumbnailUrl));
+                tryDelete(pathUtility.GetAbsolutePath(this.SmallImageUrl));
+                tryDelete(pathUtility.GetAbsolutePath(this.FullImageUrl));
             }
 
             using (StoredProceedure sp = new StoredProceedure(
@@ -166,6 +166,14 @@ namespace ManxAds
                 sp.AddParam("@ListingImageId", this.databaseId);
                 sp.Connection.Open();
                 sp.Command.ExecuteNonQuery();
+            }
+        }
+
+        private void tryDelete(string path)
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
             }
         }
 
