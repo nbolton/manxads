@@ -1,1 +1,3 @@
-# robots.txt for ManxAds.com
+User-agent: *
+Disallow: /Listings.aspx?Search=*
+Allow: /
