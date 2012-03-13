@@ -669,7 +669,9 @@
     <Content Include="SearchInline.ascx" />
     <Content Include="SellerOptions.ascx" />
     <Content Include="SettingsEditor.aspx" />
-    <Content Include="Sitemap.xml" />
+    <Content Include="Sitemap.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Styles\StyleSheet.css" />
     <Content Include="SubHeader.ascx" />
     <Content Include="SuccessDialog.ascx" />
