@@ -42,7 +42,7 @@ namespace Rensoft.ManxAds
 
         public void RunCheck()
         {
-            foreach (ListingBase listingBase in ListingBase.Fetch(ConnectionString))
+            foreach (ListingBase listingBase in ListingBase.FetchNoBan(ConnectionString))
             {
                 try
                 {

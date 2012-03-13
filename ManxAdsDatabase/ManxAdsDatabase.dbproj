@@ -177,7 +177,6 @@
     <NotInBuild Include="Procedures\ListingCount.sql" />
     <NotInBuild Include="Procedures\ListingCreate.sql" />
     <NotInBuild Include="Procedures\ListingExpiryNotified.sql" />
-    <NotInBuild Include="Procedures\ListingFetchBase.sql" />
     <NotInBuild Include="Procedures\ListingFetchByCategoryId.sql" />
     <NotInBuild Include="Procedures\ListingFetchById.sql" />
     <NotInBuild Include="Procedures\ListingFetchBySellerId.sql" />
@@ -226,6 +225,9 @@
     <NotInBuild Include="Procedures\VW_UserFetch.sql" />
     <NotInBuild Include="Queries\EnableCLR.sql" />
     <NotInBuild Include="Procedures\UserFetchBanned.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Procedures\ListingFetchBaseNoBan.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
   </ItemGroup>

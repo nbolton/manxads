@@ -302,6 +302,22 @@ namespace ManxAds
             return listingList;
         }
 
+        public static List<IListingBase> FetchNoBan(string connectionString)
+        {
+            List<IListingBase> listingList = new List<IListingBase>();
+            using (StoredProceedure sp = new StoredProceedure("ListingFetchBaseNoBan", connectionString))
+            {
+                sp.Connection.Open();
+                sp.Reader = sp.Command.ExecuteReader();
+
+                while (sp.Reader.Read())
+                {
+                    listingList.Add(ListingBase.Parse(sp));
+                }
+            }
+            return listingList;
+        }
+
         public void SetExpiryNotified(string connectionString)
         {
             using (StoredProceedure sp = new StoredProceedure("ListingExpiryNotified", connectionString))
